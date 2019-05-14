@@ -5,6 +5,8 @@ development: &default
   encoding: utf8
   host: localhost
   database: lambda_dev
+  username: wengran
+  password: 0
 
 test:
   adapter: postgresql
@@ -15,6 +17,8 @@ test:
   reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 10)) %>
   timeout: 5000
   database: lambda_test
+  username: wengran
+  password: 0
 
 production: &deploy
   encoding: utf8
@@ -22,5 +26,7 @@ production: &deploy
   pool: <%= [Integer(ENV.fetch("MAX_THREADS", 5)), Integer(ENV.fetch("DB_POOL", 5))].max %>
   timeout: 5000
   url:  <%= ENV.fetch("DATABASE_URL", "") %>
+  username: wengran
+  password: 0
 
 staging: *deploy

@@ -12,7 +12,7 @@ bundle check || bundle install
 
 # Note duplicated from run script.
 # Start Postgres
-postgres -D /usr/local/var/postgres/ &
+# postgres -D /usr/local/var/postgres/ &
 # Start Redis
 redis-server &
 
@@ -28,12 +28,12 @@ bower install
 # fi
 
 
-if heroku join --app lambda-grader &> /dev/null; then
-  git remote add heroku git@heroku.com:lambda-grader.git || true
-  printf 'You are a collaborator on the "lambda-grader" Heroku app'
-else
-  printf 'Ask for access to the "lambda-grader" Heroku app'
-fi
+#if heroku join --app lambda-grader &> /dev/null; then
+#  git remote add heroku git@heroku.com:lambda-grader.git || true
+#  printf 'You are a collaborator on the "lambda-grader" Heroku app'
+#else
+#  printf 'Ask for access to the "lambda-grader" Heroku app'
+#fi
 
 # After heroku app is added grab a .env file.
 # Disabled because this is too different of a config for now...
