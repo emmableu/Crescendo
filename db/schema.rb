@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170824054417) do
+ActiveRecord::Schema.define(version: 20190517013725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,12 @@ ActiveRecord::Schema.define(version: 20170824054417) do
     t.string   "data_source"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "courses", force: :cascade do |t|
@@ -117,7 +123,10 @@ ActiveRecord::Schema.define(version: 20170824054417) do
     t.jsonb    "metadata"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "category_id"
   end
+
+  add_index "questions", ["category_id"], name: "index_questions_on_category_id", using: :btree
 
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
@@ -145,6 +154,21 @@ ActiveRecord::Schema.define(version: 20170824054417) do
   add_index "submissions", ["dce_lti_user_id"], name: "index_submissions_on_dce_lti_user_id", using: :btree
   add_index "submissions", ["user_id"], name: "index_submissions_on_user_id", using: :btree
 
+  create_table "tasks", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "category_id"
+    t.text     "test_file"
+    t.text     "starter_file"
+    t.integer  "difficulty"
+    t.integer  "order"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "instruction"
+    t.text     "description"
+  end
+
+  add_index "tasks", ["category_id"], name: "index_tasks_on_category_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "provider"
     t.string   "uid"
@@ -167,4 +191,6 @@ ActiveRecord::Schema.define(version: 20170824054417) do
 
   add_index "users", ["lti_user_id"], name: "index_users_on_lti_user_id", unique: true, using: :btree
 
+  add_foreign_key "questions", "categories"
+  add_foreign_key "tasks", "categories"
 end

@@ -7,6 +7,7 @@ class CreateProblems < ActiveRecord::Migration
       t.text :test_file
       t.text :starter_file
       t.jsonb :metadata
+      # t.references :category
 
       t.timestamps null: false
     end

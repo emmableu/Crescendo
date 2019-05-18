@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :categories, :tasks
+
+
   # TODO: Better Homepage at some point.
   root :to => "questions#index"
 

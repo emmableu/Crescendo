@@ -1,0 +1,19 @@
+doctype html
+html lang="en"
+  body#myPage data-offset="60" data-spy="scroll" data-target=".navbar"
+    #tasks.container-fluid
+      - @categories.each do |category|
+        .col-sm-4.col-xs-12
+          .panel.panel-default.text-center
+            .panel-heading
+              h2 #{category.name}
+
+            .panel-body
+              .list-group
+                - @categorytasks[category].each do |categorytask|
+                  a.list-group-item.list-group-item-action = link_to "#{categorytask.title}", categorytask
+
+
+br
+a.btn.btn-success(href=new_task_path role='button')
+  | New Task

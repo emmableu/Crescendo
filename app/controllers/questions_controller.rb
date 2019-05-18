@@ -29,6 +29,7 @@ class QuestionsController < ApplicationController
     end
     gon.submissions_path = submission_question_path
     render layout: 'base'
+
   end
 
   # GET /questions/new

@@ -11,6 +11,7 @@ gem 'puma'
 # Always use postgres as the db
 gem 'pg', '0.20.0'
 
+gem 'devise'
 # Frontend Utilities
 # Use SCSS for stylesheets
 # TODO: Upgrade to v4

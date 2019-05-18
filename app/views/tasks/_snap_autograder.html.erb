@@ -1,0 +1,103 @@
+<% content_for :head do %>
+  <!-- NOTE: jQuery and _ are included in the Rails App  -->
+
+  <!-- AG Snap Modifications -->
+  <script src="/snap-path.js"></script>
+  <script src="/autograder/ag-files/snap-ui-overrides.js"></script>
+
+  <!-- Autograder custom display -->
+  <link rel="stylesheet" type="text/css" href="/autograder/ag-files/AG_status_bar.css" />
+  <link rel="stylesheet" type="text/css" href="/autograder/ag-files/hintstyle.css" />
+
+  <!-- Main autograder components -->
+  <script src='/autograder/ag-files/ag-util.js'></script>
+  <script src='/autograder/ag-files/help-content.js'></script>
+  <script src='/autograder/ag-files/spriteEventLog.js'></script>
+  <script src='/autograder/ag-files/scriptAnalysis.js'></script>
+  <script src="/autograder/ag-files/AGAgent.js"></script>
+  <script src='/autograder/ag-files/feedbackLog.js'></script>
+  <script src="/autograder/ag-files/AGFormatting.js"></script>
+
+  <!-- Custom cloud access on localhost only. -->
+  <% if Rails.env == 'development' %>
+  <script src="/autograder/ag-files/snap-local-cloud.js"></script>
+  <% end %>
+
+  <!-- Load snap + AG additions, similar to snap.html -->
+  <script>
+  // Override Snap! / Morphic method to not take the full size of the window.
+  // TODO: extract into AG function that builds this.
+  // It should take in a width and height.
+  WorldMorph.prototype.fillPage = function () {
+      var agHeight = $('#ag-header').outerHeight();
+          clientHeight = $(window).height() - agHeight,
+          clientWidth = window.innerWidth,
+          myself = this;
+
+      this.worldCanvas.style.position = "absolute";
+      this.worldCanvas.style.left = "0px";
+      this.worldCanvas.style.right = "0px";
+      this.worldCanvas.style.width = clientWidth + 'px';
+      this.worldCanvas.style.height = clientHeight + 'px';
+
+      if (this.worldCanvas.width !== clientWidth) {
+          this.worldCanvas.width = clientWidth;
+          this.setWidth(clientWidth);
+      }
+      if (this.worldCanvas.height !== clientHeight) {
+          this.worldCanvas.height = clientHeight;
+          this.setHeight(clientHeight);
+      }
+      this.children.forEach(function (child) {
+          if (child.reactToWorldResize) {
+              child.reactToWorldResize(myself.bounds.copy());
+          }
+      });
+  };
+  
+  // THIS SEEMS LIKE A HACK.
+  // but this site is not edX....
+  window.isEDX = false;
+  window.onload = function () {
+      $('#canvas-container').height(
+          $(window).height() - $('#ag-header').outerHeight()
+      );
+      $('#canvas-container').width($(window).width());
+      world_canvas = document.getElementById('world');
+      world = new WorldMorph(world_canvas);
+      var ide = new IDE_Morph().openIn(world);
+      // Start Snap Environment Loop
+      loop();
+
+    // AUTOGRADER ADDITIONS:
+    // Initialize AGSB button.
+    $("#autograding_button").click(doExecAndDisplayTests);
+    world_canvas.addEventListener("mouseup", update_listener);
+    // This is a link relative to /problems/N/
+    starter_path = gon.starter_file_path;
+    loadTestJS();
+    // The global id variable in set by the JS file.
+    initializeSnapAdditions(world, id);
+  };
+
+  function loop() {
+    requestAnimationFrame(loop);
+    world.doOneCycle();
+  }
+
+  function loadTestJS() {
+    var query = queryString.parse(location.hash.slice(1)),
+        problem_js = query.test_file,
+        tag;
+        
+    if (!problem_js) { return; }
+    tag = document.createElement('script')
+    tag.src = problem_js;
+    tag.onload = function () {
+        starter_path = gon.starter_file_path;
+        initializeSnapAdditions(world, id);
+    };
+    document.head.appendChild(tag);
+  }
+  </script>
+<% end %>

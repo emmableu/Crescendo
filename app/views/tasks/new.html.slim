@@ -1,0 +1,32 @@
+= form_for @task, html: {class: 'form-horizontal'} do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :category
+    = f.collection_select(:category_id, Category.all, :id, :name, prompt: true)
+    / = f.number_field :category, class: 'form-control'
+  .form-group
+    = f.label :difficulty
+    = f.text_area :difficulty, class: 'form-control'
+  .form-group
+    = f.label :order
+    = f.text_area :order, class: 'form-control'
+  .form-group
+    = f.label :description
+    = f.text_area :description, class: 'form-control', rows: 3
+  .form-group
+    = f.label :instruction
+    = f.text_area :instruction, class: 'form-control', rows: 10
+  .form-group
+    = f.label :test_file
+    = f.text_area :test_file, class: 'form-control', rows: 10
+  .form-group
+    = f.label :starter_file
+    = f.text_area :starter_file, class: 'form-control'
+  .form-group
+    .col-xs-1
+      = f.button :submit, class: "btn btn-success"
+      | Save
+    .col-xs-1
+      = link_to 'Cancel', @question, class: 'btn btn-warning'

@@ -1,28 +1,30 @@
 # == Schema Information
 #
-# Table name: questions
+# Table name: tasks
 #
 #  id           :integer          not null, primary key
 #  title        :string
-#  points       :float
-#  content      :text
+#  category_id  :integer
 #  test_file    :text
 #  starter_file :text
-#  metadata     :jsonb
+#  difficulty   :integer
+#  order        :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  category_id  :integer
+#  instruction  :text
+#  description  :text
 #
 # Indexes
 #
-#  index_questions_on_category_id  (category_id)
+#  index_tasks_on_category_id  (category_id)
 #
 # Foreign Keys
 #
 #  fk_rails_...  (category_id => categories.id)
 #
 
-class Question < ActiveRecord::Base
-  # has_many :submissions
-  belongs_to :category
+require 'rails_helper'
+
+RSpec.describe Task, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

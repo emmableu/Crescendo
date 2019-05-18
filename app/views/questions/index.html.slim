@@ -18,12 +18,13 @@ h1
       tbody
         - @questions.each do |question|
           tr
+
             - if current_user && current_user.admin
               td.vert-align = question.id
             td.vert-align
                = link_to question.title, question
             td.vert-align
-              = question.points
+              = question.category_id
             td.vert-align
               = truncate question.content
             td.vert-align

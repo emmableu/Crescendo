@@ -1,4 +1,3 @@
-- content_for :head do
   script[src="/snap/logging/config.js?v=2.4.9"]
   script[src="/snap/hints/config.js?v=2.4.9"]
   script[src="/snap/morphic.js?v=2.4.9"]
@@ -44,5 +43,32 @@
   script[src="/snap/hints/main.js?v=2.4.9"]
 
 
-#canvas-container[width='100%']
-  canvas#world[tabindex="1"]
+
+
+
+
+window.requireAssignment = false;
+// Allows the user to change their assignment by clicking on project title
+
+// If true, users are required to login before they can use the system
+window.requireLogin = false;
+
+
+
+db-logger.js:
+    xhr.open('POST', 'http://localhost/isnap/logging/mysql.php', true);
+    xhr.send(data);
+
+
+enable CORS on apache
+
+点  XAMPP - configure - Open config file, 在<directory> 里面加上：
+ Header set Access-Control-Allow-Origin "*"  
+
+
+in mysql.php
+        $assignmentID = $mysqli->escape_string('none');
+
+
+psql lambda_dev 这样可以进database
+
