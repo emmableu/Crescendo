@@ -1,24 +1,24 @@
 <style type="text/css">
 
-body {
+  body {
     overflow: hidden;
     padding-top: 50px;
     margin: 0;
-}
+  }
 
-#numtips {
-  font-variant: small-caps;
-  font-weight: bold;
-}
+  #numtips {
+    font-variant: small-caps;
+    font-weight: bold;
+  }
 
-span.task-title {
-  font-weight: bold;
-  font-family: serif;
-  font-variant: small-caps;
-  color: #003A70;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  span.task-title {
+    font-weight: bold;
+    font-family: serif;
+    font-variant: small-caps;
+    color: #003A70;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 </style>
 
 
@@ -31,14 +31,28 @@ span.task-title {
       </div>
       <div class="navbar-header">
         <div class="btn-toolbar" role="group" aria-label="...">
+
+          <div id="buttons-top" class="btn-group">
+            <a class="btn-top btn btn-default had-btn-lg active">#1</a>
+            <a class="btn-top btn btn-default had-btn-lg">#2</a>
+            <a class="btn-top btn btn-default had-btn-lg">#3</a>
+            <a class="btn-top btn btn-default had-btn-lg">#4</a>
+            <a class="btn-top btn btn-default had-btn-lg">#5</a>
+            <a class="btn-top btn btn-default had-btn-lg">#6</a>
+            <a class="btn-top btn btn-default had-btn-lg">#7</a>
+
+          </div>
+
+
+
           <div class="nav-btns btn-group">
             <button class="btn btn-info navbar-btn" id="autograding_button">
               Get Feedback
             </button>
             <div class="btn-group dropdown" id="ag-action-menu">
               <button class="btn btn-primary navbar-btn dropdown-toggle"
-                 type="button" data-toggle="dropdown" id="ag-controls"
-                 aria-haspopup="true" aria-expanded="false">
+                      type="button" data-toggle="dropdown" id="ag-controls"
+                      aria-haspopup="true" aria-expanded="false">
                 Options
                 <span class="caret"></span>
                 <span class="sr-only">Toggle AG Menu</span>

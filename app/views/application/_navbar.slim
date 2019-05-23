@@ -12,16 +12,19 @@ nav.navbar.navbar-inverse.navbar-fixed-top
       .navbar-left
         ul.nav.navbar-nav
           li
-            a(href="#{main_app.questions_path}") Questions
-          - if current_user && current_user.admin
-            li
-              a(href="#{main_app.courses_path}")Courses
-            li
-              a(href="#{main_app.users_dashboard_path}")Users
-            li
-              a(href="#{main_app.blazer_path}")Dashboards
+            a(href="#{main_app.tasks_path}") Tasks
+          / - if current_user && current_user.admin
+          /   li
+          /     a(href="#{main_app.courses_path}")Courses
+          /   li
+          /     a(href="#{main_app.users_dashboard_path}")Users
+          /   li
+          /     a(href="#{main_app.blazer_path}")Dashboards
       p.navbar-text.navbar-right
         - if current_user
-          = link_to 'Logout', '/logout', method: :delete, class: 'navbar-link'
+        #{current_user.name}
+          = link_to 'User Logout', '/users/sign_out', method: :delete, class: 'navbar-link'
+        - if current_admin
+          = link_to 'Admin Logout', '/admins/sign_out', method: :delete, class: 'navbar-link'
         - else
-          = link_to 'Admin Login', '/auth/google', class: 'navbar-link'
+          = link_to 'Admin Login', '/admins/sign_in', class: 'navbar-link'

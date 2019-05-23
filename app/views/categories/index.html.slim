@@ -1,30 +1,45 @@
 h1
   | Categories
-
-.table
-  table.table.table-striped
-    thead
-      tr
-        th
-        th Name
-        th Tasks
-        / th Consumer Key
-        th Edit
-        th Delete
-
-    tbody
-      - @categories.each do |category|
+- if current_admin
+  .table
+    table.table.table-striped
+      thead
         tr
-          td.vert-align = category.id
-          td.vert-align = link_to "#{category.name}", category
-          / td.vert-align = course.url
-          td.vert-alid
-            gn = 'tasks'
-          td.vert-align = 'Edit'
-          / td.vert-align = 'Delete'
-          / td.vert-align = link_to 'Edit', edit_course_path(course)
-          td.vert-align = link_to raw('<strong>&times;</strong>'), category, class: "btn btn-danger", data: {:confirm => 'Are you sure?'}, :method => :delete
+          th
+          th Name
+          th Tasks
+          / th Consumer Key
+          th Edit
+          th Delete
 
-br
-a.btn.btn-success(href=new_category_path role='button')
-  | New Category Configuration
+      tbody
+        - @categories.each do |category|
+          tr
+            td.vert-align = category.id
+            td.vert-align = link_to "#{category.name}", category
+            / td.vert-align = course.url
+            td.vert-alid
+              gn = 'tasks'
+            td.vert-align = 'Edit'
+            / td.vert-align = 'Delete'
+            / td.vert-align = link_to 'Edit', edit_course_path(course)
+            td.vert-align = link_to raw('<strong>&times;</strong>'), category, class: "btn btn-danger", data: {:confirm => 'Are you sure?'}, :method => :delete
+
+
+  br
+  a.btn.btn-success(href=new_category_path role='button')
+      | New Category Configuration
+
+- else
+  .table
+    table.table.table-striped
+      thead
+        tr
+          th
+          th Name
+
+      tbody
+        - @categories.each do |category|
+          tr
+            td.vert-align = category.id
+            td.vert-align = link_to "#{category.name}", category

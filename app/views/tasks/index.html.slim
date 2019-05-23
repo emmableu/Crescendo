@@ -1,19 +1,55 @@
-doctype html
-html lang="en"
-  body#myPage data-offset="60" data-spy="scroll" data-target=".navbar"
-    #tasks.container-fluid
-      - @categories.each do |category|
-        .col-sm-4.col-xs-12
-          .panel.panel-default.text-center
-            .panel-heading
-              h2 #{category.name}
+- if current_admin
+  .table
+    table.table.table-striped
+      thead
+        tr
+          / th
+          th Category Name
+          th Task
+          / th Consumer Key
+          th testfile
+          th Edit
+          th Delete
 
-            .panel-body
-              .list-group
-                - @categorytasks[category].each do |categorytask|
-                  a.list-group-item.list-group-item-action = link_to "#{categorytask.title}", categorytask
+      tbody
+        - @categories.each do |category|
+          - @categorytasks[category].each do |categorytask|
+            tr
+              / td.vert-align = category.Name
+              td.vert-align = link_to "#{category.name}", category
+              / td.vert-align = course.url
+              td.vert-align = link_to "#{categorytask.title}", categorytask
+              td.vert-align = link_to "#{categorytask.test_file[0,100]}", testfile_task_path(categorytask), :maxlength => 3, :size => 10
+              / td.vert-align = 'Edit'
+              / td.vert-align = 'Delete'
+              td.vert-align = link_to 'Edit', edit_task_path(categorytask)
+              td.vert-align = link_to raw('<strong>&times;</strong>'), categorytask, class: "btn btn-danger", data: {:confirm => 'Are you sure?'}, :method => :delete
+  br
+  a.btn.btn-success(href=new_task_path role='button')
+    | New Task
 
 
-br
-a.btn.btn-success(href=new_task_path role='button')
-  | New Task
+
+
+
+
+
+
+- else
+  doctype html
+  html lang="en"
+    body#myPage data-offset="60" data-spy="scroll" data-target=".navbar"
+      #tasks.container-fluid
+        - @categories.each do |category|
+          .col-sm-4.col-xs-12
+            .panel.panel-default.text-center
+              .panel-heading
+                h2 #{category.name}
+
+              .panel-body
+                .list-group
+                  - @categorytasks[category].each do |categorytask|
+                    li.list-group-item.list-group-item-action
+                      = link_to "#{categorytask.title}", categorytask
+
+

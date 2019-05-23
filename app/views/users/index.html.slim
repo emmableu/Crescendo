@@ -1,0 +1,46 @@
+h1
+
+- if current_admin
+  | Users
+  .table
+    table.table.table-striped
+      thead
+        tr
+          th
+          th Name
+          th Password
+          / th Consumer Key
+          th Edit
+          th Delete
+
+      tbody
+        - @users.each do |user|
+          tr
+            td.vert-align = user.id
+            td.vert-align =  "#{user.username}"
+            / td.vert-align = course.url
+            td.vert-alid
+              gn =  "#{user.encrypted_password}"
+            td.vert-align = 'Edit'
+            / td.vert-align = 'Delete'
+            / td.vert-align = link_to 'Edit', edit_user_path(user)
+            td.vert-align = link_to raw('<strong>&times;</strong>'), user, class: "btn btn-danger", data: {:confirm => 'Are you sure?'}, :method => :delete
+
+
+  / br
+  / a.btn.btn-success(href=new_category_path role='button')
+  /   | New Category Configuration
+
+/ - else
+/   .table
+/     table.table.table-striped
+/       thead
+/         tr
+/           th
+/           th Name
+/
+/       tbody
+/         - @categories.each do |category|
+/           tr
+/             td.vert-align = category.id
+/             td.vert-align = link_to "#{category.name}", category

@@ -41,6 +41,7 @@
     <orderEntry type="library" scope="PROVIDED" name="ast (v2.3.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v7.2.3, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="awesome_print (v1.8.0, rbenv: 2.4.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.12, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="better_errors (v2.4.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.3, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="blazer (v1.8.0, rbenv: 2.4.3) [gem]" level="application" />
@@ -48,7 +49,7 @@
     <orderEntry type="library" scope="PROVIDED" name="brakeman (v4.1.1, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.3, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bullet (v5.7.0, rbenv: 2.4.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v2.0.1, rbenv: 2.4.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.15.2, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler-audit (v0.6.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="byebug (v9.1.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cane (v2.6.2, rbenv: 2.4.3) [gem]" level="application" />
@@ -65,6 +66,7 @@
     <orderEntry type="library" scope="PROVIDED" name="coolline (v0.5.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.3, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.3, rbenv: 2.4.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v4.6.2, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.3, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="docile (v1.1.5, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="domain_name (v0.5.20170404, rbenv: 2.4.3) [gem]" level="application" />
@@ -125,6 +127,7 @@
     <orderEntry type="library" scope="PROVIDED" name="omniauth (v1.7.1, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-google-oauth2 (v0.5.2, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-oauth2 (v1.5.0, rbenv: 2.4.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="p3p (v2.0.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parallel (v1.12.1, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parser (v2.4.0.2, rbenv: 2.4.3) [gem]" level="application" />
@@ -165,6 +168,7 @@
     <orderEntry type="library" scope="PROVIDED" name="reek (v2.2.1, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="request_store (v1.3.2, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="require_all (v1.4.0, rbenv: 2.4.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="responders (v2.4.1, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rest-client (v2.0.2, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="roodi (v3.3.1, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.4.4, rbenv: 2.4.3) [gem]" level="application" />
@@ -204,6 +208,7 @@
     <orderEntry type="library" scope="PROVIDED" name="unicode_utils (v1.4.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uniform_notifier (v1.10.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unparser (v0.2.6, rbenv: 2.4.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.7, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v2.1.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yard (v0.9.12, rbenv: 2.4.3) [gem]" level="application" />
   </component>

@@ -10,7 +10,7 @@ gem 'puma'
 
 # Always use postgres as the db
 gem 'pg', '0.20.0'
-
+gem 'bundler', '1.15.2'
 gem 'devise'
 # Frontend Utilities
 # Use SCSS for stylesheets

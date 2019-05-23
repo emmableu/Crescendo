@@ -9,10 +9,18 @@ class CategoriesController < ApplicationController
   #     :show, :edit, :update, :destroy,
   #     :starter_file, :submit_grade, :test_file
   # ]
-  #
-  # before_action :require_admin, only: [
-  #     :edit, :update, :destroy, :new
-  # ]
+
+  before_action :require_admin, only: [
+      :edit, :update, :destroy, :new
+  ]
+  def require_admin
+    # return true if Rails.env.development?
+
+    if !current_admin
+      flash[:error] = "Visiting '#{request.fullpath}' requires an administrator account"
+      redirect_to '/' and return
+    end
+  end
     def category_params
       params.require(:category).permit(:name, :id, :tasks)
     end

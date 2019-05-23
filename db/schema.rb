@@ -11,11 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190517013725) do
+ActiveRecord::Schema.define(version: 20190520210441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "blazer_audits", force: :cascade do |t|
     t.integer  "user_id"
@@ -170,26 +183,21 @@ ActiveRecord::Schema.define(version: 20190517013725) do
   add_index "tasks", ["category_id"], name: "index_tasks_on_category_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "image_url"
-    t.string   "url"
-    t.string   "email"
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-    t.boolean  "admin",                            default: false
-    t.string   "lti_user_id"
-    t.string   "lis_person_contact_email_primary"
-    t.string   "lis_person_name_family"
-    t.string   "lis_person_name_full"
-    t.string   "lis_person_name_given"
-    t.string   "lis_person_sourcedid"
-    t.string   "user_image"
-    t.string   "roles",                            default: [],                 array: true
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "username"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "student_class"
   end
 
-  add_index "users", ["lti_user_id"], name: "index_users_on_lti_user_id", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   add_foreign_key "questions", "categories"
   add_foreign_key "tasks", "categories"

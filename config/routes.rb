@@ -1,10 +1,35 @@
 Rails.application.routes.draw do
 
+  # devise_for :admins
+  # devise_for :users
   resources :categories, :tasks
+  devise_for :users, controllers: { sessions: 'users/sessions' , registrations: 'users/registrations'}
+  # devise_for :admins, controllers: { sessions: 'admins/sessions' , registrations: 'admins/registrations'}
+  devise_for :admins do
+    get 'sign_up', to: 'admins/registrations#new'
+    get 'sign_in', to:'admins/sessions#new'
+  end
+
+  get 'admin_dashboard', to: 'users#index', :as => :users
+  get 'admin_dashboard/users/:id', :to => 'users#show', :as => :user
+  delete 'admin_dashboard/users/:id', :to => 'users#destroy'
 
 
+  # get 'snap_base', to: 's'
   # TODO: Better Homepage at some point.
-  root :to => "questions#index"
+  root :to => "tasks#index"
+  # rails_admin.dashboard_path :to =>
+
+
+  resources :tasks do
+    member do
+      # TODO: Figure out if a submissions controller might be better...
+      post 'submission', to: 'tasks#submit_grade'
+      get 'starterfile', to: 'tasks#starter_file'
+      get 'testfile', to: 'tasks#test_file'
+      get 'snapbase', to: 'tasks#snapbase'
+    end
+  end
 
   resources :questions do
     member do

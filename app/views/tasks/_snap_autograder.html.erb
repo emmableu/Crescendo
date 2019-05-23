@@ -1,3 +1,15 @@
+<style>
+  body {
+    background-color: linen;
+  }
+
+  h1 {
+    color: maroon;
+    /*margin-left: 15px;*/
+    word-wrap: break-word;
+  }
+</style>
+
 <% content_for :head do %>
   <!-- NOTE: jQuery and _ are included in the Rails App  -->
 
@@ -20,84 +32,121 @@
 
   <!-- Custom cloud access on localhost only. -->
   <% if Rails.env == 'development' %>
-  <script src="/autograder/ag-files/snap-local-cloud.js"></script>
+    <script src="/autograder/ag-files/snap-local-cloud.js"></script>
   <% end %>
+
+
+<body>
+<!--here is the content-->
+<!--<div id="left"><h1>Test</h1></div>-->
+
+</body>
 
   <!-- Load snap + AG additions, similar to snap.html -->
   <script>
-  // Override Snap! / Morphic method to not take the full size of the window.
-  // TODO: extract into AG function that builds this.
-  // It should take in a width and height.
-  WorldMorph.prototype.fillPage = function () {
-      var agHeight = $('#ag-header').outerHeight();
+
+      // Override Snap! / Morphic method to not take the full size of the window.
+      // TODO: extract into AG function that builds this.
+      // It should take in a width and height.
+      WorldMorph.prototype.fillPage = function () {
+          var agHeight = $('#ag-header').outerHeight();
           clientHeight = $(window).height() - agHeight,
-          clientWidth = window.innerWidth,
-          myself = this;
+              clientWidth = window.innerWidth,
+              myself = this;
 
-      this.worldCanvas.style.position = "absolute";
-      this.worldCanvas.style.left = "0px";
-      this.worldCanvas.style.right = "0px";
-      this.worldCanvas.style.width = clientWidth + 'px';
-      this.worldCanvas.style.height = clientHeight + 'px';
+          this.worldCanvas.style.position = "absolute";
+          this.worldCanvas.style.left = clientWidth * 1/4 + 'px';
+          this.worldCanvas.style.right = "0px";
+          this.worldCanvas.style.width = clientWidth + 'px';
+          this.worldCanvas.style.height = clientHeight + 'px';
 
-      if (this.worldCanvas.width !== clientWidth) {
-          this.worldCanvas.width = clientWidth;
-          this.setWidth(clientWidth);
-      }
-      if (this.worldCanvas.height !== clientHeight) {
-          this.worldCanvas.height = clientHeight;
-          this.setHeight(clientHeight);
-      }
-      this.children.forEach(function (child) {
-          if (child.reactToWorldResize) {
-              child.reactToWorldResize(myself.bounds.copy());
+          if (this.worldCanvas.width !== clientWidth) {
+              this.worldCanvas.width = clientWidth;
+              this.setWidth(clientWidth * 3/4);
           }
-      });
-  };
-  
-  // THIS SEEMS LIKE A HACK.
-  // but this site is not edX....
-  window.isEDX = false;
-  window.onload = function () {
-      $('#canvas-container').height(
-          $(window).height() - $('#ag-header').outerHeight()
-      );
-      $('#canvas-container').width($(window).width());
-      world_canvas = document.getElementById('world');
-      world = new WorldMorph(world_canvas);
-      var ide = new IDE_Morph().openIn(world);
-      // Start Snap Environment Loop
-      loop();
+          if (this.worldCanvas.height !== clientHeight) {
+              this.worldCanvas.height = clientHeight;
+              this.setHeight(clientHeight);
+          }
+          this.children.forEach(function (child) {
+              if (child.reactToWorldResize) {
+                  child.reactToWorldResize(myself.bounds.copy());
+              }
+          });
 
-    // AUTOGRADER ADDITIONS:
-    // Initialize AGSB button.
-    $("#autograding_button").click(doExecAndDisplayTests);
-    world_canvas.addEventListener("mouseup", update_listener);
-    // This is a link relative to /problems/N/
-    starter_path = gon.starter_file_path;
-    loadTestJS();
-    // The global id variable in set by the JS file.
-    initializeSnapAdditions(world, id);
-  };
+          canvas_container = document.getElementById('canvas-container');
+          var parent = canvas_container.parentNode;
+          var wrapper = document.createElement('div');
 
-  function loop() {
-    requestAnimationFrame(loop);
-    world.doOneCycle();
-  }
+          // set the wrapper as child (instead of the element)
+          parent.replaceChild(wrapper, canvas_container);
+    // set element as child of wrapper
+          var left_canvas = document.createElement('div');
+          left_canvas.id = 'left'
+          left_canvas.style.position = "absolute";
+          left_canvas.style.left = "15px";
+          left_canvas.style.left = "15px";
+          left_canvas.style.right = clientWidth * 1/4 - 15 + 'px';
+          left_canvas.style.width = clientWidth * 1/4 - 30+ 'px';
+          left_canvas.style.height = clientHeight + 'px';
 
-  function loadTestJS() {
-    var query = queryString.parse(location.hash.slice(1)),
-        problem_js = query.test_file,
-        tag;
-        
-    if (!problem_js) { return; }
-    tag = document.createElement('script')
-    tag.src = problem_js;
-    tag.onload = function () {
-        starter_path = gon.starter_file_path;
-        initializeSnapAdditions(world, id);
-    };
-    document.head.appendChild(tag);
-  }
+
+          left_canvas.innerHTML = '<h1>Task Description</h1>';
+          wrapper.appendChild(left_canvas);
+          wrapper.appendChild(canvas_container);
+
+      };
+
+      // THIS SEEMS LIKE A HACK.
+      // but this site is not edX....
+      window.isEDX = false;
+      window.onload = function () {
+          $('#canvas-container').height(
+              $(window).height() - $('#ag-header').outerHeight()
+          );
+          // console.log($('#ag-header').outerHeight(), $(window).height(), $('#canvas-container').height());
+          $('#canvas-container').width($(window).width()*0.7);
+          world_canvas = document.getElementById('world');
+          world = new WorldMorph(world_canvas);
+          var ide = new IDE_Morph().openIn(world);
+          // Start Snap Environment Loop
+          loop();
+
+          // AUTOGRADER ADDITIONS:
+          // Initialize AGSB button.
+          $("#autograding_button").click(doExecAndDisplayTests);
+          world_canvas.addEventListener("mouseup", update_listener);
+          left_canvas = document.getElementById('left');
+
+
+
+          // This is a link relative to /problems/N/
+          starter_path = gon.starter_file_path;
+          loadTestJS();
+          // The global id variable in set by the JS file.
+          initializeSnapAdditions(world, id);
+      };
+
+
+
+      function loop() {
+          requestAnimationFrame(loop);
+          world.doOneCycle();
+      }
+
+      function loadTestJS() {
+          var query = queryString.parse(location.hash.slice(1)),
+              problem_js = query.test_file,
+              tag;
+
+          if (!problem_js) { return; }
+          tag = document.createElement('script')
+          tag.src = problem_js;
+          tag.onload = function () {
+              starter_path = gon.starter_file_path;
+              initializeSnapAdditions(world, id);
+          };
+          document.head.appendChild(tag);
+      }
   </script>
 <% end %>

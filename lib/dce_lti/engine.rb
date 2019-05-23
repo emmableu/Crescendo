@@ -33,7 +33,7 @@ launch_presentation_return_url
       ActionController::Base.send :include, ControllerMethods
       ActionController::Base.send :include, RedirectToHelper
       ActionController::Base.send :helper, RedirectToHelper
-      ApplicationController.skip_before_filter :verify_authenticity_token, if: :cookieless_session?
+      # ApplicationController.skip_before_filter :verify_authenticity_token, if: :cookieless_session?
     end
 
     initializer 'dce_lti.add_middleware' do |app|

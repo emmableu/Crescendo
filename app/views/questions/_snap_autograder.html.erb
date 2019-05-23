@@ -35,14 +35,14 @@
           myself = this;
 
       this.worldCanvas.style.position = "absolute";
-      this.worldCanvas.style.left = "0px";
+      this.worldCanvas.style.left = clientWidth * 1/4 + 'px';
       this.worldCanvas.style.right = "0px";
       this.worldCanvas.style.width = clientWidth + 'px';
       this.worldCanvas.style.height = clientHeight + 'px';
 
       if (this.worldCanvas.width !== clientWidth) {
           this.worldCanvas.width = clientWidth;
-          this.setWidth(clientWidth);
+          this.setWidth(clientWidth * 3/4);
       }
       if (this.worldCanvas.height !== clientHeight) {
           this.worldCanvas.height = clientHeight;
