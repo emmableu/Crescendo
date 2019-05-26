@@ -14,22 +14,27 @@ Rails.application.routes.draw do
   get 'admin_dashboard/users/:id', :to => 'users#show', :as => :user
   delete 'admin_dashboard/users/:id', :to => 'users#destroy'
 
-
   # get 'snap_base', to: 's'
   # TODO: Better Homepage at some point.
   root :to => "tasks#index"
   # rails_admin.dashboard_path :to =>
 
-
   resources :tasks do
+    resources :descriptions
+    resources :testscripts
+      # match "input_new " => "input_new", :as => 'another_new'
+    # end
     member do
       # TODO: Figure out if a submissions controller might be better...
       post 'submission', to: 'tasks#submit_grade'
-      get 'starterfile', to: 'tasks#starter_file'
-      get 'testfile', to: 'tasks#test_file'
-      get 'snapbase', to: 'tasks#snapbase'
+      get 'starter_file', to: 'tasks#starter_file'
+      get 'test_file', to: 'tasks#test_file'
+      # get 'snapbase', to: 'tasks#snapbase'
+      get 'correctscript', to: 'tasks#correctscript'
+
     end
   end
+
 
   resources :questions do
     member do

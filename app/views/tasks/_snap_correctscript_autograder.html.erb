@@ -1,0 +1,185 @@
+<style>
+  body {
+    background-color: linen;
+      }
+
+      h1 {
+        color: maroon;
+          /*margin-left: 15px;*/
+          word-wrap: break-word;
+            }
+
+
+            iframe {
+              margin-top: 20px;
+                border: 0
+                  }
+                </style>
+
+                <% content_for :head do %>
+                  <!-- NOTE: jQuery and _ are included in the Rails App  -->
+
+                  <!-- AG Snap Modifications -->
+                  <script src="/snap-path.js"></script>
+                  <script src="/autograder/ag-files/snap-ui-overrides.js"></script>
+
+                  <!-- Autograder custom display -->
+                  <link rel="stylesheet" type="text/css" href="/autograder/ag-files/AG_status_bar.css" />
+                  <link rel="stylesheet" type="text/css" href="/autograder/ag-files/hintstyle.css" />
+
+                  <!-- Main autograder components -->
+                  <script src='/autograder/ag-files/ag-util.js'></script>
+                  <script src='/autograder/ag-files/help-content.js'></script>
+                  <script src='/autograder/ag-files/spriteEventLog.js'></script>
+                  <script src='/autograder/ag-files/scriptAnalysis.js'></script>
+                  <script src="/autograder/ag-files/AGAgent.js"></script>
+                  <script src='/autograder/ag-files/feedbackLog.js'></script>
+                  <script src="/autograder/ag-files/AGFormatting.js"></script>
+                  <script src="/autograder/ag-files/task-script.js"></script>
+
+
+                  <!-- Custom cloud access on localhost only. -->
+                  <% if Rails.env == 'development' %>
+                    <script src="/autograder/ag-files/snap-local-cloud.js"></script>
+                  <% end %>
+
+
+                <body>
+                <!--here is the content-->
+                <!--<div id="left"><h1>Test</h1></div>-->
+
+                </body>
+
+                  <!-- Load snap + AG additions, similar to snap.html -->
+                  <script>
+
+
+
+
+                    // Override Snap! / Morphic method to not take the full size of the window.
+                    // TODO: extract into AG function that builds this.
+                    // It should take in a width and height.
+                    WorldMorph.prototype.fillPage = function () {
+                      var agHeight = $('#ag-header').outerHeight();
+                      clientHeight = $(window).height() - agHeight,
+                              clientWidth = window.innerWidth,
+                                      myself = this;
+
+                      this.worldCanvas.style.position = "absolute";
+                      this.worldCanvas.style.left = clientWidth * 1/4 + 'px';
+                      this.worldCanvas.style.right = "0px";
+                      this.worldCanvas.style.width = clientWidth + 'px';
+                      this.worldCanvas.style.height = clientHeight + 'px';
+
+                      if (this.worldCanvas.width !== clientWidth) {
+              this.worldCanvas.width = clientWidth;
+              this.setWidth(clientWidth * 3/4);
+                      }
+                      if (this.worldCanvas.height !== clientHeight) {
+              this.worldCanvas.height = clientHeight;
+              this.setHeight(clientHeight);
+                      }
+                      this.children.forEach(function (child) {
+              if (child.reactToWorldResize) {
+                  child.reactToWorldResize(myself.bounds.copy());
+              }
+                      });
+
+                      canvas_container = document.getElementById('canvas-container');
+                      var parent = canvas_container.parentNode;
+                      var wrapper = document.createElement('div');
+
+                      // set the wrapper as child (instead of the element)
+                      parent.replaceChild(wrapper, canvas_container);
+                  // set element as child of wrapper
+          var left_canvas = document.createElement('div');
+          var description = document.createElement('h1');
+          description.innerHTML = 'Drag to create a correct script: ';
+          description.id = 'left_description';
+          description.style.position = "absolute";
+          description.style.left = "10px";
+          // description.style.left = "15px";
+          description.style.right = clientWidth * 1/4 - 20 + 'px';
+          description.style.width = clientWidth * 1/4 - 40+ 'px';
+          description.style.height = clientHeight + 'px';
+          left_canvas.appendChild(description);
+          left_canvas.id = 'left';
+          left_canvas.style.position = "absolute";
+          left_canvas.style.left = "15px";
+          left_canvas.style.left = "15px";
+          left_canvas.style.right = clientWidth * 1/4 - 15 + 'px';
+          left_canvas.style.width = clientWidth * 1/4 - 30+ 'px';
+          left_canvas.style.height = clientHeight + 'px';
+
+
+          // left_canvas.innerHTML = description;
+          wrapper.appendChild(left_canvas);
+          wrapper.appendChild(canvas_container);
+
+      };
+
+      // THIS SEEMS LIKE A HACK.
+      // but this site is not edX....
+      window.isEDX = false;
+      window.onload = function () {
+          $('#canvas-container').height(
+              $(window).height() - $('#ag-header').outerHeight()
+          );
+          // console.log($('#ag-header').outerHeight(), $(window).height(), $('#canvas-container').height());
+          $('#canvas-container').width($(window).width()*0.7);
+          world_canvas = document.getElementById('world');
+          world = new WorldMorph(world_canvas);
+          var ide = new IDE_Morph().openIn(world);
+          // Start Snap Environment Loop
+          loop();
+
+          // AUTOGRADER ADDITIONS:
+          // Initialize AGSB button.
+
+
+          $("#savescript_button").click(saveScript);
+          world_canvas.addEventListener("mouseup", update_listener);
+          left_canvas = document.getElementById('left');
+          //
+          // var doExecAndDisplayTests = function(event) {
+          //     alert('doExecAndDisplay');
+          // };
+
+
+          // This is a link relative to /problems/N/
+          starter_path = gon.starter_file_path;
+          loadTestJS();
+          // The global id variable in set by the JS file.
+          initializeSnapAdditions(world, id);
+      };
+
+
+
+
+
+      function loop() {
+          requestAnimationFrame(loop);
+          world.doOneCycle();
+      }
+
+      function loadTestJS() {
+          var query = queryString.parse(location.hash.slice(1)),
+              problem_js = query.test_file,
+              tag;
+
+          if (!problem_js) { return; }
+          tag = document.createElement('script');
+          // tag = document.createElement('null');
+
+          tag.src = problem_js;
+          // tag = problem_js;
+          // console.log(tag);
+          // tag = problem_js;
+          tag.onload = function () {
+              starter_path = gon.starter_file_path;
+              initializeSnapAdditions(world, id);
+          };
+          document.head.appendChild(tag);
+      }
+                  </script>
+                <% end %>

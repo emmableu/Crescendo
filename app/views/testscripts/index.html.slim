@@ -1,0 +1,14 @@
+h1
+  | Test Scripts
+  .table
+    table.table.table-striped
+      thead
+        tr
+          th Task id
+          th Script Array
+
+      tbody
+        - @testscripts.each do |testscript|
+          tr
+            td.vert-align = testscript.task_id
+            td.vert-align = testscript.scriptarray

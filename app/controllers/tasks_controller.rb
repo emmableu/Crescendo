@@ -9,9 +9,11 @@ class TasksController < ApplicationController
   #     :starter_file, :submit_grade, :test_file
   # ]
   #
+  respond_to :js, :json, :html
   before_action :require_admin, only: [
       :edit, :update, :destroy, :new
   ]
+
 
   def require_admin
     # return true if Rails.env.development?
@@ -109,6 +111,16 @@ class TasksController < ApplicationController
   def test_file
   end
   def snapbase
+  end
+
+  def correctscript
+    # print
+    @task = Task.find(params[:id])
+    print(@task)
+    @task.correctscript = params[:correctscript]
+    print(@task.correctscript)
+    respond_with @task.correctscript
+
   end
 
 

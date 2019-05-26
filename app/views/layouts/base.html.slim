@@ -18,3 +18,8 @@ body [class= body_class]
   = render partial: "google_analytics"
   = yield :scripts
   = render partial: "google_analytics_pageview"
+
+  / - flash.each do |name, msg|
+  /   = content_tag :div, msg, class: name
+
+  / = debug flash

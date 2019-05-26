@@ -9,17 +9,7 @@
 /     = text_field_tag(:code_submission)
 /     = text_field_tag(:test_results)
 /     = submit_tag("Submit")
-body
-  / .jumbotron.text-center
 
-  / #wrapper
-  /   nav#sidebar
-  /     h3 Step 1: Exploring Motion
-  /     li
-  /       | Log in to Snap and you can see a few scripts. Before running the sprite, imagine what this algorithm will make the sprite do.
-  /
-  /     li
-  /       | Here are the other instructions
 script
   == @task.test_file
 

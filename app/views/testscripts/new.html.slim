@@ -1,0 +1,26 @@
+/ = form_tag task_testscript_path, local: true do |form|
+/   p
+/     = form.label :scriptarrayddddddd
+/     br/
+/     = form.text_field :scriptarray
+/   / p
+/   /   = form.label :text
+/   /   br/
+/   /   = form.text_area :text
+/   p
+/     = form.submit
+
+
+= form_for([@task, @task.build_testscript], url: task_testscripts_path, html: { method: :post}) do |f|
+  .form-group
+  = f.text_field(:scriptarray)
+  .form-group
+    .col-xs-1
+      = f.button :submit, class: "btn btn-success"
+
+/ = form_for [@task, @task.build_testscript], html: {class: 'form-horizontal'} do |f|
+
+
+/ = form_for @task.build_testscript(), html: {class: "nifty_form"} do |f|
+/   = f.text_area :scriptarray, size: "60x12"
+/   = f.submit "Create"

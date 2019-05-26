@@ -1,0 +1,22 @@
+- content_for :head do
+  title
+    = @task.title
+
+script
+  == @task.test_file
+/
+/
+/ - flash.each do |key, value|
+/   div class=("flash #{key}") = value
+/ Controls for getting feedback and state and such.
+= render 'autograder_correctscript_header'
+
+= render 'snap_correctscript_base'
+
+= render 'snap_correctscript_autograder'
+= render 'autograder_help_results'
+
+
+
+
+

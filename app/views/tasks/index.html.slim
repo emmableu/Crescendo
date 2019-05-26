@@ -19,7 +19,7 @@
               td.vert-align = link_to "#{category.name}", category
               / td.vert-align = course.url
               td.vert-align = link_to "#{categorytask.title}", categorytask
-              td.vert-align = link_to "#{categorytask.test_file[0,100]}", testfile_task_path(categorytask), :maxlength => 3, :size => 10
+              td.vert-align = link_to "#{categorytask.test_file[0,100]}", test_file_task_path(categorytask), :maxlength => 3, :size => 10
               / td.vert-align = 'Edit'
               / td.vert-align = 'Delete'
               td.vert-align = link_to 'Edit', edit_task_path(categorytask)

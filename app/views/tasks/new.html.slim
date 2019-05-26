@@ -6,15 +6,15 @@
     = f.label :category
     = f.collection_select(:category_id, Category.all, :id, :name, prompt: true)
     / = f.number_field :category, class: 'form-control'
+  / .form-group
+  /   = f.label :correctscript
+  /   = link_to "correctscript", correctscript_task_path
   .form-group
     = f.label :difficulty
     = f.text_area :difficulty, class: 'form-control'
   .form-group
     = f.label :order
     = f.text_area :order, class: 'form-control'
-  .form-group
-    = f.label :description
-    = f.text_area :description, class: 'form-control', rows: 3
   .form-group
     = f.label :instruction
     = f.text_area :instruction, class: 'form-control', rows: 10

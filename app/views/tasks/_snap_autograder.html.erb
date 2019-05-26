@@ -8,6 +8,12 @@
     /*margin-left: 15px;*/
     word-wrap: break-word;
   }
+
+
+  iframe {
+    margin-top: 20px;
+    border: 0
+  }
 </style>
 
 <% content_for :head do %>
@@ -29,6 +35,8 @@
   <script src="/autograder/ag-files/AGAgent.js"></script>
   <script src='/autograder/ag-files/feedbackLog.js'></script>
   <script src="/autograder/ag-files/AGFormatting.js"></script>
+  <script src="/autograder/ag-files/task-script.js"></script>
+
 
   <!-- Custom cloud access on localhost only. -->
   <% if Rails.env == 'development' %>
@@ -82,7 +90,17 @@
           parent.replaceChild(wrapper, canvas_container);
     // set element as child of wrapper
           var left_canvas = document.createElement('div');
-          left_canvas.id = 'left'
+          var description = document.createElement('iframe');
+          description.innerHTML = 'src="https://google.com"';
+          description.id = 'left_description';
+          description.style.position = "absolute";
+          description.style.left = "10px";
+          // description.style.left = "15px";
+          description.style.right = clientWidth * 1/4 - 20 + 'px';
+          description.style.width = clientWidth * 1/4 - 40+ 'px';
+          description.style.height = clientHeight + 'px';
+          left_canvas.appendChild(description);
+          left_canvas.id = 'left';
           left_canvas.style.position = "absolute";
           left_canvas.style.left = "15px";
           left_canvas.style.left = "15px";
@@ -91,7 +109,7 @@
           left_canvas.style.height = clientHeight + 'px';
 
 
-          left_canvas.innerHTML = '<h1>Task Description</h1>';
+          // left_canvas.innerHTML = description;
           wrapper.appendChild(left_canvas);
           wrapper.appendChild(canvas_container);
 
@@ -141,7 +159,12 @@
 
           if (!problem_js) { return; }
           tag = document.createElement('script')
+          // tag = document.createElement('null');
+
           tag.src = problem_js;
+          // tag = problem_js;
+          // console.log(tag);
+          // tag = problem_js;
           tag.onload = function () {
               starter_path = gon.starter_file_path;
               initializeSnapAdditions(world, id);

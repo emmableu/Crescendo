@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190520210441) do
+ActiveRecord::Schema.define(version: 20190526012331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,15 @@ ActiveRecord::Schema.define(version: 20190520210441) do
     t.datetime "updated_at"
   end
 
+  create_table "descriptions", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "descriptions", ["task_id"], name: "index_descriptions_on_task_id", using: :btree
+
   create_table "nonces", force: :cascade do |t|
     t.string   "nonce"
     t.datetime "created_at"
@@ -174,13 +183,22 @@ ActiveRecord::Schema.define(version: 20190520210441) do
     t.text     "starter_file"
     t.integer  "difficulty"
     t.integer  "order"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.text     "instruction"
-    t.text     "description"
+    t.text     "correctscript"
   end
 
   add_index "tasks", ["category_id"], name: "index_tasks_on_category_id", using: :btree
+
+  create_table "testscripts", force: :cascade do |t|
+    t.integer  "task_id"
+    t.text     "scriptarray", default: "{}", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "testscripts", ["task_id"], name: "index_testscripts_on_task_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -199,6 +217,8 @@ ActiveRecord::Schema.define(version: 20190520210441) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
+  add_foreign_key "descriptions", "tasks"
   add_foreign_key "questions", "categories"
   add_foreign_key "tasks", "categories"
+  add_foreign_key "testscripts", "tasks"
 end

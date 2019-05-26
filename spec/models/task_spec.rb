@@ -2,17 +2,17 @@
 #
 # Table name: tasks
 #
-#  id           :integer          not null, primary key
-#  title        :string
-#  category_id  :integer
-#  test_file    :text
-#  starter_file :text
-#  difficulty   :integer
-#  order        :integer
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
-#  instruction  :text
-#  description  :text
+#  id            :integer          not null, primary key
+#  title         :string
+#  category_id   :integer
+#  test_file     :text
+#  starter_file  :text
+#  difficulty    :integer
+#  order         :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  instruction   :text
+#  correctscript :text
 #
 # Indexes
 #
