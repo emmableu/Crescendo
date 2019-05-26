@@ -1,0 +1,11 @@
+= form_for @template, html: {class: 'form-horizontal'} do |f|
+  .form-group
+    = f.label :template_name
+    = f.text_field :template_name, class: 'form-control'
+  .form-group
+    = f.label :test_template
+    = f.text_area :test_template, class: 'form-control', rows: 30
+  .form-group
+    .col-xs-1
+      = f.button :submit, class: "btn btn-success"
+      | Save

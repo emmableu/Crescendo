@@ -2,17 +2,19 @@
 #
 # Table name: tasks
 #
-#  id            :integer          not null, primary key
-#  title         :string
-#  category_id   :integer
-#  test_file     :text
-#  starter_file  :text
-#  difficulty    :integer
-#  order         :integer
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#  instruction   :text
-#  correctscript :text
+#  id             :integer          not null, primary key
+#  title          :string
+#  category_id    :integer
+#  test_file      :text
+#  starter_file   :text
+#  difficulty     :integer
+#  order          :integer
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  instruction    :text
+#  correctscript  :text
+#  scriptarray    :text
+#  scriptarraytwo :text
 #
 # Indexes
 #
@@ -29,13 +31,13 @@ class Task < ActiveRecord::Base
   has_one :description
   has_one :testscript
   accepts_nested_attributes_for :description
-  def script2test(script)
-    test = script
-    return test
-  end
-
-  def create_test_file(test)
-    self.test_file = test
-  end
+  # def script2test(script)
+  #   test = script
+  #   return test
+  # end
+  #
+  # def create_test_file(test)
+  #   self.test_file = test
+  # end
 
 end

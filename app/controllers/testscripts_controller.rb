@@ -18,16 +18,17 @@ class TestscriptsController < ApplicationController
     response.headers['Content-Type'] = 'application/json'
 
     if @testscript.save
-      testfile = script2test(@testscript.scriptarray)
+      scriptarray = (@testscript.scriptarray)
+      @template = Template.where({template_name: 'spriteContainsBlock'}).first
+      testtemplate = @template.test_template
+      testfile = script2test(scriptarray, testtemplate)
       @task.update_attributes(:test_file => testfile)
-      # redirect_to :action => :index
       render json: {}, status: 200
     else
       flash.now[:notice] = "the script is not saved because you already have saved one before"
       render 'new'
     end
-
-
+    # redirect_to edit_task_path
   end
 
   def show
@@ -38,16 +39,15 @@ class TestscriptsController < ApplicationController
   end
 
   def edit
-
+    @task = Task.where({id: params[:id]}).first
   end
 
   def update
-    @testscript =  Testscript.find(params[:task_id])
-    # print(@testscript)
+    @task = Task.where({id: params[:id]}).first
+    @testscript =  Testscript.where({task_id: @task.id}).first
     if @testscript.update(testscript_params)
       redirect_to :action => :show
     else
-      # @title = "Sign up":utf8, :authenticity_token, :commit, :scriptarray, :task_id):utf8, :authenticity_token, :commit, :scriptarray, :task_id)
       render 'new'
     end
   end
@@ -62,8 +62,9 @@ class TestscriptsController < ApplicationController
     # params
   end
   private
-  def script2test(script)
-    return script
+  def script2test(scriptarray, testtemplate)
+    testfile = testtemplate.sub('BLOCKSTOBEREPLACED', scriptarray)
+    return testfile
   end
 
 

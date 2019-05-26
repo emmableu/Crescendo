@@ -63,11 +63,11 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.save
         format.html {
-          redirect_to @task,
+          redirect_to action: "index",
                       notice: "Task #{@task.title} was successfully created."
         }
         format.json {
-          render :show, status: :created, location: @task
+          render :index, status: :created, location: @task
         }
       else
         format.html { render :new }
@@ -109,6 +109,7 @@ class TasksController < ApplicationController
   end
 
   def test_file
+    @task = Task.find(params[:id])
   end
   def snapbase
   end
@@ -120,6 +121,11 @@ class TasksController < ApplicationController
     @task.correctscript = params[:correctscript]
     print(@task.correctscript)
     respond_with @task.correctscript
+
+  end
+
+  def scriptarraytwo
+    @task = Task.find(params[:id])
 
   end
 

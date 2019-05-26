@@ -1,0 +1,29 @@
+
+.table
+  table.table.table-striped
+    thead
+      tr
+        / th
+        th Template Name
+        th Test Template
+        / th Consumer Key
+        / th testfile
+        / th Edit
+        / th Delete
+
+    tbody
+      - @templates.each do |template|
+          tr
+            / td.vert-align = category.Name
+            td.vert-align = link_to "#{template.template_name}", template
+            / td.vert-align = course.url
+            td.vert-align = link_to "#{template.test_template}", template
+/             td.vert-align = link_to "#{categorytask.test_file[0, 100]}", test_file_task_path(categorytask), :maxlength => 3, :size => 10
+/             / td.vert-align = 'Edit'
+/             / td.vert-align = 'Delete'
+/             td.vert-align = link_to 'Edit', edit_task_path(categorytask)
+/             td.vert-align = link_to raw('<strong>&times;</strong>'), categorytask, class: "btn btn-danger", data: {:confirm => 'Are you sure?'}, :method => :delete
+/ br
+a.btn.btn-success(href=new_template_path role='button')
+  | New Template
+

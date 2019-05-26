@@ -53,9 +53,6 @@
                   <!-- Load snap + AG additions, similar to snap.html -->
                   <script>
 
-
-
-
                     // Override Snap! / Morphic method to not take the full size of the window.
                     // TODO: extract into AG function that builds this.
                     // It should take in a width and height.
@@ -93,8 +90,22 @@
                       parent.replaceChild(wrapper, canvas_container);
                   // set element as child of wrapper
           var left_canvas = document.createElement('div');
+          // left_canvas.style.display = "none";
           var description = document.createElement('h1');
           description.innerHTML = 'Drag to create a correct script: ';
+
+
+
+
+
+
+
+
+
+
+
+
+
           description.id = 'left_description';
           description.style.position = "absolute";
           description.style.left = "10px";
@@ -107,8 +118,8 @@
           left_canvas.style.position = "absolute";
           left_canvas.style.left = "15px";
           left_canvas.style.left = "15px";
-          left_canvas.style.right = clientWidth * 1/4 - 15 + 'px';
-          left_canvas.style.width = clientWidth * 1/4 - 30+ 'px';
+          left_canvas.style.right = clientWidth *  1/4  - 15 + 'px';
+          left_canvas.style.width = clientWidth *  1/4  - 30+ 'px';
           left_canvas.style.height = clientHeight + 'px';
 
 

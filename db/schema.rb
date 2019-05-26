@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190526012331) do
+ActiveRecord::Schema.define(version: 20190526213125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -183,13 +183,22 @@ ActiveRecord::Schema.define(version: 20190526012331) do
     t.text     "starter_file"
     t.integer  "difficulty"
     t.integer  "order"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.text     "instruction"
     t.text     "correctscript"
+    t.text     "scriptarray"
+    t.text     "scriptarraytwo"
   end
 
   add_index "tasks", ["category_id"], name: "index_tasks_on_category_id", using: :btree
+
+  create_table "templates", force: :cascade do |t|
+    t.string   "template_name"
+    t.text     "test_template"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "testscripts", force: :cascade do |t|
     t.integer  "task_id"

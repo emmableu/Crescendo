@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # devise_for :admins
   # devise_for :users
-  resources :categories, :tasks
+  resources :categories, :tasks, :templates
   devise_for :users, controllers: { sessions: 'users/sessions' , registrations: 'users/registrations'}
   # devise_for :admins, controllers: { sessions: 'admins/sessions' , registrations: 'admins/registrations'}
   devise_for :admins do
@@ -31,6 +31,8 @@ Rails.application.routes.draw do
       get 'test_file', to: 'tasks#test_file'
       # get 'snapbase', to: 'tasks#snapbase'
       get 'correctscript', to: 'tasks#correctscript'
+      get 'scriptarraytwo', to: 'tasks#scriptarraytwo'
+
 
     end
   end
