@@ -23,8 +23,8 @@
                  td.vert-align
                    = link_to "#{categorytask.test_file[0,100]}", test_file_task_path(categorytask), :maxlength => 3, :size => 10
               - else
-                 td.vert-align
-                   = link_to "Enter a correct script to get test file", correctscript_task_path(categorytask)
+                 td.vert-align = "no test file yet"
+                   / = link_to "Enter a correct script to get test file", correctscript_task_path(categorytask)
               / td.vert-align = 'Edit'
               / td.vert-align = 'Delete'
               td.vert-align = link_to 'Edit', edit_task_path(categorytask)

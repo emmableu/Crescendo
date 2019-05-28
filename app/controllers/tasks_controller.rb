@@ -25,7 +25,7 @@ class TasksController < ApplicationController
   end
   def tasks_params
     params.require(:task).permit(:title, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
-                                 :updated_at, :instruction, :description)
+                                 :updated_at, :instruction, :description, :ppxmlfile)
   end
   def index
     @tasks = Task.all
