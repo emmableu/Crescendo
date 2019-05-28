@@ -2,11 +2,13 @@
 #
 # Table name: testscripts
 #
-#  id          :integer          not null, primary key
-#  task_id     :integer
-#  scriptarray :text             default("{}"), not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id            :integer          not null, primary key
+#  task_id       :integer
+#  scriptarray   :text             default("{}"), not null
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  blockarray    :text
+#  blockxmlarray :text
 #
 # Indexes
 #

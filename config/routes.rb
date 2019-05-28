@@ -32,6 +32,7 @@ Rails.application.routes.draw do
       # get 'snapbase', to: 'tasks#snapbase'
       get 'correctscript', to: 'tasks#correctscript'
       get 'scriptarraytwo', to: 'tasks#scriptarraytwo'
+      get 'ppxmlfile', to: 'tasks#ppxmlfile'
 
 
     end

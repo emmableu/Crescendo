@@ -124,9 +124,17 @@ class TasksController < ApplicationController
 
   end
 
+  def ppxmlfile
+    @task = Task.find(params[:id])
+    render plain: @task.ppxmlfile
+  end
   def scriptarraytwo
     @task = Task.find(params[:id])
-
+    if @task.ppxmlfile
+      gon.ppxmlfile_path = ppxmlfile_task_path
+    else
+      gon.ppxmlfile_path = nil
+    end
   end
 
 

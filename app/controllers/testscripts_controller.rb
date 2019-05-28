@@ -9,20 +9,30 @@ class TestscriptsController < ApplicationController
   end
   def new
     @task = Task.where({id: params[:task_id]}).first
-    @testscript =  @task.build_testscript(params.permit(:scriptarray, :task_id))
+    @testscript =  @task.build_testscript(params.permit(:blockarray, :blockxmlarray, :scriptarray, :task_id))
 
   end
   def create
     @task = Task.where({id: params[:task_id]}).first
-    @testscript = @task.create_testscript(params.permit(:scriptarray, :task_id))
+    @testscript = @task.create_testscript(params.permit(:blockarray, :blockxmlarray, :scriptarray, :task_id))
     response.headers['Content-Type'] = 'application/json'
 
     if @testscript.save
       scriptarray = (@testscript.scriptarray)
+      @task.scriptarray = scriptarray
       @template = Template.where({template_name: 'spriteContainsBlock'}).first
       testtemplate = @template.test_template
       testfile = script2test(scriptarray, testtemplate)
+
+
+      blockxmlarray = block2xml(@testscript.blockarray)
+      @testscript.update_attributes(:blockxmlarray => blockxmlarray)
+      xmltemplate = Template.where({template_name: 'xml'}).first.test_template
+      ppxmlfile = script2test(blockxmlarray, xmltemplate)
+
+
       @task.update_attributes(:test_file => testfile)
+      @task.update_attributes(:ppxmlfile => ppxmlfile)
       render json: {}, status: 200
     else
       flash.now[:notice] = "the script is not saved because you already have saved one before"
@@ -63,10 +73,33 @@ class TestscriptsController < ApplicationController
   end
   private
   def script2test(scriptarray, testtemplate)
-    testfile = testtemplate.sub('BLOCKSTOBEREPLACED', scriptarray)
-    return testfile
+    file = testtemplate.sub('BLOCKSTOBEREPLACED', scriptarray)
+    return file
   end
+  def block2xml(blockarray)
+    blockarray.sub!('[', '')
+    blockarray.sub!(']', '')
+    blockarray = blockarray.split(',')
+    blockarray = blockarray.reject { |c| c.empty? }
+    blockxmlarray = ""
+    xvalue = 70
+    yvalue = 40
+    blockid = 42
+    for i in 0..(blockarray.length-1) do
+      xml = "<script x='XVALUE' y='YVALUE'><block id='BLOCKID' s=BLOCKNAME><l></l></block></script>"
+      xml.sub!('XVALUE', xvalue.to_s)
+      xml.sub!('YVALUE', yvalue.to_s)
+      xml.sub!('BLOCKID', blockid.to_s)
+      xml.sub!('BLOCKNAME', blockarray[i].to_s)
+      blockxmlarray += xml
+      yvalue += 30
+      blockid += 1
+    end
+    puts 'blockxmlarray'
+    puts blockxmlarray
+    return blockxmlarray
 
+  end
 
 
 

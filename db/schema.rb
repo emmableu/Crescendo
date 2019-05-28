@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190526213125) do
+ActiveRecord::Schema.define(version: 20190527001156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -189,6 +189,7 @@ ActiveRecord::Schema.define(version: 20190526213125) do
     t.text     "correctscript"
     t.text     "scriptarray"
     t.text     "scriptarraytwo"
+    t.text     "ppxmlfile"
   end
 
   add_index "tasks", ["category_id"], name: "index_tasks_on_category_id", using: :btree
@@ -202,9 +203,11 @@ ActiveRecord::Schema.define(version: 20190526213125) do
 
   create_table "testscripts", force: :cascade do |t|
     t.integer  "task_id"
-    t.text     "scriptarray", default: "{}", null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.text     "scriptarray",   default: "{}", null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.text     "blockarray"
+    t.text     "blockxmlarray"
   end
 
   add_index "testscripts", ["task_id"], name: "index_testscripts_on_task_id", using: :btree

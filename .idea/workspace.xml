@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806cd96d-f0dc-453e-8b4e-0faddd5064d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/tasks/scriptarraytwo.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tasks/test_file.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/templates/edit.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/templates/index.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/templates/new.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/templates/show.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/tasks/_parsons_problem.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/tasks/ppxmlfile.html.slim" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/autograder/modeling/isnaptest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/snap/modeling/hide-block.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/testscripts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/testscripts_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/task.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/testscript.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/testscript.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/tasks/_autograder_correctscript_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/_autograder_correctscript_header.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/_snap_correctscript_autograder.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/_snap_correctscript_autograder.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/correctscript.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/correctscript.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/index.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tasks/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/new.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tasks/scriptarraytwo.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/scriptarraytwo.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seed-data/task1test.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/seed-data/task1test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/autograder" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/autograder/ag-files/AGFormatting.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder/ag-files/AGFormatting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/autograder/ag-files/feedbackLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder/ag-files/feedbackLog.js" afterDir="false" />
@@ -30,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_PatrickOHalloran.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_PatrickOHalloran.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_YifatAmir.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_YifatAmir.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/snap" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/snap/isnap/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap/isnap/util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/snap/logging/db-logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap/logging/db-logger.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/snap/logging/mysql.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap/logging/mysql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/models/task_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/task_spec.rb" afterDir="false" />
@@ -68,32 +63,33 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="5" />
-          <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.13" value="4" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Gemfile" value="1" />
-          <entry key="erb" value="77" />
-          <entry key="html" value="33" />
+          <entry key="erb" value="85" />
+          <entry key="html" value="36" />
           <entry key="jbuilder" value="6" />
-          <entry key="js" value="67" />
+          <entry key="js" value="103" />
           <entry key="log" value="2" />
           <entry key="md" value="1" />
           <entry key="php" value="4" />
-          <entry key="rb" value="221" />
+          <entry key="rb" value="230" />
           <entry key="rnc" value="1" />
           <entry key="ru" value="1" />
-          <entry key="slim" value="167" />
+          <entry key="slim" value="178" />
           <entry key="sql" value="1" />
           <entry key="svg" value="1" />
           <entry key="xml" value="3" />
@@ -102,16 +98,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="33" />
-          <entry key="JavaScript" value="67" />
+          <entry key="HTML" value="36" />
+          <entry key="JavaScript" value="103" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="RHTML" value="77" />
+          <entry key="RHTML" value="85" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="229" />
+          <entry key="Ruby" value="238" />
           <entry key="SQL" value="1" />
           <entry key="SVG" value="1" />
-          <entry key="Slim" value="167" />
+          <entry key="Slim" value="178" />
           <entry key="XML" value="3" />
           <entry key="YAML" value="4" />
         </counts>
@@ -119,22 +115,22 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="44" />
-          <entry key="erb" value="2019" />
+          <entry key="erb" value="2173" />
           <entry key="html" value="2" />
-          <entry key="js" value="2649" />
+          <entry key="js" value="4882" />
           <entry key="php" value="33" />
-          <entry key="rb" value="7436" />
-          <entry key="slim" value="3260" />
+          <entry key="rb" value="8111" />
+          <entry key="slim" value="3446" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="4" />
-          <entry key="JavaScript" value="2649" />
+          <entry key="JavaScript" value="4882" />
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="RHTML" value="2017" />
-          <entry key="Ruby" value="7480" />
-          <entry key="Slim" value="3260" />
+          <entry key="RHTML" value="2171" />
+          <entry key="Ruby" value="8155" />
+          <entry key="Slim" value="3446" />
         </counts>
       </usages-collector>
     </session>
@@ -142,87 +138,447 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/testscripts_controller.rb">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_snap_scriptarraytwo_autograder.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+            <state relative-caret-position="3675">
+              <caret line="147" column="11" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_snap_correctscript_autograder.html.erb">
+        <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/AGScriptArrayTwoFormatting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="5700">
+              <caret line="230" column="13" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.slim">
+        <entry file="file://$PROJECT_DIR$/public/snap/modeling/iframe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/correctscript.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="950">
+              <caret line="38" selection-start-line="38" selection-start-column="3" selection-end-line="55" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/tasks/_autograder_correctscript_header.html.erb">
+        <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+            <state relative-caret-position="441">
+              <caret line="1632" column="41" lean-forward="true" selection-start-line="1632" selection-start-column="41" selection-end-line="1632" selection-end-column="41" />
+              <folding>
+                <element signature="e#657#668#0" />
+                <element signature="e#1031#1063#0" />
+                <element signature="e#1098#1311#0" />
+                <element signature="e#1126#1309#0" />
+                <element signature="e#1386#1745#0" />
+                <element signature="e#1462#1717#0" />
+                <element signature="e#1548#1646#0" />
+                <element signature="e#1809#7011#0" />
+                <element signature="e#1943#2512#0" />
+                <element signature="e#2030#2239#0" />
+                <element signature="e#2096#2229#0" />
+                <element signature="e#2420#2506#0" />
+                <element signature="e#2766#2919#0" />
+                <element signature="e#2951#3101#0" />
+                <element signature="e#3137#5510#0" />
+                <element signature="e#3299#3469#0" />
+                <element signature="e#3654#3820#0" />
+                <element signature="e#3929#4093#0" />
+                <element signature="e#4281#4456#0" />
+                <element signature="e#4315#4446#0" />
+                <element signature="e#4694#4863#0" />
+                <element signature="e#5080#5247#0" />
+                <element signature="e#5331#5504#0" />
+                <element signature="e#5546#6385#0" />
+                <element signature="e#5731#5897#0" />
+                <element signature="e#6042#6206#0" />
+                <element signature="e#6337#6379#0" />
+                <element signature="e#6481#6555#0" />
+                <element signature="e#6594#6671#0" />
+                <element signature="e#6694#6987#0" />
+                <element signature="e#6755#6981#0" />
+                <element signature="e#6810#6940#0" />
+                <element signature="e#7159#19928#0" />
+                <element signature="e#7303#8477#0" />
+                <element signature="e#7437#7984#0" />
+                <element signature="e#7498#7972#0" />
+                <element signature="e#7692#7958#0" />
+                <element signature="e#7752#7901#0" />
+                <element signature="e#8251#8471#0" />
+                <element signature="e#8304#8430#0" />
+                <element signature="e#8616#8742#0" />
+                <element signature="e#8952#9144#0" />
+                <element signature="e#9209#9469#0" />
+                <element signature="e#9581#19745#0" />
+                <element signature="e#9714#10060#0" />
+                <element signature="e#9871#10050#0" />
+                <element signature="e#10141#11397#0" />
+                <element signature="e#10203#10852#0" />
+                <element signature="e#10628#10838#0" />
+                <element signature="e#10741#10820#0" />
+                <element signature="e#10895#11361#0" />
+                <element signature="e#10994#11264#0" />
+                <element signature="e#11054#11246#0" />
+                <element signature="e#11439#14889#0" />
+                <element signature="e#11614#11799#0" />
+                <element signature="e#11996#12178#0" />
+                <element signature="e#12295#12475#0" />
+                <element signature="e#12679#12874#0" />
+                <element signature="e#12717#12860#0" />
+                <element signature="e#13128#13313#0" />
+                <element signature="e#13546#13729#0" />
+                <element signature="e#13958#14146#0" />
+                <element signature="e#14326#14574#0" />
+                <element signature="e#14384#14525#0" />
+                <element signature="e#14627#14879#0" />
+                <element signature="e#14683#14865#0" />
+                <element signature="e#14925#16009#0" />
+                <element signature="e#15122#15304#0" />
+                <element signature="e#15461#15641#0" />
+                <element signature="e#15814#15999#0" />
+                <element signature="e#16117#16199#0" />
+                <element signature="e#16238#16323#0" />
+                <element signature="e#16350#16982#0" />
+                <element signature="e#16415#16665#0" />
+                <element signature="e#16474#16616#0" />
+                <element signature="e#16719#16972#0" />
+                <element signature="e#16775#16958#0" />
+                <element signature="e#17095#17177#0" />
+                <element signature="e#17216#17301#0" />
+                <element signature="e#17328#17965#0" />
+                <element signature="e#17393#17643#0" />
+                <element signature="e#17452#17594#0" />
+                <element signature="e#17697#17955#0" />
+                <element signature="e#17758#17941#0" />
+                <element signature="e#18067#18143#0" />
+                <element signature="e#18179#18258#0" />
+                <element signature="e#18282#19739#0" />
+                <element signature="e#18344#18588#0" />
+                <element signature="e#18400#18539#0" />
+                <element signature="e#18639#19729#0" />
+                <element signature="e#18695#18875#0" />
+                <element signature="e#18919#19715#0" />
+                <element signature="e#19048#19344#0" />
+                <element signature="e#19114#19279#0" />
+                <element signature="e#19397#19697#0" />
+                <element signature="e#19461#19675#0" />
+                <element signature="e#19816#19904#0" />
+                <element signature="e#19975#20818#0" />
+                <element signature="e#20232#20785#0" />
+                <element signature="e#20294#20779#0" />
+                <element signature="e#20346#20625#0" />
+                <element signature="e#20631#20743#0" />
+                <element signature="e#20887#24488#0" />
+                <element signature="e#20945#20983#0" />
+                <element signature="e#21190#21244#0" />
+                <element signature="e#21266#21305#0" />
+                <element signature="e#21376#21432#0" />
+                <element signature="e#21474#22105#0" />
+                <element signature="e#21563#21846#0" />
+                <element signature="e#21701#21836#0" />
+                <element signature="e#22013#22099#0" />
+                <element signature="e#22349#22508#0" />
+                <element signature="e#22622#22780#0" />
+                <element signature="e#22849#23754#0" />
+                <element signature="e#23055#23230#0" />
+                <element signature="e#23089#23220#0" />
+                <element signature="e#23321#23494#0" />
+                <element signature="e#23577#23748#0" />
+                <element signature="e#23857#23933#0" />
+                <element signature="e#23977#24056#0" />
+                <element signature="e#24076#24360#0" />
+                <element signature="e#24134#24354#0" />
+                <element signature="e#24186#24313#0" />
+                <element signature="e#24429#24463#0" />
+                <element signature="e#24531#25262#0" />
+                <element signature="e#24548#25243#0" />
+                <element signature="e#24626#24678#0" />
+                <element signature="e#24708#24936#0" />
+                <element signature="e#24756#24900#0" />
+                <element signature="e#25007#25237#0" />
+                <element signature="e#25055#25201#0" />
+                <element signature="e#25309#39003#0" />
+                <element signature="e#25436#25748#0" />
+                <element signature="e#25466#25742#0" />
+                <element signature="e#25886#25940#0" />
+                <element signature="e#26014#26070#0" />
+                <element signature="e#26205#26829#0" />
+                <element signature="e#26294#26577#0" />
+                <element signature="e#26432#26567#0" />
+                <element signature="e#26744#26823#0" />
+                <element signature="e#26925#26978#0" />
+                <element signature="e#27067#27121#0" />
+                <element signature="e#27163#27241#0" />
+                <element signature="e#27467#29725#0" />
+                <element signature="e#27603#28251#0" />
+                <element signature="e#27697#28168#0" />
+                <element signature="e#27754#28034#0" />
+                <element signature="e#28040#28154#0" />
+                <element signature="e#28394#28821#0" />
+                <element signature="e#28446#28809#0" />
+                <element signature="e#28595#28795#0" />
+                <element signature="e#29018#29591#0" />
+                <element signature="e#29114#29300#0" />
+                <element signature="e#29395#29581#0" />
+                <element signature="e#29597#29639#0" />
+                <element signature="e#29731#29757#0" />
+                <element signature="e#30291#37983#0" />
+                <element signature="e#30416#31064#0" />
+                <element signature="e#30510#30981#0" />
+                <element signature="e#30567#30847#0" />
+                <element signature="e#30853#30967#0" />
+                <element signature="e#31195#31520#0" />
+                <element signature="e#31247#31508#0" />
+                <element signature="e#31294#31494#0" />
+                <element signature="e#31603#37977#0" />
+                <element signature="e#32078#32605#0" />
+                <element signature="e#32148#32589#0" />
+                <element signature="e#32345#32571#0" />
+                <element signature="e#32886#32936#0" />
+                <element signature="e#32950#32983#0" />
+                <element signature="e#33129#34428#0" />
+                <element signature="e#33442#33902#0" />
+                <element signature="e#33510#33882#0" />
+                <element signature="e#33623#33860#0" />
+                <element signature="e#34087#34145#0" />
+                <element signature="e#34322#34380#0" />
+                <element signature="e#34479#36150#0" />
+                <element signature="e#34791#35257#0" />
+                <element signature="e#34859#35237#0" />
+                <element signature="e#34978#35215#0" />
+                <element signature="e#35429#35808#0" />
+                <element signature="e#35567#35790#0" />
+                <element signature="e#35814#35872#0" />
+                <element signature="e#36044#36102#0" />
+                <element signature="e#36199#37496#0" />
+                <element signature="e#36301#36738#0" />
+                <element signature="e#36371#36522#0" />
+                <element signature="e#36431#36500#0" />
+                <element signature="e#36573#36720#0" />
+                <element signature="e#36629#36698#0" />
+                <element signature="e#36873#37453#0" />
+                <element signature="e#37009#37161#0" />
+                <element signature="e#37070#37139#0" />
+                <element signature="e#37287#37435#0" />
+                <element signature="e#37344#37413#0" />
+                <element signature="e#37548#37731#0" />
+                <element signature="e#37659#37717#0" />
+                <element signature="e#37783#37967#0" />
+                <element signature="e#37895#37953#0" />
+                <element signature="e#37989#38066#0" />
+                <element signature="e#38154#38208#0" />
+                <element signature="e#38250#38431#0" />
+                <element signature="e#38383#38425#0" />
+                <element signature="e#38475#38649#0" />
+                <element signature="e#38601#38643#0" />
+                <element signature="e#38694#38875#0" />
+                <element signature="e#38827#38869#0" />
+                <element signature="e#38944#38978#0" />
+                <element signature="e#39054#40212#0" />
+                <element signature="e#39623#39656#0" />
+                <element signature="e#39662#40188#0" />
+                <element signature="e#39699#39751#0" />
+                <element signature="e#39842#39969#0" />
+                <element signature="e#40055#40182#0" />
+                <element signature="e#40217#40289#0" />
+                <element signature="e#40436#41444#0" />
+                <element signature="e#40641#40691#0" />
+                <element signature="e#40723#40945#0" />
+                <element signature="e#40773#40907#0" />
+                <element signature="e#41026#41135#0" />
+                <element signature="e#41082#41129#0" />
+                <element signature="e#41141#41415#0" />
+                <element signature="e#41231#41356#0" />
+                <element signature="e#41291#41346#0" />
+                <element signature="e#41362#41409#0" />
+                <element signature="e#41490#43771#0" />
+                <element signature="e#41632#43019#0" />
+                <element signature="e#41830#41945#0" />
+                <element signature="e#41880#41935#0" />
+                <element signature="e#42026#42442#0" />
+                <element signature="e#42241#42432#0" />
+                <element signature="e#42355#42418#0" />
+                <element signature="e#42504#43013#0" />
+                <element signature="e#42635#42697#0" />
+                <element signature="e#42733#43003#0" />
+                <element signature="e#42787#42949#0" />
+                <element signature="e#43065#43255#0" />
+                <element signature="e#43202#43249#0" />
+                <element signature="e#43318#43492#0" />
+                <element signature="e#43439#43486#0" />
+                <element signature="e#43570#43741#0" />
+                <element signature="e#43688#43735#0" />
+                <element signature="e#43826#47029#0" />
+                <element signature="e#43894#43915#0" />
+                <element signature="e#44052#45341#0" />
+                <element signature="e#44128#44845#0" />
+                <element signature="e#44256#44667#0" />
+                <element signature="e#44332#44463#0" />
+                <element signature="e#44525#44653#0" />
+                <element signature="e#44719#44835#0" />
+                <element signature="e#44888#45237#0" />
+                <element signature="e#45012#45227#0" />
+                <element signature="e#45085#45213#0" />
+                <element signature="e#45261#45335#0" />
+                <element signature="e#45440#46456#0" />
+                <element signature="e#45629#45805#0" />
+                <element signature="e#45903#46450#0" />
+                <element signature="e#46112#46440#0" />
+                <element signature="e#46218#46426#0" />
+                <element signature="e#46642#46803#0" />
+                <element signature="e#46955#46997#0" />
+                <element signature="e#47077#57746#0" />
+                <element signature="e#47147#57713#0" />
+                <element signature="e#47387#48228#0" />
+                <element signature="e#47438#47916#0" />
+                <element signature="e#47692#47902#0" />
+                <element signature="e#48024#48218#0" />
+                <element signature="e#48357#54893#0" />
+                <element signature="e#48612#49521#0" />
+                <element signature="e#48670#48885#0" />
+                <element signature="e#48891#49507#0" />
+                <element signature="e#49121#49352#0" />
+                <element signature="e#49422#49489#0" />
+                <element signature="e#49537#49570#0" />
+                <element signature="e#49664#52151#0" />
+                <element signature="e#49812#51076#0" />
+                <element signature="e#49876#50445#0" />
+                <element signature="e#50273#50335#0" />
+                <element signature="e#50341#50423#0" />
+                <element signature="e#50496#51058#0" />
+                <element signature="e#50886#50948#0" />
+                <element signature="e#50954#51036#0" />
+                <element signature="e#51116#52095#0" />
+                <element signature="e#51248#52077#0" />
+                <element signature="e#51346#52053#0" />
+                <element signature="e#51410#51789#0" />
+                <element signature="e#51511#51759#0" />
+                <element signature="e#51795#52027#0" />
+                <element signature="e#52203#54709#0" />
+                <element signature="e#52354#53624#0" />
+                <element signature="e#52421#52993#0" />
+                <element signature="e#52818#52880#0" />
+                <element signature="e#52886#52971#0" />
+                <element signature="e#53041#53606#0" />
+                <element signature="e#53431#53493#0" />
+                <element signature="e#53499#53584#0" />
+                <element signature="e#53667#54650#0" />
+                <element signature="e#53799#54632#0" />
+                <element signature="e#53897#54608#0" />
+                <element signature="e#53961#54341#0" />
+                <element signature="e#54060#54311#0" />
+                <element signature="e#54347#54582#0" />
+                <element signature="e#54783#54843#0" />
+                <element signature="e#54940#56264#0" />
+                <element signature="e#55227#56131#0" />
+                <element signature="e#55285#55495#0" />
+                <element signature="e#55501#56117#0" />
+                <element signature="e#55736#55962#0" />
+                <element signature="e#56032#56099#0" />
+                <element signature="e#56164#56219#0" />
+                <element signature="e#56309#56885#0" />
+                <element signature="e#56403#56850#0" />
+                <element signature="e#56526#56659#0" />
+                <element signature="e#56580#56641#0" />
+                <element signature="e#56705#56836#0" />
+                <element signature="e#56757#56818#0" />
+                <element signature="e#56925#57088#0" />
+                <element signature="e#57020#57078#0" />
+                <element signature="e#57127#57291#0" />
+                <element signature="e#57223#57281#0" />
+                <element signature="e#57330#57494#0" />
+                <element signature="e#57426#57484#0" />
+                <element signature="e#57657#57707#0" />
+                <element signature="e#57779#60779#0" />
+                <element signature="e#57906#58410#0" />
+                <element signature="e#57936#58404#0" />
+                <element signature="e#58493#58547#0" />
+                <element signature="e#58568#58607#0" />
+                <element signature="e#58695#59287#0" />
+                <element signature="e#58784#59067#0" />
+                <element signature="e#58922#59057#0" />
+                <element signature="e#59195#59281#0" />
+                <element signature="e#59307#60652#0" />
+                <element signature="e#59441#60268#0" />
+                <element signature="e#59527#60211#0" />
+                <element signature="e#59584#59914#0" />
+                <element signature="e#59920#60167#0" />
+                <element signature="e#60415#60457#0" />
+                <element signature="e#60562#60604#0" />
+                <element signature="e#60721#60755#0" />
+                <element signature="e#60782#60854#0" />
+                <element signature="e#61417#61485#0" />
+                <element signature="e#61614#62817#0" />
+                <element signature="e#61717#61740#0" />
+                <element signature="e#61894#61956#0" />
+                <element signature="e#61972#62004#0" />
+                <element signature="e#62121#62173#0" />
+                <element signature="e#62209#62246#0" />
+                <element signature="e#62366#62439#0" />
+                <element signature="e#62445#62488#0" />
+                <element signature="e#62598#62625#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_parsons_problem.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/snap/gui.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48750">
+              <caret line="2008" column="20" selection-start-line="2008" selection-start-column="20" selection-end-line="2008" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/snap/modeling/hide-block.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" column="26" selection-end-line="125" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/snap/gui.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54000">
+              <caret line="2215" column="10" selection-start-line="2215" selection-start-column="10" selection-end-line="2215" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/tasks/scriptarraytwo.html.slim">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
+            <state relative-caret-position="375">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks/_snap_scriptarraytwo_base.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20190526213125_add_columns_to_task.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20190517013725_add_columns_to_tasks.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" selection-start-line="2" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="1425">
+              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -231,36 +587,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>testscr</find>
-      <find>&lt;% flash.each do |key, value| %&gt;     &lt;div class=&quot;flash &lt;%= key %&gt;&quot;&gt;&lt;%= value %&gt;&lt;/div&gt; &lt;% end %&gt;</find>
-      <find>flash</find>
-      <find>l</find>
-      <find>square</find>
-      <find>config.example</find>
-      <find>Draw a Square</find>
-      <find>script</find>
-      <find>task-scr</find>
-      <find>querystring</find>
-      <find>draw a squa</find>
-      <find>category</find>
-      <find>test_file</find>
-      <find>task</find>
-      <find>params</find>
-      <find>type</find>
-      <find>task.title</find>
-      <find>redirect_to</find>
-      <find>draw a square</find>
-      <find>function spritec</find>
-      <find>getelement</find>
-      <find>left_canvas</find>
-      <find>drag to</find>
-      <find>3/4</find>
-      <find>left_desc</find>
-      <find>1/2</find>
-      <find>tasks menu</find>
-      <find>test</find>
-      <find>edit_task</find>
-      <find>task_tests</find>
+      <find>snapserializer.prototype.op</find>
+      <find>SnapSerializer.prototype.openProject</find>
+      <find>onWorldloaded</find>
+      <find>scriptarraytwo</find>
+      <find>onworldloaded</find>
+      <find>id</find>
+      <find>ide =</find>
+      <find>var ide =</find>
+      <find>worldloaded</find>
+      <find>ide.width</find>
+      <find>window.ide</find>
+      <find>sed</find>
+      <find>setwideth</find>
+      <find>ppxml</find>
+      <find>createparsonsproblempalette</find>
+      <find>ppxml_path</find>
+      <find>ppxml_path \= gon\.ppxmlfile_path\;\n</find>
+      <find>onworld</find>
+      <find>openProject</find>
+      <find>loop</find>
+      <find>ide = wor</find>
+      <find>onwin</find>
+      <find>extend</find>
+      <find>droppedtext</find>
+      <find>rawopenp</find>
+      <find>droppedtext =</find>
+      <find>openprojectstring</find>
+      <find>showparsons</find>
+      <find>addtext</find>
+      <find>opening pro</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;]</replace>
@@ -282,27 +638,11 @@
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/public/snap" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/tasks/_snap_base.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/tasks/show.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/tasks/endscript.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/tasks/_autograder_endscript_header.html.erb" />
-        <option value="$PROJECT_DIR$/public/autograder/cs10/AG_HW3.html" />
-        <option value="$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_PatrickOHalloran.html" />
-        <option value="$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_YifatAmir.html" />
-        <option value="$PROJECT_DIR$/public/autograder/hw-graders/AG_HW3.html" />
-        <option value="$PROJECT_DIR$/app/views/questions/_snap_autograder.html.erb" />
-        <option value="$PROJECT_DIR$/public/autograder/ag-files/feedbackLog.js" />
-        <option value="$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js" />
-        <option value="$PROJECT_DIR$/public/autograder/ag-files/script2Block.js" />
-        <option value="$PROJECT_DIR$/app/views/tasks/_snap_endscript_autograder.html.erb" />
-        <option value="$PROJECT_DIR$/public/autograder/ag-files/AGFormatting.js" />
-        <option value="$PROJECT_DIR$/db/migrate/20190525035019_change_column_name_tasks.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/testscript_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/testscripts/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/testscripts/show.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20190525153705_create_testscripts.rb" />
@@ -330,14 +670,30 @@
         <option value="$PROJECT_DIR$/app/controllers/templates_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/new.html.slim" />
         <option value="$PROJECT_DIR$/app/views/tasks/index.html.slim" />
-        <option value="$PROJECT_DIR$/public/autograder/ag-files/task-script.js" />
-        <option value="$PROJECT_DIR$/app/controllers/testscripts_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190526213125_add_columns_to_task.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/tasks/_snap_correctscript_autograder.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/correctscript.html.slim" />
         <option value="$PROJECT_DIR$/app/views/tasks/_autograder_correctscript_header.html.erb" />
+        <option value="$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190526234435_add_column_to_testscript.rb" />
+        <option value="$PROJECT_DIR$/public/autograder/ag-files/task-script.js" />
+        <option value="$PROJECT_DIR$/app/controllers/testscripts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/ppxmlfile.html.slim" />
+        <option value="$PROJECT_DIR$/public/autograder/ag-files/AGFormatting.js" />
+        <option value="$PROJECT_DIR$/app/controllers/tasks_controller.rb" />
+        <option value="$PROJECT_DIR$/public/snap/gui.js" />
+        <option value="$PROJECT_DIR$/public/snap/modeling/stencil-highlight-morph.js" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_snap_scriptarraytwo_base.html.slim" />
+        <option value="$PROJECT_DIR$/public/snap/modeling/iframe.js" />
+        <option value="$PROJECT_DIR$/public/snap/logging/assignment.js" />
+        <option value="$PROJECT_DIR$/public/snap/isnap/util.js" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_snap_scriptarraytwo_autograder.html.erb" />
+        <option value="$PROJECT_DIR$/public/autograder/ag-files/AGScriptArrayTwoFormatting.js" />
+        <option value="$PROJECT_DIR$/app/views/tasks/_parsons_problem.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/tasks/scriptarraytwo.html.slim" />
+        <option value="$PROJECT_DIR$/public/snap/modeling/hide-block.js" />
+        <option value="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" />
       </list>
     </option>
   </component>
@@ -356,9 +712,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="35" />
-    <option name="y" value="27" />
-    <option name="width" value="913" />
+    <option name="y" value="-2" />
+    <option name="width" value="903" />
     <option name="height" value="785" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -367,6 +722,46 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="snap" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
           <expand>
@@ -424,48 +819,6 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="locales" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -659,12 +1012,16 @@
       <workItem from="1558744452224" duration="17351000" />
       <workItem from="1558797165103" duration="48461000" />
       <workItem from="1558892391690" duration="1027000" />
-      <workItem from="1558893810027" duration="11648000" />
+      <workItem from="1558893810027" duration="23159000" />
+      <workItem from="1558921079907" duration="10968000" />
+      <workItem from="1558970453664" duration="19053000" />
+      <workItem from="1558991024042" duration="9516000" />
+      <workItem from="1559007436389" duration="1560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283333000" />
+    <option name="totallyTimeSpent" value="335941000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,11 +1036,11 @@
     <frame x="35" y="25" width="1885" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21651176" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22963367" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32964602" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32867885" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.7163198" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -692,7 +1049,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32964602" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49972662" weight="0.32300884" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49972662" weight="0.12278761" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50027335" side_tool="true" weight="0.32079646" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32964602" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -730,205 +1087,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190525180809_change_column_default_from_testscript.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190526012331_change_testscript_column_type.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/courses_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/testscripts/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/testscripts/new.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/base.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/_flashes.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/ag-util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-691">
-          <caret line="198" column="4" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/actionview-4.2.10/lib/action_view/helpers/url_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="174" column="10" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190525153705_create_testscripts.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="3" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190526181512_create_templates.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/task.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/categories_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="23" selection-start-line="23" selection-end-line="92" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/categories/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190526185557_change_column_from_template.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/new.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="193" column="23" selection-start-line="193" selection-start-column="23" selection-end-line="193" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/categories/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/edit.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="27" column="26" selection-end-line="40" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/test_file.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/templates/edit.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="65" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/new.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/templates_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/index.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seed-data/task1test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -941,16 +1103,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_YifatAmir.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6225">
-          <folding>
-            <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-6225" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_T1.html">
@@ -974,20 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="1737" selection-start-line="1737" selection-end-line="1737" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="554" column="1" selection-start-line="554" selection-start-column="1" selection-end-line="554" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/task-script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1015,13 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/testscripts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20190517013725_add_columns_to_tasks.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1036,48 +1168,633 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/scriptarraytwo.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_autograder_correctscript_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+        <state relative-caret-position="275">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_snap_correctscript_autograder.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        <state relative-caret-position="125">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/correctscript.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state>
+          <caret selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_autograder_correctscript_header.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/show.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+        <state relative-caret-position="150">
+          <caret line="6" column="95" selection-start-line="6" selection-start-column="95" selection-end-line="6" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190527001156_add_pp_to_task.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/questions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4100">
+          <caret line="164" column="28" selection-start-line="164" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190526234435_add_column_to_testscript.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seed-data/task1test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/test_file.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="15" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_autograder_scriptarraytwo_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1083" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/AGFormatting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="239" column="48" lean-forward="true" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/testscripts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2300">
+          <caret line="92" column="47" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/xml.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="114" column="22" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/snap/morphic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1683" column="8" selection-start-line="1683" selection-start-column="8" selection-end-line="1683" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_PatrickOHalloran.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1747" column="18" selection-start-line="1747" selection-start-column="18" selection-end-line="1747" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/ppxmlfile.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/logging/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_snap_autograder.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="136" column="56" selection-start-line="136" selection-start-column="56" selection-end-line="136" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/hints/highlight-dialog-box-morph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="38" column="16" selection-start-line="36" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/morphic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1960">
+          <caret line="10371" column="42" selection-start-line="10371" selection-start-column="42" selection-end-line="10371" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13575">
+          <caret line="545" column="14" selection-start-line="545" selection-start-column="8" selection-end-line="545" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/task-script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" column="23" selection-start-line="22" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/snap/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="1385" selection-start-line="1385" selection-end-line="1385" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/isnap/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="108" column="72" selection-start-line="108" selection-start-column="72" selection-end-line="108" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/snap.min.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="1781" selection-start-line="1781" selection-end-line="1827" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/logging/assignment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_snap_scriptarraytwo_autograder.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3675">
+          <caret line="147" column="11" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/AGScriptArrayTwoFormatting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5700">
+          <caret line="230" column="13" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/modeling/iframe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="38" selection-start-line="38" selection-start-column="3" selection-end-line="55" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_parsons_problem.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/gui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48750">
+          <caret line="2008" column="20" selection-start-line="2008" selection-start-column="20" selection-end-line="2008" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/modeling/hide-block.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="26" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/snap/gui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54000">
+          <caret line="2215" column="10" selection-start-line="2215" selection-start-column="10" selection-end-line="2215" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/scriptarraytwo.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks/_snap_scriptarraytwo_base.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="1632" column="41" lean-forward="true" selection-start-line="1632" selection-start-column="41" selection-end-line="1632" selection-end-column="41" />
+          <folding>
+            <element signature="e#657#668#0" />
+            <element signature="e#1031#1063#0" />
+            <element signature="e#1098#1311#0" />
+            <element signature="e#1126#1309#0" />
+            <element signature="e#1386#1745#0" />
+            <element signature="e#1462#1717#0" />
+            <element signature="e#1548#1646#0" />
+            <element signature="e#1809#7011#0" />
+            <element signature="e#1943#2512#0" />
+            <element signature="e#2030#2239#0" />
+            <element signature="e#2096#2229#0" />
+            <element signature="e#2420#2506#0" />
+            <element signature="e#2766#2919#0" />
+            <element signature="e#2951#3101#0" />
+            <element signature="e#3137#5510#0" />
+            <element signature="e#3299#3469#0" />
+            <element signature="e#3654#3820#0" />
+            <element signature="e#3929#4093#0" />
+            <element signature="e#4281#4456#0" />
+            <element signature="e#4315#4446#0" />
+            <element signature="e#4694#4863#0" />
+            <element signature="e#5080#5247#0" />
+            <element signature="e#5331#5504#0" />
+            <element signature="e#5546#6385#0" />
+            <element signature="e#5731#5897#0" />
+            <element signature="e#6042#6206#0" />
+            <element signature="e#6337#6379#0" />
+            <element signature="e#6481#6555#0" />
+            <element signature="e#6594#6671#0" />
+            <element signature="e#6694#6987#0" />
+            <element signature="e#6755#6981#0" />
+            <element signature="e#6810#6940#0" />
+            <element signature="e#7159#19928#0" />
+            <element signature="e#7303#8477#0" />
+            <element signature="e#7437#7984#0" />
+            <element signature="e#7498#7972#0" />
+            <element signature="e#7692#7958#0" />
+            <element signature="e#7752#7901#0" />
+            <element signature="e#8251#8471#0" />
+            <element signature="e#8304#8430#0" />
+            <element signature="e#8616#8742#0" />
+            <element signature="e#8952#9144#0" />
+            <element signature="e#9209#9469#0" />
+            <element signature="e#9581#19745#0" />
+            <element signature="e#9714#10060#0" />
+            <element signature="e#9871#10050#0" />
+            <element signature="e#10141#11397#0" />
+            <element signature="e#10203#10852#0" />
+            <element signature="e#10628#10838#0" />
+            <element signature="e#10741#10820#0" />
+            <element signature="e#10895#11361#0" />
+            <element signature="e#10994#11264#0" />
+            <element signature="e#11054#11246#0" />
+            <element signature="e#11439#14889#0" />
+            <element signature="e#11614#11799#0" />
+            <element signature="e#11996#12178#0" />
+            <element signature="e#12295#12475#0" />
+            <element signature="e#12679#12874#0" />
+            <element signature="e#12717#12860#0" />
+            <element signature="e#13128#13313#0" />
+            <element signature="e#13546#13729#0" />
+            <element signature="e#13958#14146#0" />
+            <element signature="e#14326#14574#0" />
+            <element signature="e#14384#14525#0" />
+            <element signature="e#14627#14879#0" />
+            <element signature="e#14683#14865#0" />
+            <element signature="e#14925#16009#0" />
+            <element signature="e#15122#15304#0" />
+            <element signature="e#15461#15641#0" />
+            <element signature="e#15814#15999#0" />
+            <element signature="e#16117#16199#0" />
+            <element signature="e#16238#16323#0" />
+            <element signature="e#16350#16982#0" />
+            <element signature="e#16415#16665#0" />
+            <element signature="e#16474#16616#0" />
+            <element signature="e#16719#16972#0" />
+            <element signature="e#16775#16958#0" />
+            <element signature="e#17095#17177#0" />
+            <element signature="e#17216#17301#0" />
+            <element signature="e#17328#17965#0" />
+            <element signature="e#17393#17643#0" />
+            <element signature="e#17452#17594#0" />
+            <element signature="e#17697#17955#0" />
+            <element signature="e#17758#17941#0" />
+            <element signature="e#18067#18143#0" />
+            <element signature="e#18179#18258#0" />
+            <element signature="e#18282#19739#0" />
+            <element signature="e#18344#18588#0" />
+            <element signature="e#18400#18539#0" />
+            <element signature="e#18639#19729#0" />
+            <element signature="e#18695#18875#0" />
+            <element signature="e#18919#19715#0" />
+            <element signature="e#19048#19344#0" />
+            <element signature="e#19114#19279#0" />
+            <element signature="e#19397#19697#0" />
+            <element signature="e#19461#19675#0" />
+            <element signature="e#19816#19904#0" />
+            <element signature="e#19975#20818#0" />
+            <element signature="e#20232#20785#0" />
+            <element signature="e#20294#20779#0" />
+            <element signature="e#20346#20625#0" />
+            <element signature="e#20631#20743#0" />
+            <element signature="e#20887#24488#0" />
+            <element signature="e#20945#20983#0" />
+            <element signature="e#21190#21244#0" />
+            <element signature="e#21266#21305#0" />
+            <element signature="e#21376#21432#0" />
+            <element signature="e#21474#22105#0" />
+            <element signature="e#21563#21846#0" />
+            <element signature="e#21701#21836#0" />
+            <element signature="e#22013#22099#0" />
+            <element signature="e#22349#22508#0" />
+            <element signature="e#22622#22780#0" />
+            <element signature="e#22849#23754#0" />
+            <element signature="e#23055#23230#0" />
+            <element signature="e#23089#23220#0" />
+            <element signature="e#23321#23494#0" />
+            <element signature="e#23577#23748#0" />
+            <element signature="e#23857#23933#0" />
+            <element signature="e#23977#24056#0" />
+            <element signature="e#24076#24360#0" />
+            <element signature="e#24134#24354#0" />
+            <element signature="e#24186#24313#0" />
+            <element signature="e#24429#24463#0" />
+            <element signature="e#24531#25262#0" />
+            <element signature="e#24548#25243#0" />
+            <element signature="e#24626#24678#0" />
+            <element signature="e#24708#24936#0" />
+            <element signature="e#24756#24900#0" />
+            <element signature="e#25007#25237#0" />
+            <element signature="e#25055#25201#0" />
+            <element signature="e#25309#39003#0" />
+            <element signature="e#25436#25748#0" />
+            <element signature="e#25466#25742#0" />
+            <element signature="e#25886#25940#0" />
+            <element signature="e#26014#26070#0" />
+            <element signature="e#26205#26829#0" />
+            <element signature="e#26294#26577#0" />
+            <element signature="e#26432#26567#0" />
+            <element signature="e#26744#26823#0" />
+            <element signature="e#26925#26978#0" />
+            <element signature="e#27067#27121#0" />
+            <element signature="e#27163#27241#0" />
+            <element signature="e#27467#29725#0" />
+            <element signature="e#27603#28251#0" />
+            <element signature="e#27697#28168#0" />
+            <element signature="e#27754#28034#0" />
+            <element signature="e#28040#28154#0" />
+            <element signature="e#28394#28821#0" />
+            <element signature="e#28446#28809#0" />
+            <element signature="e#28595#28795#0" />
+            <element signature="e#29018#29591#0" />
+            <element signature="e#29114#29300#0" />
+            <element signature="e#29395#29581#0" />
+            <element signature="e#29597#29639#0" />
+            <element signature="e#29731#29757#0" />
+            <element signature="e#30291#37983#0" />
+            <element signature="e#30416#31064#0" />
+            <element signature="e#30510#30981#0" />
+            <element signature="e#30567#30847#0" />
+            <element signature="e#30853#30967#0" />
+            <element signature="e#31195#31520#0" />
+            <element signature="e#31247#31508#0" />
+            <element signature="e#31294#31494#0" />
+            <element signature="e#31603#37977#0" />
+            <element signature="e#32078#32605#0" />
+            <element signature="e#32148#32589#0" />
+            <element signature="e#32345#32571#0" />
+            <element signature="e#32886#32936#0" />
+            <element signature="e#32950#32983#0" />
+            <element signature="e#33129#34428#0" />
+            <element signature="e#33442#33902#0" />
+            <element signature="e#33510#33882#0" />
+            <element signature="e#33623#33860#0" />
+            <element signature="e#34087#34145#0" />
+            <element signature="e#34322#34380#0" />
+            <element signature="e#34479#36150#0" />
+            <element signature="e#34791#35257#0" />
+            <element signature="e#34859#35237#0" />
+            <element signature="e#34978#35215#0" />
+            <element signature="e#35429#35808#0" />
+            <element signature="e#35567#35790#0" />
+            <element signature="e#35814#35872#0" />
+            <element signature="e#36044#36102#0" />
+            <element signature="e#36199#37496#0" />
+            <element signature="e#36301#36738#0" />
+            <element signature="e#36371#36522#0" />
+            <element signature="e#36431#36500#0" />
+            <element signature="e#36573#36720#0" />
+            <element signature="e#36629#36698#0" />
+            <element signature="e#36873#37453#0" />
+            <element signature="e#37009#37161#0" />
+            <element signature="e#37070#37139#0" />
+            <element signature="e#37287#37435#0" />
+            <element signature="e#37344#37413#0" />
+            <element signature="e#37548#37731#0" />
+            <element signature="e#37659#37717#0" />
+            <element signature="e#37783#37967#0" />
+            <element signature="e#37895#37953#0" />
+            <element signature="e#37989#38066#0" />
+            <element signature="e#38154#38208#0" />
+            <element signature="e#38250#38431#0" />
+            <element signature="e#38383#38425#0" />
+            <element signature="e#38475#38649#0" />
+            <element signature="e#38601#38643#0" />
+            <element signature="e#38694#38875#0" />
+            <element signature="e#38827#38869#0" />
+            <element signature="e#38944#38978#0" />
+            <element signature="e#39054#40212#0" />
+            <element signature="e#39623#39656#0" />
+            <element signature="e#39662#40188#0" />
+            <element signature="e#39699#39751#0" />
+            <element signature="e#39842#39969#0" />
+            <element signature="e#40055#40182#0" />
+            <element signature="e#40217#40289#0" />
+            <element signature="e#40436#41444#0" />
+            <element signature="e#40641#40691#0" />
+            <element signature="e#40723#40945#0" />
+            <element signature="e#40773#40907#0" />
+            <element signature="e#41026#41135#0" />
+            <element signature="e#41082#41129#0" />
+            <element signature="e#41141#41415#0" />
+            <element signature="e#41231#41356#0" />
+            <element signature="e#41291#41346#0" />
+            <element signature="e#41362#41409#0" />
+            <element signature="e#41490#43771#0" />
+            <element signature="e#41632#43019#0" />
+            <element signature="e#41830#41945#0" />
+            <element signature="e#41880#41935#0" />
+            <element signature="e#42026#42442#0" />
+            <element signature="e#42241#42432#0" />
+            <element signature="e#42355#42418#0" />
+            <element signature="e#42504#43013#0" />
+            <element signature="e#42635#42697#0" />
+            <element signature="e#42733#43003#0" />
+            <element signature="e#42787#42949#0" />
+            <element signature="e#43065#43255#0" />
+            <element signature="e#43202#43249#0" />
+            <element signature="e#43318#43492#0" />
+            <element signature="e#43439#43486#0" />
+            <element signature="e#43570#43741#0" />
+            <element signature="e#43688#43735#0" />
+            <element signature="e#43826#47029#0" />
+            <element signature="e#43894#43915#0" />
+            <element signature="e#44052#45341#0" />
+            <element signature="e#44128#44845#0" />
+            <element signature="e#44256#44667#0" />
+            <element signature="e#44332#44463#0" />
+            <element signature="e#44525#44653#0" />
+            <element signature="e#44719#44835#0" />
+            <element signature="e#44888#45237#0" />
+            <element signature="e#45012#45227#0" />
+            <element signature="e#45085#45213#0" />
+            <element signature="e#45261#45335#0" />
+            <element signature="e#45440#46456#0" />
+            <element signature="e#45629#45805#0" />
+            <element signature="e#45903#46450#0" />
+            <element signature="e#46112#46440#0" />
+            <element signature="e#46218#46426#0" />
+            <element signature="e#46642#46803#0" />
+            <element signature="e#46955#46997#0" />
+            <element signature="e#47077#57746#0" />
+            <element signature="e#47147#57713#0" />
+            <element signature="e#47387#48228#0" />
+            <element signature="e#47438#47916#0" />
+            <element signature="e#47692#47902#0" />
+            <element signature="e#48024#48218#0" />
+            <element signature="e#48357#54893#0" />
+            <element signature="e#48612#49521#0" />
+            <element signature="e#48670#48885#0" />
+            <element signature="e#48891#49507#0" />
+            <element signature="e#49121#49352#0" />
+            <element signature="e#49422#49489#0" />
+            <element signature="e#49537#49570#0" />
+            <element signature="e#49664#52151#0" />
+            <element signature="e#49812#51076#0" />
+            <element signature="e#49876#50445#0" />
+            <element signature="e#50273#50335#0" />
+            <element signature="e#50341#50423#0" />
+            <element signature="e#50496#51058#0" />
+            <element signature="e#50886#50948#0" />
+            <element signature="e#50954#51036#0" />
+            <element signature="e#51116#52095#0" />
+            <element signature="e#51248#52077#0" />
+            <element signature="e#51346#52053#0" />
+            <element signature="e#51410#51789#0" />
+            <element signature="e#51511#51759#0" />
+            <element signature="e#51795#52027#0" />
+            <element signature="e#52203#54709#0" />
+            <element signature="e#52354#53624#0" />
+            <element signature="e#52421#52993#0" />
+            <element signature="e#52818#52880#0" />
+            <element signature="e#52886#52971#0" />
+            <element signature="e#53041#53606#0" />
+            <element signature="e#53431#53493#0" />
+            <element signature="e#53499#53584#0" />
+            <element signature="e#53667#54650#0" />
+            <element signature="e#53799#54632#0" />
+            <element signature="e#53897#54608#0" />
+            <element signature="e#53961#54341#0" />
+            <element signature="e#54060#54311#0" />
+            <element signature="e#54347#54582#0" />
+            <element signature="e#54783#54843#0" />
+            <element signature="e#54940#56264#0" />
+            <element signature="e#55227#56131#0" />
+            <element signature="e#55285#55495#0" />
+            <element signature="e#55501#56117#0" />
+            <element signature="e#55736#55962#0" />
+            <element signature="e#56032#56099#0" />
+            <element signature="e#56164#56219#0" />
+            <element signature="e#56309#56885#0" />
+            <element signature="e#56403#56850#0" />
+            <element signature="e#56526#56659#0" />
+            <element signature="e#56580#56641#0" />
+            <element signature="e#56705#56836#0" />
+            <element signature="e#56757#56818#0" />
+            <element signature="e#56925#57088#0" />
+            <element signature="e#57020#57078#0" />
+            <element signature="e#57127#57291#0" />
+            <element signature="e#57223#57281#0" />
+            <element signature="e#57330#57494#0" />
+            <element signature="e#57426#57484#0" />
+            <element signature="e#57657#57707#0" />
+            <element signature="e#57779#60779#0" />
+            <element signature="e#57906#58410#0" />
+            <element signature="e#57936#58404#0" />
+            <element signature="e#58493#58547#0" />
+            <element signature="e#58568#58607#0" />
+            <element signature="e#58695#59287#0" />
+            <element signature="e#58784#59067#0" />
+            <element signature="e#58922#59057#0" />
+            <element signature="e#59195#59281#0" />
+            <element signature="e#59307#60652#0" />
+            <element signature="e#59441#60268#0" />
+            <element signature="e#59527#60211#0" />
+            <element signature="e#59584#59914#0" />
+            <element signature="e#59920#60167#0" />
+            <element signature="e#60415#60457#0" />
+            <element signature="e#60562#60604#0" />
+            <element signature="e#60721#60755#0" />
+            <element signature="e#60782#60854#0" />
+            <element signature="e#61417#61485#0" />
+            <element signature="e#61614#62817#0" />
+            <element signature="e#61717#61740#0" />
+            <element signature="e#61894#61956#0" />
+            <element signature="e#61972#62004#0" />
+            <element signature="e#62121#62173#0" />
+            <element signature="e#62209#62246#0" />
+            <element signature="e#62366#62439#0" />
+            <element signature="e#62445#62488#0" />
+            <element signature="e#62598#62625#0" />
+          </folding>
         </state>
       </provider>
     </entry>
