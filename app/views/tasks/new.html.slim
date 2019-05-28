@@ -15,12 +15,12 @@
   / .form-group
   /   = f.label :instruction
   /   = f.text_area :instruction, class: 'form-control', rows: 10
-  / .form-group
-  /   = f.label :test_file
-  /   = f.text_area :test_file, class: 'form-control', rows: 10
-  / .form-group
-  /   = f.label :starter_file
-  /   = f.text_area :starter_file, class: 'form-control'
+  .form-group
+    = f.label :test_file
+    = f.text_area :test_file, class: 'form-control', rows: 10
+  .form-group
+    = f.label :parsons_problem_xml_file
+    = f.text_area :ppxmlfile, class: 'form-control', rows: 10
   .form-group
     .col-xs-1
       = f.button :submit, class: "btn btn-success"

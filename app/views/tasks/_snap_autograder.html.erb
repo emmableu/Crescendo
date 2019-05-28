@@ -34,7 +34,7 @@
   <script src='/autograder/ag-files/scriptAnalysis.js'></script>
   <script src="/autograder/ag-files/AGAgent.js"></script>
   <script src='/autograder/ag-files/feedbackLog.js'></script>
-  <script src="/autograder/ag-files/AGFormatting.js"></script>
+  <script src="/autograder/ag-files/AGScriptArrayTwoFormatting.js"></script>
   <script src="/autograder/ag-files/task-script.js"></script>
 
 
@@ -44,11 +44,11 @@
   <% end %>
 
 
-<body>
-<!--here is the content-->
-<!--<div id="left"><h1>Test</h1></div>-->
+  <body>
+  <!--here is the content-->
+  <!--<div id="left"><h1>Test</h1></div>-->
 
-</body>
+  </body>
 
   <!-- Load snap + AG additions, similar to snap.html -->
   <script>
@@ -88,15 +88,21 @@
 
           // set the wrapper as child (instead of the element)
           parent.replaceChild(wrapper, canvas_container);
-    // set element as child of wrapper
+          // set element as child of wrapper
           var left_canvas = document.createElement('div');
-          var description = document.createElement('iframe');
-          description.innerHTML = 'src="https://google.com"';
+          // left_canvas.style.display = "none";
+          <!--          var description = document.createElement('iframe');-->
+          <!--          description.src ="<%= scriptorder_task_path %>";-->
+          var description = document.createElement('h1');
+          description.innerHTML = "Instructions";
+
+
+
           description.id = 'left_description';
           description.style.position = "absolute";
           description.style.left = "10px";
           // description.style.left = "15px";
-          description.style.right = clientWidth * 1/4 - 20 + 'px';
+          description.style.right = clientWidth * 1/4- 20 + 'px';
           description.style.width = clientWidth * 1/4 - 40+ 'px';
           description.style.height = clientHeight + 'px';
           left_canvas.appendChild(description);
@@ -104,8 +110,8 @@
           left_canvas.style.position = "absolute";
           left_canvas.style.left = "15px";
           left_canvas.style.left = "15px";
-          left_canvas.style.right = clientWidth * 1/4 - 15 + 'px';
-          left_canvas.style.width = clientWidth * 1/4 - 30+ 'px';
+          left_canvas.style.right = clientWidth *  1/4  - 15 + 'px';
+          left_canvas.style.width = clientWidth *  1/4  - 30+ 'px';
           left_canvas.style.height = clientHeight + 'px';
 
 
@@ -129,21 +135,29 @@
           var ide = new IDE_Morph().openIn(world);
           // Start Snap Environment Loop
           loop();
-
-          // AUTOGRADER ADDITIONS:
-          // Initialize AGSB button.
           $("#autograding_button").click(doExecAndDisplayTests);
+
+          if (window.onWorldLoaded) {
+              window.onWorldLoaded();
+          }
+
+          // $("#autograding_button").click(doExecAndDisplayTests);
           world_canvas.addEventListener("mouseup", update_listener);
           left_canvas = document.getElementById('left');
-
+          //
+          // var doExecAndDisplayTests = function(event) {
+          //     alert('doExecAndDisplay');
+          // };
 
 
           // This is a link relative to /problems/N/
-          starter_path = gon.starter_file_path;
+          ppxml_path = gon.ppxmlfile_path;
           loadTestJS();
           // The global id variable in set by the JS file.
           initializeSnapAdditions(world, id);
       };
+
+
 
 
 
@@ -158,7 +172,7 @@
               tag;
 
           if (!problem_js) { return; }
-          tag = document.createElement('script')
+          tag = document.createElement('script');
           // tag = document.createElement('null');
 
           tag.src = problem_js;
@@ -166,7 +180,8 @@
           // console.log(tag);
           // tag = problem_js;
           tag.onload = function () {
-              starter_path = gon.starter_file_path;
+              ppxml_path = gon.ppxmlfile_path;
+              // console.log(starter_path)
               initializeSnapAdditions(world, id);
           };
           document.head.appendChild(tag);

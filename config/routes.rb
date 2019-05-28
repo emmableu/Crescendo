@@ -33,6 +33,7 @@ Rails.application.routes.draw do
       get 'correctscript', to: 'tasks#correctscript'
       get 'scriptarraytwo', to: 'tasks#scriptarraytwo'
       get 'ppxmlfile', to: 'tasks#ppxmlfile'
+      get 'scriptorder', to: 'tasks#scriptorder'
 
 
     end

@@ -31,8 +31,8 @@ class TestscriptsController < ApplicationController
       ppxmlfile = script2test(blockxmlarray, xmltemplate)
 
 
-      @task.update_attributes(:test_file => testfile)
-      @task.update_attributes(:ppxmlfile => ppxmlfile)
+      # @task.update_attributes(:test_file => testfile)
+      # @task.update_attributes(:ppxmlfile => ppxmlfile)
       render json: {}, status: 200
     else
       flash.now[:notice] = "the script is not saved because you already have saved one before"

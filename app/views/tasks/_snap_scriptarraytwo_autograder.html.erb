@@ -63,14 +63,14 @@
                                       myself = this;
 
                       this.worldCanvas.style.position = "absolute";
-                      this.worldCanvas.style.left = clientWidth * 1/4 + 'px';
+                      this.worldCanvas.style.left = clientWidth * 1/3 + 'px';
                       this.worldCanvas.style.right = "0px";
                       this.worldCanvas.style.width = clientWidth + 'px';
                       this.worldCanvas.style.height = clientHeight + 'px';
 
                       if (this.worldCanvas.width !== clientWidth) {
               this.worldCanvas.width = clientWidth;
-              this.setWidth(clientWidth * 3/4);
+              this.setWidth(clientWidth * 2/3);
                       }
                       if (this.worldCanvas.height !== clientHeight) {
               this.worldCanvas.height = clientHeight;
@@ -91,18 +91,10 @@
                   // set element as child of wrapper
           var left_canvas = document.createElement('div');
           // left_canvas.style.display = "none";
+<!--          var description = document.createElement('iframe');-->
+<!--          description.src ="<%= scriptorder_task_path %>";-->
           var description = document.createElement('h1');
-          description.innerHTML = 'Drag to create a correct script: ';
-
-
-
-
-
-
-
-
-
-
+          description.innerHTML = "Instructions";
 
 
 
@@ -110,16 +102,16 @@
           description.style.position = "absolute";
           description.style.left = "10px";
           // description.style.left = "15px";
-          description.style.right = clientWidth * 1/4 - 20 + 'px';
-          description.style.width = clientWidth * 1/4 - 40+ 'px';
+          description.style.right = clientWidth * 1/3- 20 + 'px';
+          description.style.width = clientWidth * 1/3 - 40+ 'px';
           description.style.height = clientHeight + 'px';
           left_canvas.appendChild(description);
           left_canvas.id = 'left';
           left_canvas.style.position = "absolute";
           left_canvas.style.left = "15px";
           left_canvas.style.left = "15px";
-          left_canvas.style.right = clientWidth *  1/4  - 15 + 'px';
-          left_canvas.style.width = clientWidth *  1/4  - 30+ 'px';
+          left_canvas.style.right = clientWidth *  1/3  - 15 + 'px';
+          left_canvas.style.width = clientWidth *  1/3  - 30+ 'px';
           left_canvas.style.height = clientHeight + 'px';
 
 

@@ -38,12 +38,12 @@ class TasksController < ApplicationController
    end
   end
   def show
-    # if @task.starter_file
-    #   gon.starter_file_path = starter_file_question_path
-    # else
-    #   gon.starter_file_path = nil
-    # end
-    # gon.submissions_path = submission_question_path
+    @task = Task.find(params[:id])
+    if @task.ppxmlfile
+      gon.ppxmlfile_path = ppxmlfile_task_path
+    else
+      gon.ppxmlfile_path = nil
+    end
     @task = Task.find(params[:id])
     render layout: 'base'
 
@@ -135,6 +135,11 @@ class TasksController < ApplicationController
     else
       gon.ppxmlfile_path = nil
     end
+  end
+
+  def scriptorder
+    @task = Task.find(params[:id])
+    # render layout: 'nonavbar'
   end
 
 
