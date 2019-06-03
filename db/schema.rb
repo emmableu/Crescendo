@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190528033225) do
+ActiveRecord::Schema.define(version: 20190603020311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -117,6 +117,21 @@ ActiveRecord::Schema.define(version: 20190528033225) do
   end
 
   add_index "descriptions", ["task_id"], name: "index_descriptions_on_task_id", using: :btree
+
+  create_table "minitasks", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "task_id"
+    t.text     "test_file"
+    t.text     "starter_file"
+    t.integer  "difficulty"
+    t.integer  "order"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "instruction"
+    t.text     "ppxmlfile"
+  end
+
+  add_index "minitasks", ["task_id"], name: "index_minitasks_on_task_id", using: :btree
 
   create_table "nonces", force: :cascade do |t|
     t.string   "nonce"
@@ -225,12 +240,14 @@ ActiveRecord::Schema.define(version: 20190528033225) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "student_class"
+    t.integer  "progression"
   end
 
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   add_foreign_key "descriptions", "tasks"
+  add_foreign_key "minitasks", "tasks"
   add_foreign_key "questions", "categories"
   add_foreign_key "tasks", "categories"
   add_foreign_key "testscripts", "tasks"

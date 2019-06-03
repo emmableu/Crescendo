@@ -14,6 +14,7 @@
 #  first_name             :string
 #  last_name              :string
 #  student_class          :string
+#  progression            :integer
 #
 # Indexes
 #

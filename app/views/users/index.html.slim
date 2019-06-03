@@ -9,7 +9,7 @@ h1
           th
           th Name
           th Password
-          / th Consumer Key
+          th Progression
           th Edit
           th Delete
 
@@ -19,9 +19,10 @@ h1
             td.vert-align = user.id
             td.vert-align =  "#{user.username}"
             / td.vert-align = course.url
-            td.vert-alid
-              gn =  "#{user.encrypted_password}"
-            td.vert-align = 'Edit'
+            td.vert-align =  "#{user.encrypted_password}"
+            td.vert-align  = "#{user.progression}"
+            / td.vert-align = 'Edit'
+            td.vert-align = link_to 'Edit', edit_user_registration_path(user)
             / td.vert-align = 'Delete'
             / td.vert-align = link_to 'Edit', edit_user_path(user)
             td.vert-align = link_to raw('<strong>&times;</strong>'), user, class: "btn btn-danger", data: {:confirm => 'Are you sure?'}, :method => :delete

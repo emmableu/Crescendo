@@ -1,29 +1,17 @@
-= form_for @task, html: {class: 'form-horizontal'} do |f|
+= form_for @minitask, html: {class: 'form-horizontal'} do |f|
   .form-group
     = f.label :title
     = f.text_field :title, class: 'form-control'
   .form-group
-    = f.label :category
-    = f.collection_select(:category_id, Category.all, :id, :name, prompt: true)
-  / = f.number_field :category, class: 'form-control'
+    = f.label :task
+    = f.collection_select(:task_id, Task.all, :id, :title, prompt: true)
+
   / .form-group
   /   = f.label :difficulty
   /   = f.text_area :difficulty, class: 'form-control'
   .form-group
     = f.label :order
     = f.text_area :order, class: 'form-control'
-
-  / .form-group
-  /   = f.label :start_block
-  /   = f.text_area :order, class: 'form-control'
-  /
-  / .form-group
-  /   = f.label :correctscript
-  /   = link_to "correctscript", correctscript_task_path
-  / .form-group
-  /   = f.label :description
-  /   = link_to "Description", edit_task_description_path(@task)
-  /
   / .form-group
   /   = f.label :instruction
   /   = f.text_area :instruction, class: 'form-control', rows: 10
@@ -37,5 +25,3 @@
     .col-xs-1
       = f.button :submit, class: "btn btn-success"
       | Save
-    / .col-xs-1
-    /   = link_to 'Cancel', @question, class: 'btn btn-warning'

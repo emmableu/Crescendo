@@ -1,0 +1,14 @@
+- content_for :head do
+  title
+    = @minitask.title
+
+script
+  == @minitask.test_file
+
+/ Controls for getting feedback and state and such.
+= render 'autograder_header'
+= render 'snap_base'
+/ = render 'snap_scriptarraytwo_base'
+
+= render 'snap_autograder'
+= render 'autograder_help_results'

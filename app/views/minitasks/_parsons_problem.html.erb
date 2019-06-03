@@ -1,0 +1,24 @@
+
+<html>
+<head>
+  <script type="text/javascript">
+      function loadExample() {
+              ppxml_path = gon.ppxmlfile_path;
+              ide = world.children[0];
+              if (ppxml_path) {
+                  console.log('find ppxmlpath');
+                  console.log('ppxmlfilepath: ', ppxml_path);
+                  $.get(
+                      ppxml_path,
+                      function(data) {
+                          ide.droppedText(data);
+                          // ide.palette.hide();
+                      }
+                  ).done();
+              }
+      }
+  </script>
+</head>
+<body onload="loadExample();">
+</body>
+</html>

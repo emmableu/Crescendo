@@ -1,3 +1,10 @@
+/pictures from https://scratch.mit.edu/projects/editor/?tutorial=getStarted
+doctype html
+- if current_user
+  - @next_task = current_user.progression/3 + 1
+- else
+  - @next_task = 3
+  / console.log(#{@next_task})
 - if current_admin
   .table
     table.table.table-striped
@@ -20,11 +27,11 @@
               / td.vert-align = course.url
               td.vert-align = link_to "#{categorytask.title}", categorytask
               - if categorytask.test_file
-                 td.vert-align
-                   = link_to "#{categorytask.test_file[0,100]}", test_file_task_path(categorytask), :maxlength => 3, :size => 10
+                td.vert-align
+                  = link_to "#{categorytask.test_file[0,100]}", test_file_task_path(categorytask), :maxlength => 3, :size => 10
               - else
-                 td.vert-align = "no test file yet"
-                   / = link_to "Enter a correct script to get test file", correctscript_task_path(categorytask)
+                td.vert-align = "no test file yet"
+                / = link_to "Enter a correct script to get test file", correctscript_task_path(categorytask)
               / td.vert-align = 'Edit'
               / td.vert-align = 'Delete'
               td.vert-align = link_to 'Edit', edit_task_path(categorytask)
@@ -41,20 +48,142 @@
 
 
 - else
-  doctype html
-  html lang="en"
-    body#myPage data-offset="60" data-spy="scroll" data-target=".navbar"
-      #tasks.container-fluid
-        - @categories.each do |category|
-          .col-sm-4.col-xs-12
-            .panel.panel-default.text-center
-              .panel-heading
-                h2 #{category.name}
+= render 'index_header'
 
-              .panel-body
-                .list-group
-                  - @categorytasks[category].each do |categorytask|
-                    li.list-group-item.list-group-item-action
-                      = link_to "#{categorytask.title}", categorytask
+head
+  / title Bootstrap Example
+  meta charset="utf-8" /
+  meta content="width=device-width, initial-scale=1" name="viewport" /
+  link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" /
 
+
+body
+  css:
+    body{
+      background-color: #0c1021
+    }
+    img {
+      /*width: 6vw;*/
+      height: 8vw;
+      object-fit: fill;
+    }
+    .entire-card {
+      color: #f2eeff;
+    }
+
+    .entire-card:hover {
+      color: #f2eeff;
+    }
+    .card-body {
+      font-family: serif;
+      font-size: 15px;
+      text-align: center;
+      background-color: #0c1021
+    }
+    .album.text_muted{
+      position: absolute;
+    }
+
+    @-webkit-keyframes greenPulse {
+      from {
+        background-color: #ffe72e;
+        -webkit-box-shadow: 0 0 80px #ffdf1a;
+      }
+      50% {
+        background-color: #ffe31b;
+        -webkit-box-shadow: 0 0 160px #ffd714;
+      }
+      to {
+        background-color: #ffdf1a;
+        -webkit-box-shadow: 0 0 80px #ffd722;
+      }
+    }
+
+    .greenPulse.button {
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: greenPulse;
+      -webkit-animation-duration: 2s;
+    }
+
+
+
+  br
+  br
+  br
+  / .album.text_muted
+  /   svg
+  /     line id = 'line1' stroke="red" stroke-width = 3
+  .album.text-muted
+    .container
+      - @categories.each do |category|
+        .row.mt-auto.justify-content-center
+          .card-deck
+
+            - if category.name == 'loop'
+
+              - @categorytasks[category].each do |categorytask|
+                - if categorytask.order == @next_task
+                  a.entire-card href="#{minitask_path(@minitask1[categorytask])}"
+                    .card.border-secondary.mx-4.mb-5.greenPulse.button
+                      |#{image_tag(categorytask.title)}
+                      .card-body
+                        strong.card-text = "#{categorytask.title}"
+                - elsif categorytask.order < @next_task
+                  a.entire-card
+                    .card.border-secondary.mx-4.mb-5
+                      |#{image_tag("Pass" + categorytask.title)}
+                      .card-body
+                        strong.card-text =  "#{categorytask.title}"
+                - else
+                  a.entire-card
+                    .card.border-secondary.mx-4.mb-5
+                      |#{image_tag("Blur" + categorytask.title)}
+                      .card-body
+                        strong.card-text = "#{categorytask.title}"
+
+                .card.invisible.mx-4.mb-5
+                  |#{image_tag(categorytask.title)}
+                  .card-body
+                    strong.card-text = "#{categorytask.title}"
+            - else
+
+              - @categorytasks[category].each do |categorytask|
+                .card.invisible.mx-4.mb-5
+                  |#{image_tag(categorytask.title)}
+                  .card-body
+                    strong.card-text = "#{categorytask.title}"
+
+                - if categorytask.order == @next_task
+                  a.entire-card href="#{minitask_path(@minitask1[categorytask])}"
+                  script
+                    javascript:console.log(@minitasks);
+                    .card.border-secondary.mx-4.mb-5.greenPulse.button
+                      |#{image_tag(categorytask.title)}
+                      .card-body
+                        strong.card-text = "#{categorytask.title}"
+                - elsif categorytask.order < @next_task
+                  a.entire-card
+                    .card.border-secondary.mx-4.mb-5
+                      |#{image_tag("Pass" + categorytask.title)}
+                      .card-body
+                        strong.card-text =  "#{categorytask.title}"
+                - else
+                  a.entire-card
+                    .card.border-secondary.mx-4.mb-5
+                      |#{image_tag("Blur" + categorytask.title)}
+                      .card-body
+                        strong.card-text = "#{categorytask.title}"
+/
+/ script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+//javascript:
+//  line1 = $('#line1');
+//  div1 = $('#task1');
+//  div2 = $('#task2');
+//  var pos1 = div1.offset()- div1.offsetParent();
+//  var pos2 = div2.offset() - div2.offsetParent();
+//  line1
+//    .attr('x1', div1.offset().left - div1.offsetParent().left)
+//    .attr('y1', div1.offset().top - div1.offsetParent().top)
+//    .attr('x2', pos2.left)
+//    .attr('y2', pos2.top);
 

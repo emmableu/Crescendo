@@ -1,0 +1,37 @@
+/pictures from https://scratch.mit.edu/projects/editor/?tutorial=getStarted
+doctype html
+
+/ - if current_admin
+.table
+  table.table.table-striped
+    thead
+      tr
+        / th
+        th Category Name
+        th MiniTask
+        / th Consumer Key
+        th testfile
+        th Edit
+        th Delete
+
+    tbody
+      - @categories.each do |category|
+        - @categorytasks[category].each do |categorytask|
+          - @minitasks[categorytask].each do |minitask|
+            tr
+              td.vert-align = link_to "#{category.name}", category
+              td.vert-align = link_to "#{minitask.title}", minitask
+              - if minitask.test_file
+                td.vert-align
+                  = link_to "#{minitask.test_file[0,100]}", test_file_task_path(minitask), :maxlength => 3, :size => 10
+              - else
+                td.vert-align = "no test file yet"
+                / = link_to "Enter a correct script to get test file", correctscript_task_path(categorytask)
+              / td.vert-align = 'Edit'
+              / td.vert-align = 'Delete'
+              td.vert-align = link_to 'Edit', edit_minitask_path(minitask)
+              td.vert-align = link_to raw('<strong>&times;</strong>'), minitask, class: "btn btn-danger", data: {:confirm => 'Are you sure?'}, :method => :delete
+br
+a.btn.btn-success(href=new_minitask_path role='button')
+  | New Minitask
+

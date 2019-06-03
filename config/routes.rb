@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # devise_for :admins
   # devise_for :users
-  resources :categories, :tasks, :templates
+  resources :categories, :tasks, :templates, :minitasks
   devise_for :users, controllers: { sessions: 'users/sessions' , registrations: 'users/registrations'}
   # devise_for :admins, controllers: { sessions: 'admins/sessions' , registrations: 'admins/registrations'}
   devise_for :admins do

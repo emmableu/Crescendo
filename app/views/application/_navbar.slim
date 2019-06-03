@@ -13,13 +13,7 @@ nav.navbar.navbar-inverse.navbar-fixed-top
         ul.nav.navbar-nav
           li
             a(href="#{main_app.tasks_path}") Tasks
-          / - if current_user && current_user.admin
-          /   li
-          /     a(href="#{main_app.courses_path}")Courses
-          /   li
-          /     a(href="#{main_app.users_dashboard_path}")Users
-          /   li
-          /     a(href="#{main_app.blazer_path}")Dashboards
+
       p.navbar-text.navbar-right
         - if current_user
         #{current_user.name}
