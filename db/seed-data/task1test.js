@@ -10,7 +10,7 @@ function AGTest(outputLog) {
         id
 
      );
-    var blocks =["move %n steps","turn %clockwise %n degrees","turn %counterclockwise %n degrees"];
+    var blocks =["move %n steps"];
     var i = 0;
     var len = blocks.length;
     for (; i < len; ) {

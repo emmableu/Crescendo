@@ -46,12 +46,23 @@ class MinitasksController < ApplicationController
 
   def show
     @minitask = Minitask.find(params[:id])
+    @task = Task.where(id: @minitask.task_id).first
+    if @minitask.starter_file
+      gon.starter_file_path = starter_file_minitask_path
+    else
+      gon.starter_file_path = nil
+    end
     if @minitask.ppxmlfile
       # gon.ppxmlfile_path = ppxmlfile_minitask_path
     else
       # gon.ppxmlfile_path = nil
     end
+    # @minitask = Minitask.find(params[:id])
+    #
+    #
     @minitask = Minitask.find(params[:id])
+    @task = Task.where(id: @minitask.task_id).first
+    @nextminitask = Minitask.where(task_id: @task.id, order: @minitask.order+1).first
     render layout: 'base'
 
   end
@@ -135,14 +146,29 @@ class MinitasksController < ApplicationController
     @minitask = Minitask.find(params[:id])
     render plain: @minitask.ppxmlfile
   end
-  def scriptarraytwo
+  def starter_file
     @minitask = Minitask.find(params[:id])
-    if @minitask.ppxmlfile
-      gon.ppxmlfile_path = ppxmlfile_minitask_path
-    else
-      gon.ppxmlfile_path = nil
-    end
+    render plain: @minitask.starter_file
+
   end
+
+  def next_minitask
+    @minitask = Minitask.find(params[:id])
+    @task = Task.where(id: @minitask.task_id).first
+    @nextminitask = Minitask.where(task_id: @task.id, order: @minitask.order+1).first
+    respond_with @nextminitask.show
+  end
+
+
+
+  # def scriptarraytwo
+  #   @minitask = Minitask.find(params[:id])
+  #   if @minitask.ppxmlfile
+  #     gon.ppxmlfile_path = ppxmlfile_minitask_path
+  #   else
+  #     gon.ppxmlfile_path = nil
+  #   end
+  # end
 
   def scriptorder
     @minitask = Minitask.find(params[:id])

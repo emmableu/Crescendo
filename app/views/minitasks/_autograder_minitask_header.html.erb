@@ -1,0 +1,173 @@
+<style type="text/css">
+
+  body {
+    overflow: hidden;
+    /*padding-top: 50px;*/
+    /*margin: 0;*/
+    margin:0px;
+    padding:0px;
+
+
+  }
+  #ag-header{
+    background-color: #1b1e21;
+    height: 10%;
+    position: relative;
+  }
+
+  #numtips {
+    font-variant: small-caps;
+    font-weight: bold;
+  }
+
+  span.task-title {
+    float: left;
+    font-weight: bold;
+    font-family: serif;
+    font-variant: small-caps;
+    color: #f2eeff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+  }
+  span.task-title-right {
+    float:right;
+    text-align: end;
+    font-weight: bold;
+    font-family: serif;
+    font-variant: small-caps;
+    color: #f2eeff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+  }
+
+ .navbar-upper-left {
+   margin-left: 10px;
+   margin-right: 10px;
+   float: left;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    display: table-cell;
+    /*right: 100%;*/
+  }
+  .navbar-lower-left {
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    width: 100%;
+    padding: 15px;
+    display: table-cell;
+    color: #777;
+  }
+
+  .navbar-logo {
+    background-image: url('https://lh3.googleusercontent.com/-tw5LsU4Fg28/Umo6BBcoCnI/AAAAAAAAmjE/1iqULsem06E/w896-h896/heisencat.png');
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 45%;
+    z-index: 1051;
+  }
+
+  .checkmywork{
+    background-image: url('https://lh3.googleusercontent.com/-tw5LsU4Fg28/Umo6BBcoCnI/AAAAAAAAmjE/1iqULsem06E/w896-h896/heisencat.png');
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 70%;
+    z-index: 1051;
+  }
+</style>
+
+<a class="navbar-logo" href="#"></a>
+<button class = "checkmywork" id = 'autograding_button'></button>
+<div id="ag-header">
+<nav class="navbar-inverse navbar-upper" >
+  <div class="container-fluid">
+    <ul class="nav navbar-upper-left">
+      <li> <span class="task-title">Score: <%=30* @task.order%> </span>
+ <span class="task-title-right"><%= @task.title %></span>
+      </li>
+
+
+
+  </div>
+</nav>
+<nav class="navbar navbar-inverse navbar-static-top navbar-lower">
+  <div class="container-fluid">
+
+      <ul class="nav navbar-lower-left">
+        <li> <span class="task-title">Goal: 180</span>
+          <span class="task-title-right">Level <%= @task.order %></span>
+        </li>
+
+      </ul>
+    </div>
+
+  <button class="btn btn-default navbar-btn tips-msg"
+          id="numtips" style="display: none;"
+          onClick="openResults()">
+    <span class="badge">0</span> Tips
+  </button>
+</nav>
+
+
+</div>
+
+<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="ag-header">-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="navbar-upper-left" id="autograding_bar">-->
+<!--    <div class="navbar-brand">-->
+<!--      <span class="task-title">Exercise: <%#= @minitask.title %></span>-->
+<!--    </div>-->
+<!--    <ul class="navbar-nav justify-content-end">-->
+<!--    <div class="navbar-brand-right">-->
+<!--      <span class="task-title">navbar-upper-right</span>-->
+<!--    </div>-->
+<!--      </ul>-->
+
+<!--  </div>-->
+
+<!--    <div class="navbar-upper justify-content-end" >-->
+
+<!--      </div>-->
+
+
+
+
+<!--      <div class="navbar-lower-left ">-->
+<!--        <div class="navbar-brand">-->
+<!--          <span class="task-title">navbar_lower_left</span>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    <div class="navbar-lower-right" id="autograding_bar_right">-->
+<!--      <div class="navbar-brand">-->
+<!--        <span class="task-title">navbar-lower-right</span>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+<!--  </div>-->
+<!--  </div>-->
+
+
+
+
+
+
+
+
+<!--</nav>-->
+

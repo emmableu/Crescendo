@@ -34,8 +34,8 @@
   <script src='/autograder/ag-files/scriptAnalysis.js'></script>
   <script src="/autograder/ag-files/AGAgent.js"></script>
   <script src='/autograder/ag-files/feedbackLog.js'></script>
-  <script src="/autograder/ag-files/AGFormatting.js"></script>
-  <script src="/autograder/ag-files/task-script.js"></script>
+  <script src="/autograder/ag-files/AGMiniTaskFormatting.js"></script>
+<!--  <script src="/autograder/ag-files/task-script.js"></script>-->
 
 
   <!-- Custom cloud access on localhost only. -->
@@ -66,7 +66,7 @@
           this.worldCanvas.style.left = clientWidth * 1/4 + 'px';
           this.worldCanvas.style.right = "0px";
           this.worldCanvas.style.width = clientWidth + 'px';
-          this.worldCanvas.style.height = clientHeight + 'px';
+          this.worldCanvas.style.top = agHeight + 'px';
 
           if (this.worldCanvas.width !== clientWidth) {
               this.worldCanvas.width = clientWidth;

@@ -2,13 +2,6 @@
   title
     = @task.title
 
-/ .hidden
-/   = link_to 'Back', questions_path
-/   = form_tag(submission_question_path(params[:id]), id: 'submission-form', method: "post") do
-/     = text_field_tag(:score)
-/     = text_field_tag(:code_submission)
-/     = text_field_tag(:test_results)
-/     = submit_tag("Submit")
 
 script
   == @task.test_file
@@ -16,7 +9,7 @@ script
 / Controls for getting feedback and state and such.
 = render 'autograder_header'
 
-= render 'snap_scriptarraytwo_base'
+= render 'snap_correctscript_base'
 
-= render 'snap_autograder'
+= render 'minitasks/snap_minitask_autograder'
 = render 'autograder_help_results'

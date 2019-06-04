@@ -18,7 +18,12 @@ Rails.application.routes.draw do
   # TODO: Better Homepage at some point.
   root :to => "tasks#index"
   # rails_admin.dashboard_path :to =>
-
+  resources :minitasks do
+    member do
+      get 'starter_file', to: 'minitasks#starter_file'
+      get 'next_minitask', to: 'minitasks#next_minitask'
+    end
+  end
   resources :tasks do
     resources :descriptions
     resources :testscripts

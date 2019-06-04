@@ -1,14 +1,19 @@
 - content_for :head do
   title
     = @minitask.title
-
+.hidden
+  = form_tag(submission_question_path(params[:id]), id: 'submission-form', method: "post") do
+    = text_field_tag(:score)
+    = text_field_tag(:code_submission)
+    = text_field_tag(:test_results)
+    = submit_tag("Submit")
 script
   == @minitask.test_file
 
 / Controls for getting feedback and state and such.
-= render 'autograder_header'
-= render 'snap_base'
-/ = render 'snap_scriptarraytwo_base'
+= render 'autograder_minitask_header'
+/ = render 'snap_base'
+= render 'snap_minitask_base'
 
-= render 'snap_autograder'
+= render 'snap_minitask_autograder'
 = render 'autograder_help_results'
