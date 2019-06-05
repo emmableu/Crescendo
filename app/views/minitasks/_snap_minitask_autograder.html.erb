@@ -19,6 +19,7 @@
 <% content_for :head do %>
   <!-- NOTE: jQuery and _ are included in the Rails App  -->
 
+<!--  <script src='/autograder/ag-files/MiniTaskPopulate.js'></script>-->
   <!-- AG Snap Modifications -->
   <script src="/snap-path.js"></script>
   <script src="/autograder/ag-files/snap-ui-overrides.js"></script>
@@ -28,11 +29,13 @@
   <link rel="stylesheet" type="text/css" href="/autograder/ag-files/hintstyle.css" />
 
   <!-- Main autograder components -->
+
   <script src='/autograder/ag-files/ag-util.js'></script>
   <script src='/autograder/ag-files/help-content.js'></script>
   <script src='/autograder/ag-files/spriteEventLog.js'></script>
   <script src='/autograder/ag-files/scriptAnalysis.js'></script>
-  <script src="/autograder/ag-files/AGAgent.js"></script>
+
+  <script src="/autograder/ag-files/AGMiniTaskAgent.js"></script>
   <script src='/autograder/ag-files/feedbackLog.js'></script>
   <script src="/autograder/ag-files/AGMiniTaskFormatting.js"></script>
 <!--  <script src="/autograder/ag-files/task-script.js"></script>-->
@@ -186,5 +189,6 @@
           };
           document.head.appendChild(tag);
       }
+
   </script>
 <% end %>

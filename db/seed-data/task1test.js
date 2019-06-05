@@ -10,7 +10,7 @@ function AGTest(outputLog) {
         id
 
      );
-    var blocks =["move %n steps"];
+    var blocks =["move %n steps", "stamp"];
     var i = 0;
     var len = blocks.length;
     for (; i < len; ) {
