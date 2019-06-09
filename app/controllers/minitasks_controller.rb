@@ -40,29 +40,33 @@ class MinitasksController < ApplicationController
     end
   end
   def minitasks_params
-    params.require(:minitask).permit(:title,:task_id, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
+    params.require(:minitask).permit(:id, :title,:task_id, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
                                      :updated_at, :instruction, :description, :ppxmlfile)
   end
 
   def show
+
     @minitask = Minitask.find(params[:id])
-    @task = Task.where(id: @minitask.task_id).first
-    if @minitask.starter_file
-      gon.starter_file_path = starter_file_minitask_path
-    else
-      gon.starter_file_path = nil
+    @quiz = Quiz.where(minitask_id: @minitask.id).first
+    # print("quizbody: ", @quiz.quizbody);
+    if @quiz
+      @options =Option.where(quiz_id: @quiz.id).order(order: :asc)
     end
+    @task = Task.where(id: @minitask.task_id).first
+    # if @minitask.starter_file
+    #   gon.starter_file_path = starter_file_minitask_path
+    # else
+    #   gon.starter_file_path = nil
+    # end
     if @minitask.ppxmlfile
-      # gon.ppxmlfile_path = ppxmlfile_minitask_path
+      gon.ppxmlfile_path = ppxmlfile_minitask_path
     else
-      # gon.ppxmlfile_path = nil
+      gon.ppxmlfile_path = nil
     end
-    # @minitask = Minitask.find(params[:id])
     #
-    #
-    @minitask = Minitask.find(params[:id])
-    @task = Task.where(id: @minitask.task_id).first
+    puts('task: ', @task.title)
     @nextminitask = Minitask.where(task_id: @task.id, order: @minitask.order+1).first
+    puts("nextminitask: ", @nextminitask)
     render layout: 'base'
 
   end
@@ -152,11 +156,17 @@ class MinitasksController < ApplicationController
 
   end
 
+
   def next_minitask
     @minitask = Minitask.find(params[:id])
     @task = Task.where(id: @minitask.task_id).first
     @nextminitask = Minitask.where(task_id: @task.id, order: @minitask.order+1).first
-    respond_with @nextminitask.show
+    # respond_with @nextminitask.show
+    format.html {
+      redirect_to action: "show",
+                  id: @nextminitask.id
+
+    }
   end
 
 

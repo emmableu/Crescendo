@@ -24,9 +24,9 @@
   /   = f.label :description
   /   = link_to "Description", edit_task_description_path(@task)
   /
-  / .form-group
-  /   = f.label :instruction
-  /   = f.text_area :instruction, class: 'form-control', rows: 10
+  .form-group
+    = f.label :instruction
+    = f.text_area :instruction, class: 'form-control', rows: 4
   .form-group
     = f.label :starter_file
     = f.text_area :starter_file, class: 'form-control', rows: 10

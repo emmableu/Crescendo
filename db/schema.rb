@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190603020311) do
+ActiveRecord::Schema.define(version: 20190607222438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -141,6 +141,16 @@ ActiveRecord::Schema.define(version: 20190603020311) do
 
   add_index "nonces", ["nonce"], name: "index_nonces_on_nonce", unique: true, using: :btree
 
+  create_table "options", force: :cascade do |t|
+    t.integer  "quiz_id"
+    t.text     "optionbody"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "order"
+  end
+
+  add_index "options", ["quiz_id"], name: "index_options_on_quiz_id", using: :btree
+
   create_table "pghero_query_stats", force: :cascade do |t|
     t.text     "database"
     t.text     "query"
@@ -164,6 +174,17 @@ ActiveRecord::Schema.define(version: 20190603020311) do
   end
 
   add_index "questions", ["category_id"], name: "index_questions_on_category_id", using: :btree
+
+  create_table "quizzes", force: :cascade do |t|
+    t.string   "name"
+    t.text     "quizbody"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "solution"
+    t.integer  "minitask_id"
+  end
+
+  add_index "quizzes", ["minitask_id"], name: "index_quizzes_on_minitask_id", using: :btree
 
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
@@ -248,7 +269,9 @@ ActiveRecord::Schema.define(version: 20190603020311) do
 
   add_foreign_key "descriptions", "tasks"
   add_foreign_key "minitasks", "tasks"
+  add_foreign_key "options", "quizzes"
   add_foreign_key "questions", "categories"
+  add_foreign_key "quizzes", "minitasks"
   add_foreign_key "tasks", "categories"
   add_foreign_key "testscripts", "tasks"
 end

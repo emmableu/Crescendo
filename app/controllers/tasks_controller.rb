@@ -35,7 +35,7 @@ class TasksController < ApplicationController
     @minitask1 = {}
     @categories.each do |category|
       # if @task
-        @categorytasks[category] = Task.where(category_id: category.id)
+        @categorytasks[category] = Task.where(category_id: category.id).order(order: :asc)
         @categorytasks[category].each do |task|
           @minitasks[task] = Minitask.where(task_id: task.id).order(order: :asc)
           @minitask1[task] = Minitask.where(task_id: task.id).order(order: :asc).first

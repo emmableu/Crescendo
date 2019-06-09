@@ -1,0 +1,25 @@
+h1 Listing options
+
+table
+  thead
+    tr
+      th Quiz
+      th Optionbody
+      th Order
+      th
+      th
+      th
+
+  tbody
+    - @options.each do |option|
+      tr
+        td = option.quiz
+        td = option.optionbody
+        td = option.order
+        td = link_to 'Show', option
+        td = link_to 'Edit', edit_option_path(option)
+        td = link_to 'Destroy', option, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Option', new_option_path

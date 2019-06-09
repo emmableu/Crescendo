@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :options
+  resources :quizzes
   # devise_for :admins
   # devise_for :users
   resources :categories, :tasks, :templates, :minitasks
@@ -21,7 +23,10 @@ Rails.application.routes.draw do
   resources :minitasks do
     member do
       get 'starter_file', to: 'minitasks#starter_file'
+      get 'ppxmlfile', to: 'minitasks#ppxmlfile'
       get 'next_minitask', to: 'minitasks#next_minitask'
+      # get 'show_instruction', to: 'minitasks#show_instruction'
+
     end
   end
   resources :tasks do

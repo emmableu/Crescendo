@@ -1,0 +1,17 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @quiz.name
+p
+  strong Quizbody:
+  = @quiz.quizbody
+
+p
+  strong options:
+  = @options
+
+
+=> link_to 'Edit', edit_quiz_path(@quiz)
+'|
+=< link_to 'Back', quizzes_path

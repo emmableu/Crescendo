@@ -8,6 +8,14 @@
     /*margin-left: 15px;*/
     word-wrap: break-word;
   }
+  #bottom-right{
+    position: absolute;
+    z-index: 1;
+    color: whitesmoke;
+    font-size: 18px;
+    margin: 15px;
+    overflow: visible;
+  }
 
 
   iframe {
@@ -60,20 +68,22 @@
       // TODO: extract into AG function that builds this.
       // It should take in a width and height.
       WorldMorph.prototype.fillPage = function () {
+          console.log('worldmorph fill page');
           var agHeight = $('#ag-header').outerHeight();
+
           clientHeight = $(window).height() - agHeight,
               clientWidth = window.innerWidth,
               myself = this;
 
           this.worldCanvas.style.position = "absolute";
-          this.worldCanvas.style.left = clientWidth * 1/4 + 'px';
+          this.worldCanvas.style.left = '0px';
           this.worldCanvas.style.right = "0px";
           this.worldCanvas.style.width = clientWidth + 'px';
           this.worldCanvas.style.top = agHeight + 'px';
 
           if (this.worldCanvas.width !== clientWidth) {
               this.worldCanvas.width = clientWidth;
-              this.setWidth(clientWidth * 3/4);
+              this.setWidth(clientWidth);
           }
           if (this.worldCanvas.height !== clientHeight) {
               this.worldCanvas.height = clientHeight;
@@ -85,43 +95,6 @@
               }
           });
 
-          canvas_container = document.getElementById('canvas-container');
-          var parent = canvas_container.parentNode;
-          var wrapper = document.createElement('div');
-
-          // set the wrapper as child (instead of the element)
-          parent.replaceChild(wrapper, canvas_container);
-          // set element as child of wrapper
-          var left_canvas = document.createElement('div');
-          // left_canvas.style.display = "none";
-          <!--          var description = document.createElement('iframe');-->
-          <!--          description.src ="<%= scriptorder_task_path %>";-->
-          var description = document.createElement('h1');
-          description.innerHTML = "Instructions";
-
-
-
-          description.id = 'left_description';
-          description.style.position = "absolute";
-          description.style.left = "10px";
-          // description.style.left = "15px";
-          description.style.right = clientWidth * 1/4- 20 + 'px';
-          description.style.width = clientWidth * 1/4 - 40+ 'px';
-          description.style.height = clientHeight + 'px';
-          left_canvas.appendChild(description);
-          left_canvas.id = 'left';
-          left_canvas.style.position = "absolute";
-          left_canvas.style.left = "15px";
-          left_canvas.style.left = "15px";
-          left_canvas.style.right = clientWidth *  1/4  - 15 + 'px';
-          left_canvas.style.width = clientWidth *  1/4  - 30+ 'px';
-          left_canvas.style.height = clientHeight + 'px';
-
-
-          // left_canvas.innerHTML = description;
-          wrapper.appendChild(left_canvas);
-          wrapper.appendChild(canvas_container);
-
       };
 
       // THIS SEEMS LIKE A HACK.
@@ -132,13 +105,60 @@
               $(window).height() - $('#ag-header').outerHeight()
           );
           // console.log($('#ag-header').outerHeight(), $(window).height(), $('#canvas-container').height());
-          $('#canvas-container').width($(window).width()*0.7);
+          $('#canvas-container').width($(window).width());
           world_canvas = document.getElementById('world');
           world = new WorldMorph(world_canvas);
           var ide = new IDE_Morph().openIn(world);
           // Start Snap Environment Loop
           loop();
-          $("#autograding_button").click(doExecAndDisplayTests);
+          <% if @minitask.order == 1 %>
+            $("#autograding_button").click(doExecAndDisplayQuizzes);
+          <% else %>
+            $("#autograding_button").click(doExecAndDisplayTests);
+          <% end %>
+          var ide = world.children[0];
+
+
+
+
+          console.log('ide: ', ide);
+          instruction_left = ide.stage.left();
+          instruction_width = clientWidth - ide.stage.left();
+          var agHeight = $('#ag-header').outerHeight();
+          instruction_top = ide.stage.bottom() + agHeight + 50;
+          console.log('instruction_width: ', instruction_left);
+          console.log('instruction_top: ', instruction_top);
+
+
+
+
+          canvas_container = document.getElementById('canvas-container');
+          var parent = canvas_container.parentNode;
+          var wrapper = document.createElement('div');
+
+          // set the wrapper as child (instead of the element)
+          parent.replaceChild(wrapper, canvas_container);
+          // set element as child of wrapper
+          var instruction_canvas = document.createElement('div');
+
+          instruction_canvas.id = 'bottom-right';
+          instruction_canvas.style.position = "absolute";
+          instruction_canvas.style.left = instruction_left+ 'px';
+          // instruction_canvas.style.left = "15px";
+          instruction_canvas.style.right =clientWidth + 'px';
+          instruction_canvas.style.width = instruction_width + 'px';
+          instruction_canvas.style.top = instruction_top +  'px';
+          instruction_canvas.style.bottom =  '0px';
+
+          instruction_canvas.innerHTML = "<%=escape_javascript @minitask.instruction.html_safe%>";
+          wrapper.appendChild(instruction_canvas);
+          wrapper.appendChild(canvas_container);
+
+
+
+
+
+
 
           if (window.onWorldLoaded) {
               window.onWorldLoaded();

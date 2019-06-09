@@ -1,0 +1,21 @@
+= form_for @quiz do |f|
+  - if @quiz.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@quiz.errors.count, "error")} prohibited this quiz from being saved:"
+      ul
+        - @quiz.errors.full_messages.each do |message|
+          li = message
+  .field
+    = f.label :minitask_id
+    = f.text_area :minitask_id
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :quizbody
+    = f.text_area :quizbody
+
+  .field
+    = f.label :solution
+    = f.text_area :solution
+  .actions = f.submit

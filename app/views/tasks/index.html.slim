@@ -120,7 +120,6 @@ body
           .card-deck
 
             - if category.name == 'loop'
-
               - @categorytasks[category].each do |categorytask|
                 - if categorytask.order == @next_task
                   a.entire-card href="#{minitask_path(@minitask1[categorytask])}"

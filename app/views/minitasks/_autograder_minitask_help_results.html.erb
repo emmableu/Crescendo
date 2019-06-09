@@ -1,7 +1,7 @@
 <!-- Snap Autograding Menu -->
 <style type="text/css">
   .container {
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     text-align: center;
   }
 
@@ -25,14 +25,102 @@
     display: none;
   }
 
-  .star:hover .description {
+  .description-table {
+    /*display: none;*/
+    text-align: center;
+    font-size: 14px;
+    color: whitesmoke;
+  }
+  .star:hover .description-table {
     display: block;
+    text-align: center;
+    font-size: 14px;
+    color: whitesmoke;
+  }
+
+  /*body{*/
+  /*font-size: 20px;*/
+  /*font-family: sans-serif;*/
+  /*color: #333;*/
+  /*}*/
+
+
+  @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
+  /*body{*/
+  /*font-size: 20px;*/
+  /*font-family: 'Work Sans', sans-serif;*/
+  /*color: #333;*/
+  /*font-weight: 300;*/
+  /*text-align: center;*/
+  /*background-color: #f8f6f0;*/
+  /*}*/
+  h1{
+    font-weight: 300;
+    margin: 0px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #444;
+    color: #fff;
+  }
+  .question{
+    color: whitesmoke;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .answers {
+    color: whitesmoke;
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+  }
+  .answers label{
+    color: whitesmoke;
+    display: block;
+    margin-bottom: 10px;
+  }
+  button{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  button:hover{
+    background-color: #38a;
+  }
+
+  .overlay{
+    position:absolute;
+  }
+  /*#ag-output{*/
+    /*z-index: 1;*/
+  /*}*/
+
+  #close {
+    position: absolute;
+    background: #ff5763;
+    color: white;
+    top: 0px;
+    right: -10px;
   }
 
 </style>
 
+<!--<div id="quiz"></div>-->
+<!--<button id="submit">Submit Quiz</button>-->
+<!--<div id="results"></div>-->
 
-<div class="overlay" id="ag-output" style="display: none">
+
+
+<div class="overlay hidden" id="ag-output">
+  <!--<div class = 'quiz' id = 'quiz'> </div>-->
+  <!--<div class = 'results' id = 'results'> </div>-->
+
   <div class="popup-content" id="ag-results">
     <br>
     <br>
@@ -43,8 +131,7 @@
 </div>
 
 <script>
-    populateFeedback = function(feedbackLog, allFeedback, chunknum, tipnum) {
-        // TODO: Declare move variables up here:
+    populateQuiz = function() {
         var i, j, x;
 
         var comment = document.getElementById("comment");
@@ -53,6 +140,162 @@
         while (comment.nextSibling) {
             document.getElementById("ag-results").removeChild(comment.nextSibling);
         }
+
+        quiz = document.createElement('div');
+        quiz.id = 'quiz';
+        results = document.createElement('div');
+        results.id = 'results';
+        submitButton = document.createElement('button');
+        submitButton.id = "submit";
+        submitButton.innerHTML = 'Submit';
+        closeButton = document.createElement('button');
+        closeButton.id = "close";
+        closeButton.innerHTML = 'X';
+        // nextButton = document.createElement('button');
+        // nextButton.id = "next";
+        // nextButton.innerHTML = 'nextButton';
+
+        $("#ag-results").append(quiz);
+        $("#ag-results").append(results);
+        $("#ag-results").append(submitButton);
+        $("#ag-results").append(closeButton);
+        // $("#ag-results").append(previouButton);
+        // $("#ag-results").append(nextButton);
+
+        (function() {
+            function buildQuiz() {
+                // we'll need a place to store the HTML output
+                const output = [];
+
+                // for each question...
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                    // we'll want to store the list of answer choices
+                    const answers = [];
+                    ;
+
+                    // and for each available answer...
+                    for (letter in currentQuestion.answers) {
+                        // ...add an HTML radio button
+                        answers.push(
+                            `<label>
+            <input type="radio" name="question${questionNumber}" value="${letter}">
+            ${letter} :
+            ${currentQuestion.answers[letter]}
+          </label>`
+                        );
+                    }
+
+                    // add this question and its answers to the output
+                    output.push(
+                        `<div class="question"> ${currentQuestion.question} </div>
+        <div class="answers"> ${answers.join("")} </div>`
+                    );
+                });
+
+                // finally combine our output list into one string of HTML and put it on the page
+                quizContainer.innerHTML = output.join("");
+            }
+
+            function showResults() {
+                // gather answer containers from our quiz
+                const answerContainers = quizContainer.querySelectorAll(".answers");
+
+                // keep track of user's answers
+                let numCorrect = 0;
+
+                // for each question...
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                    // find selected answer
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+                    Trace.log(userAnswer.toString());
+                    // if answer is correct
+                    if (userAnswer === currentQuestion.correctAnswer) {
+                        // add to the number of correct answers
+                        numCorrect++;
+                        alert("Correct! Congratulations!");
+                        // color the answers green
+                        ;
+                        next_subtask = document.getElementById('next-subtask');
+                        if (next_subtask == null) {
+                            divTest = $('<div>')
+                                .html("<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>")
+                            ;
+                            $("#ag-results").append(divTest);
+                        }
+
+                    } else {
+                        // if answer is wrong or blank
+                        alert("Wrong Answer, please try again");
+                        answerContainers[questionNumber].style.color = "red";
+                        // resultsContainer.innerHTML = `Wrong!`;
+
+                    }
+                });
+                // resultsContainer.innerHTML = `Correct!`
+                // show number of correct answers out of total
+                // Trace.log(resultsContainer);
+                // closePopup()
+            }
+
+            const quizContainer = document.getElementById("quiz");
+            const resultsContainer = document.getElementById("results");
+            const submitButton = document.getElementById("submit");
+            const closeButton = document.getElementById("close");
+            <% if @quiz%>
+              const myQuestions = [
+                  {
+                      question: "<%= @quiz.quizbody%>",
+                      answers: {
+                          a: "<%= @options[0].optionbody.html_safe%>",
+                          b: "<%= @options[1].optionbody.html_safe%>",
+                          c: "<%= @options[2].optionbody.html_safe%>"
+                      },
+                      correctAnswer:  "<%= @quiz.solution%>"
+                  },
+              ];
+            <% else%>
+            const myQuestions = []
+            <% end%>
+                // }
+
+
+            // display quiz right away
+            buildQuiz();
+
+            // on submit, show results
+            submitButton.addEventListener("click", showResults);
+            closeButton.addEventListener("click", closePopup);
+        })();
+
+    };
+
+
+
+    populateFeedback = function(feedbackLog, allFeedback, chunknum, tipnum) {
+        var i, j, x;
+
+        var comment = document.getElementById("comment");
+        comment.innerHTML = "";
+
+        while (comment.nextSibling) {
+            document.getElementById("ag-results").removeChild(comment.nextSibling);
+        }
+
+
+        closeButton = document.createElement('button');
+        closeButton.id = "close";
+        closeButton.innerHTML = 'X';
+        $("#ag-results").append(closeButton);
+        const closeButton = document.getElementById("close");
+
+        closeButton.addEventListener("click", closePopup);
+
+
+
+
+
 
         var log = feedbackLog;
         var chunks = log.chunk_list;
@@ -403,9 +646,25 @@
 
         }
 
+        var description_table = document.createElement('p');
+        description_table.innerHTML = "<span><\span>";
+        description_table.className = 'description-table';
+        description_table.id = 'description-table';
 
-<!--        star = $('<div>')-->
-<!--            .html("<%= escape_javascript image_tag('star.jpg') %> <p>text<p> <p class = 'description'> description <p>").addClass('star');-->
+        $("#ag-results").append(description_table);
+
+        $( "div.star" )
+            .mouseenter(function() {
+                description = this.children[1].innerHTML;
+                console.log(description);
+                $( "#description-table" ).find( "span" ).html( description);
+            })
+            .mouseleave(function() {
+                $(  "#description-table"  ).find( "span" ).text();
+            });
+
+        <!--        star = $('<div>')-->
+        <!--            .html("<%= escape_javascript image_tag('star.jpg') %> <p>text<p> <p class = 'description'> description <p>").addClass('star');-->
         // star.id = 'star';
         // star.html("<p>text<\p>");
         // star.className = 'star';
