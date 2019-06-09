@@ -1,12 +1,10 @@
 - content_for :head do
   title
     = @minitask.title
-.hidden
-  = form_tag(submission_question_path(params[:id]), id: 'submission-form', method: "post") do
-    = text_field_tag(:score)
-    = text_field_tag(:code_submission)
-    = text_field_tag(:test_results)
-    = submit_tag("Submit")
+.hidden#minitask_allow_repeat
+  = @minitask.allow_repeat
+.hidden#minitask_palette_start_index
+  = @minitask.palette_start_index
 script
   == @minitask.test_file
 

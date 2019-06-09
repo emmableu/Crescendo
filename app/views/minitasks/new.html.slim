@@ -5,10 +5,12 @@
   .form-group
     = f.label :task
     = f.collection_select(:task_id, Task.all, :id, :title, prompt: true)
-
-  / .form-group
-  /   = f.label :difficulty
-  /   = f.text_area :difficulty, class: 'form-control'
+  .form-group
+    = f.label :allow_repeat_tobe_flexible_in_parsons_problem
+    = f.text_area :allow_repeat, class: 'form-control'
+  .form-group
+    = f.label :palette_start_index
+    = f.text_area :palette_start_index, class: 'form-control'
   .form-group
     = f.label :order
     = f.text_area :order, class: 'form-control'

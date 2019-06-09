@@ -41,7 +41,7 @@ class MinitasksController < ApplicationController
   end
   def minitasks_params
     params.require(:minitask).permit(:id, :title,:task_id, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
-                                     :updated_at, :instruction, :description, :ppxmlfile)
+                                     :updated_at, :instruction, :description, :ppxmlfile, :allow_repeat, :palette_start_index)
   end
 
   def show

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190607222438) do
+ActiveRecord::Schema.define(version: 20190609230257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -125,10 +125,12 @@ ActiveRecord::Schema.define(version: 20190607222438) do
     t.text     "starter_file"
     t.integer  "difficulty"
     t.integer  "order"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.text     "instruction"
     t.text     "ppxmlfile"
+    t.integer  "allow_repeat"
+    t.integer  "palette_start_index"
   end
 
   add_index "minitasks", ["task_id"], name: "index_minitasks_on_task_id", using: :btree
