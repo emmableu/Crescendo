@@ -22,7 +22,7 @@ gem 'gon' # JS Data Transfer
 # https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-
+gem 'seed_dump'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

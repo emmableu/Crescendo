@@ -183,6 +183,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.5.4, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-listen (v4.0.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.7, rbenv: 2.4.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="seed_dump (v3.3.1, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sexp_processor (v4.10.0, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="shoulda-matchers (v3.1.2, rbenv: 2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simplecov (v0.15.1, rbenv: 2.4.3) [gem]" level="application" />

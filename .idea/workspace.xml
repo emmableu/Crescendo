@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806cd96d-f0dc-453e-8b4e-0faddd5064d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -65,7 +68,7 @@
           <entry key="md" value="1" />
           <entry key="php" value="5" />
           <entry key="png" value="1" />
-          <entry key="rb" value="279" />
+          <entry key="rb" value="280" />
           <entry key="rnc" value="1" />
           <entry key="ru" value="1" />
           <entry key="scss" value="5" />
@@ -86,7 +89,7 @@
           <entry key="PLAIN_TEXT" value="13" />
           <entry key="RHTML" value="133" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="287" />
+          <entry key="Ruby" value="288" />
           <entry key="SCSS" value="1" />
           <entry key="SQL" value="1" />
           <entry key="SVG" value="1" />
@@ -161,12 +164,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="725">
               <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1125" />
           </provider>
         </entry>
       </file>
@@ -192,7 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>doexecandd</find>
       <find>&lt;% if</find>
       <find>next_</find>
       <find>populatefeed</find>
@@ -222,6 +231,7 @@
       <find>function cblockcontains</find>
       <find>allow_rep</find>
       <find>lambda_dev</find>
+      <find>seeds.rb</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;]</replace>
@@ -318,10 +328,10 @@
       <path value="$PROJECT_DIR$/vendor/bower/jquery-ujs/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="579" />
-    <option name="y" value="409" />
-    <option name="width" value="1240" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="136" />
+    <option name="y" value="194" />
+    <option name="width" value="1230" />
     <option name="height" value="785" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -751,12 +761,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="6169000" />
+      <workItem from="1560119191939" duration="6781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="536266000" />
+    <option name="totallyTimeSpent" value="536878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -822,13 +832,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/options/edit.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20190607193012_add_order_to_options.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1519,6 +1522,11 @@
         <state relative-caret-position="725">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1125" />
       </provider>
     </entry>
   </component>
