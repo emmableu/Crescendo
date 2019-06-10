@@ -104,7 +104,7 @@
           <entry key="html" value="25" />
           <entry key="js" value="6583" />
           <entry key="php" value="33" />
-          <entry key="rb" value="9596" />
+          <entry key="rb" value="9602" />
           <entry key="scss" value="5" />
           <entry key="slim" value="6762" />
           <entry key="yml" value="23" />
@@ -117,7 +117,7 @@
           <entry key="JavaScript" value="6582" />
           <entry key="PLAIN_TEXT" value="38" />
           <entry key="RHTML" value="10514" />
-          <entry key="Ruby" value="9640" />
+          <entry key="Ruby" value="9646" />
           <entry key="Slim" value="6762" />
           <entry key="YAML" value="23" />
         </counts>
@@ -165,8 +165,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3435">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="304">
+              <caret line="48" column="168" selection-start-line="48" selection-start-column="168" selection-end-line="48" selection-end-column="168" />
             </state>
           </provider>
         </entry>
@@ -328,7 +328,7 @@
       <path value="$PROJECT_DIR$/vendor/bower/jquery-ujs/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="35" />
     <option name="y" value="25" />
     <option name="width" value="1613" />
@@ -680,12 +680,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="9810000" />
+      <workItem from="1560119191939" duration="9891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539907000" />
+    <option name="totallyTimeSpent" value="539988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -697,10 +697,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="25" width="1613" height="1055" extended-state="4" />
+    <frame x="35" y="25" width="1885" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26974952" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22963367" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1441,8 +1441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3435">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="304">
+          <caret line="48" column="168" selection-start-line="48" selection-start-column="168" selection-end-line="48" selection-end-column="168" />
         </state>
       </provider>
     </entry>
