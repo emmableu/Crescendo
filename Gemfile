@@ -21,8 +21,16 @@ gem 'slim-rails' # Templates
 gem 'gon' # JS Data Transfer
 # https://github.com/rails/turbolinks
 gem 'turbolinks'
+<<<<<<< HEAD
 
 gem 'seed_dump'
+=======
+#gem 'capistrano'
+#gem 'capistrano-rails'
+#gem 'capistrano-passenger'
+#gem 'capistrano-rbenv'
+
+>>>>>>> 805fd8c032547e4e43848d8dd5d348d0acfd1c9b
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

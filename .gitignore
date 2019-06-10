@@ -38,3 +38,11 @@ ngrok.yml
 
 # From the db clone command
 wget-log*
+
+ngrok/*
+
+ngrok
+ngrok-stable-linux-amd64.zip
+redis-2.8.9.tar.gz
+redis-2.8.9/*
+
