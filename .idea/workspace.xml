@@ -165,8 +165,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="48" column="168" selection-start-line="48" selection-start-column="168" selection-end-line="48" selection-end-column="168" />
+            <state relative-caret-position="354">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -680,12 +680,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="9891000" />
+      <workItem from="1560119191939" duration="10019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539988000" />
+    <option name="totallyTimeSpent" value="540116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1441,8 +1441,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="48" column="168" selection-start-line="48" selection-start-column="168" selection-end-line="48" selection-end-column="168" />
+        <state relative-caret-position="354">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
