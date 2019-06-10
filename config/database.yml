@@ -6,7 +6,7 @@ development: &default
   host: localhost
   database: lambda_dev
   username: wengran
-  password: 0
+  password: Wwr1995@1206
 
 test:
   adapter: postgresql

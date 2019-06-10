@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806cd96d-f0dc-453e-8b4e-0faddd5064d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/autograder" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/autograder/snap" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder/snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/snap" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -64,7 +61,7 @@
           <entry key="jbuilder" value="6" />
           <entry key="js" value="170" />
           <entry key="less" value="1" />
-          <entry key="log" value="2" />
+          <entry key="log" value="3" />
           <entry key="md" value="1" />
           <entry key="php" value="5" />
           <entry key="png" value="1" />
@@ -76,7 +73,7 @@
           <entry key="sql" value="1" />
           <entry key="svg" value="1" />
           <entry key="xml" value="4" />
-          <entry key="yml" value="4" />
+          <entry key="yml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -86,7 +83,7 @@
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="170" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="PLAIN_TEXT" value="13" />
           <entry key="RHTML" value="133" />
           <entry key="RNG Compact" value="1" />
           <entry key="Ruby" value="287" />
@@ -95,7 +92,7 @@
           <entry key="SVG" value="1" />
           <entry key="Slim" value="252" />
           <entry key="XML" value="4" />
-          <entry key="YAML" value="4" />
+          <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -109,6 +106,7 @@
           <entry key="rb" value="9550" />
           <entry key="scss" value="5" />
           <entry key="slim" value="6762" />
+          <entry key="yml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -120,6 +118,7 @@
           <entry key="RHTML" value="10514" />
           <entry key="Ruby" value="9594" />
           <entry key="Slim" value="6762" />
+          <entry key="YAML" value="12" />
         </counts>
       </usages-collector>
     </session>
@@ -153,7 +152,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -162,11 +161,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-772">
-              <caret line="564" selection-start-line="564" selection-end-line="564" />
+              <caret line="569" selection-start-line="569" selection-end-line="569" />
             </state>
           </provider>
         </entry>
@@ -184,7 +192,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>populateQuiz</find>
       <find>doexecandd</find>
       <find>&lt;% if</find>
       <find>next_</find>
@@ -214,6 +221,7 @@
       <find>cblock</find>
       <find>function cblockcontains</find>
       <find>allow_rep</find>
+      <find>lambda_dev</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;]</replace>
@@ -242,7 +250,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/minitasks/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_autograder_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_snap_base.html.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/base.html.slim" />
@@ -293,6 +300,7 @@
         <option value="$PROJECT_DIR$/app/views/minitasks/edit.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/minitasks_controller.rb" />
         <option value="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -743,12 +751,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="4204000" />
+      <workItem from="1560119191939" duration="4251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="534301000" />
+    <option name="totallyTimeSpent" value="534348000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -814,16 +822,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/quizzes/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tasks/_form.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/options/edit.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1131,7 +1129,7 @@
     <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-772">
-          <caret line="564" selection-start-line="564" selection-end-line="564" />
+          <caret line="569" selection-start-line="569" selection-end-line="569" />
         </state>
       </provider>
     </entry>
@@ -1502,10 +1500,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log/development.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="158" column="46" selection-start-line="158" selection-start-column="46" selection-end-line="158" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="43" column="125" selection-start-line="43" selection-start-column="125" selection-end-line="43" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
