@@ -1,9 +1,4 @@
-User.create!([
-  {email: "", encrypted_password: "$2a$11$CRYuWLgVkNSsCuEqrmImZeLNTv/Cjv1.DM1Ej4BWedT2m/ThC148O", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, username: "s1", first_name: nil, last_name: nil, student_class: nil, progression: 0}
-])
-Admin.create!([
-  {email: "admin@ncsu.edu", encrypted_password: "$2a$11$6mfweHeMaaMEOYbFbzvPZuurydOLGN6IgY9oZOSXBXFWcXSH/4F/W", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil}
-])
+
 Category.create!([
   {name: "variable"},
   {name: "io"},

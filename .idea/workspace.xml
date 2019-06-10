@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="806cd96d-f0dc-453e-8b4e-0faddd5064d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -68,13 +66,14 @@
           <entry key="md" value="1" />
           <entry key="php" value="5" />
           <entry key="png" value="1" />
-          <entry key="rb" value="280" />
+          <entry key="rb" value="281" />
           <entry key="rnc" value="1" />
           <entry key="ru" value="1" />
           <entry key="scss" value="5" />
           <entry key="slim" value="252" />
           <entry key="sql" value="1" />
           <entry key="svg" value="1" />
+          <entry key="tt" value="1" />
           <entry key="xml" value="4" />
           <entry key="yml" value="5" />
         </counts>
@@ -86,10 +85,10 @@
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="170" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="RHTML" value="133" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="288" />
+          <entry key="Ruby" value="289" />
           <entry key="SCSS" value="1" />
           <entry key="SQL" value="1" />
           <entry key="SVG" value="1" />
@@ -106,7 +105,7 @@
           <entry key="html" value="25" />
           <entry key="js" value="6583" />
           <entry key="php" value="33" />
-          <entry key="rb" value="9550" />
+          <entry key="rb" value="9551" />
           <entry key="scss" value="5" />
           <entry key="slim" value="6762" />
           <entry key="yml" value="23" />
@@ -119,7 +118,7 @@
           <entry key="JavaScript" value="6582" />
           <entry key="PLAIN_TEXT" value="38" />
           <entry key="RHTML" value="10514" />
-          <entry key="Ruby" value="9594" />
+          <entry key="Ruby" value="9595" />
           <entry key="Slim" value="6762" />
           <entry key="YAML" value="23" />
         </counts>
@@ -158,17 +157,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="43" column="125" selection-start-line="43" selection-start-column="125" selection-end-line="43" selection-end-column="125" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="150">
+              <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -176,7 +166,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1125" />
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -260,7 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/minitasks/_autograder_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_snap_base.html.slim" />
         <option value="$PROJECT_DIR$/app/views/layouts/base.html.slim" />
         <option value="$PROJECT_DIR$/public/autograder/ag-files/AGScriptArrayTwoFormatting.js" />
@@ -311,6 +311,7 @@
         <option value="$PROJECT_DIR$/app/controllers/minitasks_controller.rb" />
         <option value="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
@@ -346,87 +347,6 @@
             <path>
               <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
               <item name="lambda" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="minitasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="options" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="quizzes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="registrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
@@ -761,12 +681,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="6781000" />
+      <workItem from="1560119191939" duration="7730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="536878000" />
+    <option name="totallyTimeSpent" value="537827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -832,13 +752,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190607193012_add_order_to_options.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/options/index.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1510,23 +1423,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="43" column="125" selection-start-line="43" selection-start-column="125" selection-end-line="43" selection-end-column="125" />
+        <state relative-caret-position="150">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.3/lib/ruby/gems/2.4.0/gems/railties-4.2.10/lib/rails/generators/rails/app/templates/db/seeds.rb.tt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1125" />
+        <state>
+          <caret lean-forward="true" />
+        </state>
       </provider>
     </entry>
   </component>
