@@ -6,7 +6,7 @@ development: &default
   host: localhost
   database: lambda_dev
   username: wwang33
-  password: Wwr1995@1206
+  password: 0
 
 test:
   adapter: postgresql
@@ -18,7 +18,7 @@ test:
   timeout: 5000
   database: lambda_test
   username: wwang33
-  password: Wwr1995@1206
+  password: 0
 
 production: &deploy
   encoding: utf8
@@ -27,6 +27,6 @@ production: &deploy
   timeout: 5000
   url:  <%= ENV.fetch("DATABASE_URL", "") %>
   username: wwang33
-  password: Wwr1995@1206
+  password: 0
 
 staging: *deploy
