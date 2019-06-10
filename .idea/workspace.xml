@@ -65,7 +65,7 @@
           <entry key="md" value="1" />
           <entry key="php" value="5" />
           <entry key="png" value="1" />
-          <entry key="rb" value="281" />
+          <entry key="rb" value="282" />
           <entry key="rnc" value="1" />
           <entry key="ru" value="1" />
           <entry key="scss" value="5" />
@@ -87,7 +87,7 @@
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="RHTML" value="133" />
           <entry key="RNG Compact" value="1" />
-          <entry key="Ruby" value="289" />
+          <entry key="Ruby" value="290" />
           <entry key="SCSS" value="1" />
           <entry key="SQL" value="1" />
           <entry key="SVG" value="1" />
@@ -104,7 +104,7 @@
           <entry key="html" value="25" />
           <entry key="js" value="6583" />
           <entry key="php" value="33" />
-          <entry key="rb" value="9555" />
+          <entry key="rb" value="9591" />
           <entry key="scss" value="5" />
           <entry key="slim" value="6762" />
           <entry key="yml" value="23" />
@@ -117,7 +117,7 @@
           <entry key="JavaScript" value="6582" />
           <entry key="PLAIN_TEXT" value="38" />
           <entry key="RHTML" value="10514" />
-          <entry key="Ruby" value="9599" />
+          <entry key="Ruby" value="9635" />
           <entry key="Slim" value="6762" />
           <entry key="YAML" value="23" />
         </counts>
@@ -156,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+            <state relative-caret-position="225">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -165,8 +165,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="714">
+              <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -202,7 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;% if</find>
       <find>next_</find>
       <find>populatefeed</find>
       <find>nextminitask</find>
@@ -232,6 +231,7 @@
       <find>allow_rep</find>
       <find>lambda_dev</find>
       <find>seeds.rb</find>
+      <find>bridge of shapes</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;]</replace>
@@ -328,11 +328,11 @@
       <path value="$PROJECT_DIR$/vendor/bower/jquery-ujs/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="136" />
-    <option name="y" value="194" />
-    <option name="width" value="1230" />
-    <option name="height" value="785" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="35" />
+    <option name="y" value="25" />
+    <option name="width" value="1613" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -680,12 +680,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="8052000" />
+      <workItem from="1560119191939" duration="8985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="538149000" />
+    <option name="totallyTimeSpent" value="539082000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -697,10 +697,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="25" width="1885" height="1055" extended-state="6" />
+    <frame x="35" y="25" width="1613" height="1055" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22963367" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26974952" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1434,15 +1434,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        <state relative-caret-position="225">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="714">
+          <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
         </state>
       </provider>
     </entry>
