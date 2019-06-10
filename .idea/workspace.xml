@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806cd96d-f0dc-453e-8b4e-0faddd5064d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/minitasks/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/minitasks/new.html.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -73,7 +73,7 @@
           <entry key="sql" value="1" />
           <entry key="svg" value="1" />
           <entry key="tt" value="1" />
-          <entry key="xml" value="4" />
+          <entry key="xml" value="6" />
           <entry key="yml" value="5" />
         </counts>
       </usages-collector>
@@ -92,7 +92,7 @@
           <entry key="SQL" value="1" />
           <entry key="SVG" value="1" />
           <entry key="Slim" value="252" />
-          <entry key="XML" value="4" />
+          <entry key="XML" value="6" />
           <entry key="YAML" value="5" />
         </counts>
       </usages-collector>
@@ -106,7 +106,7 @@
           <entry key="php" value="33" />
           <entry key="rb" value="9602" />
           <entry key="scss" value="5" />
-          <entry key="slim" value="6762" />
+          <entry key="slim" value="6763" />
           <entry key="yml" value="23" />
         </counts>
       </usages-collector>
@@ -118,7 +118,7 @@
           <entry key="PLAIN_TEXT" value="38" />
           <entry key="RHTML" value="10514" />
           <entry key="Ruby" value="9646" />
-          <entry key="Slim" value="6762" />
+          <entry key="Slim" value="6763" />
           <entry key="YAML" value="23" />
         </counts>
       </usages-collector>
@@ -126,11 +126,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/minitasks/new.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+            <state relative-caret-position="450">
+              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -162,11 +162,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
               <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops2-Use.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="37" selection-start-column="37" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops1-Use(1).xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret column="1001" lean-forward="true" selection-start-column="1001" selection-end-column="1001" />
             </state>
           </provider>
         </entry>
@@ -202,7 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.nextminitask</find>
       <find>.nextmini</find>
       <find>.nextmi</find>
       <find>populatefee</find>
@@ -232,6 +249,7 @@
       <find>task_id:</find>
       <find>quiz</find>
       <find>Quiz</find>
+      <find>minitask_id</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;]</replace>
@@ -304,13 +322,13 @@
         <option value="$PROJECT_DIR$/app/views/minitasks/_snap_minitask_base.html.slim" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/public/snap/modeling/minitask-iframe.js" />
-        <option value="$PROJECT_DIR$/app/views/minitasks/new.html.slim" />
         <option value="$PROJECT_DIR$/app/views/minitasks/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/minitasks/edit.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/minitasks_controller.rb" />
         <option value="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/app/views/minitasks/new.html.slim" />
       </list>
     </option>
   </component>
@@ -350,13 +368,25 @@
             <path>
               <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
               <item name="lambda" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="starters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
               <item name="lambda" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="seed-data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
@@ -680,12 +710,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="10019000" />
+      <workItem from="1560119191939" duration="11337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="540116000" />
+    <option name="totallyTimeSpent" value="541434000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -751,20 +781,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/options/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops2-Modify.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14443" selection-start-column="14443" selection-end-column="14443" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/options_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
@@ -1003,13 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="809">
           <caret line="179" column="48" selection-start-line="179" selection-start-column="48" selection-end-line="179" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/minitasks/new.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1443,6 +1452,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops2-Use.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops1-Use(1).xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret column="1001" lean-forward="true" selection-start-column="1001" selection-end-column="1001" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/minitasks/new.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
         </state>
       </provider>
     </entry>
