@@ -218,9 +218,15 @@
                         // color the answers green
                         ;
                         next_subtask = document.getElementById('next-subtask');
-                        if (next_subtask == null) {
+                        if (next_subtask == null && task_order <3) {
                             divTest = $('<div>')
                                 .html("<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>")
+                            ;
+                            $("#ag-results").append(divTest);
+                        }
+                        if (next_subtask == null && task_order === 3) {
+                            divTest = $('<div>')
+                                .html("<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'nextminitask', id: "next-subtask" }) %>")
                             ;
                             $("#ag-results").append(divTest);
                         }

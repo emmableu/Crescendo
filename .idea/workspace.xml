@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806cd96d-f0dc-453e-8b4e-0faddd5064d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/minitasks/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/minitasks/new.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/Screenshot from 2019-06-02 21-53-08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/Screenshot from 2019-06-03 00-00-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/Screenshot from 2019-06-03 00-23-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/Screenshot from 2019-06-07 11-07-43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seed-data/task1test.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/seed-data/task1test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -56,10 +62,10 @@
         <counts>
           <entry key="Gemfile" value="1" />
           <entry key="css" value="4" />
-          <entry key="erb" value="133" />
-          <entry key="html" value="44" />
+          <entry key="erb" value="134" />
+          <entry key="html" value="46" />
           <entry key="jbuilder" value="6" />
-          <entry key="js" value="170" />
+          <entry key="js" value="173" />
           <entry key="less" value="1" />
           <entry key="log" value="3" />
           <entry key="md" value="1" />
@@ -80,12 +86,12 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="HTML" value="44" />
+          <entry key="HTML" value="46" />
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="170" />
+          <entry key="JavaScript" value="173" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="RHTML" value="133" />
+          <entry key="RHTML" value="134" />
           <entry key="RNG Compact" value="1" />
           <entry key="Ruby" value="290" />
           <entry key="SCSS" value="1" />
@@ -100,9 +106,9 @@
         <counts>
           <entry key="Gemfile" value="44" />
           <entry key="css" value="29" />
-          <entry key="erb" value="10516" />
+          <entry key="erb" value="10559" />
           <entry key="html" value="25" />
-          <entry key="js" value="6583" />
+          <entry key="js" value="6746" />
           <entry key="php" value="33" />
           <entry key="rb" value="9602" />
           <entry key="scss" value="5" />
@@ -114,9 +120,9 @@
         <counts>
           <entry key="CSS" value="29" />
           <entry key="HTML" value="28" />
-          <entry key="JavaScript" value="6582" />
+          <entry key="JavaScript" value="6745" />
           <entry key="PLAIN_TEXT" value="38" />
-          <entry key="RHTML" value="10514" />
+          <entry key="RHTML" value="10557" />
           <entry key="Ruby" value="9646" />
           <entry key="Slim" value="6763" />
           <entry key="YAML" value="23" />
@@ -126,7 +132,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/minitasks/new.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
@@ -136,37 +142,70 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/minitasks/edit.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="904">
+              <caret line="41" column="65585" selection-start-line="41" selection-start-column="65385" selection-end-line="41" selection-end-column="65585" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="447" column="38" selection-start-line="447" selection-start-column="22" selection-end-line="447" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/seed-data/task1test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="659">
+              <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="616">
+              <caret line="2445" column="23" selection-start-line="2445" selection-start-column="23" selection-end-line="2445" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_Demo_KScope.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-610">
+              <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W2_L1_E3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-14">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="926">
+              <caret line="606" column="82" lean-forward="true" selection-start-line="606" selection-start-column="82" selection-end-line="606" selection-end-column="82" />
+              <folding>
+                <element signature="e#20700#20824#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,34 +223,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops1-Use(1).xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret column="1001" lean-forward="true" selection-start-column="1001" selection-end-column="1001" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-772">
-              <caret line="569" selection-start-line="569" selection-end-line="569" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/minitasks/show.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <caret column="1001" selection-start-column="1001" selection-end-column="1001" />
             </state>
           </provider>
         </entry>
@@ -220,19 +232,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.nextmini</find>
-      <find>.nextmi</find>
-      <find>populatefee</find>
-      <find>su</find>
-      <find>submitbutton</find>
-      <find>ppxml</find>
-      <find>loadstarter</find>
-      <find>ppxmlfile</find>
-      <find>starter_path</find>
-      <find>onworldloaded</find>
-      <find>onworldloadedin par</find>
-      <find>ppxmlfile_path</find>
-      <find>iframe.js</find>
       <find>setDefaultInputForPolygonMaker</find>
       <find>setText</find>
       <find>cover</find>
@@ -250,6 +249,19 @@
       <find>quiz</find>
       <find>Quiz</find>
       <find>minitask_id</find>
+      <find>divTest =</find>
+      <find>Make sure you name your block exactly</find>
+      <find>draw square</find>
+      <find>CBlock</find>
+      <find>a</find>
+      <find>script_s</find>
+      <find>scripts</find>
+      <find>simplecblock</find>
+      <find>cblockcontains</find>
+      <find>Cblockcontains</find>
+      <find>correct_feedback</find>
+      <find>instruction</find>
+      <find>allow_re</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;]</replace>
@@ -273,7 +285,7 @@
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/public/snap" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -295,7 +307,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_autograder_help_results.html.erb" />
         <option value="$PROJECT_DIR$/public/autograder/ag-files/hintstyle.css" />
-        <option value="$PROJECT_DIR$/db/seed-data/task1test.js" />
         <option value="$PROJECT_DIR$/public/autograder/ag-files/AGAgent.js" />
         <option value="$PROJECT_DIR$/public/autograder/ag-files/MiniTaskPopulate.js" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
@@ -316,7 +327,6 @@
         <option value="$PROJECT_DIR$/public/autograder/ag-files/AGMiniTaskFormatting.js" />
         <option value="$PROJECT_DIR$/public/autograder/mooc2/M2_W3_L1_T3_E3.html" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_snap_minitask_autograder.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_header.html.erb" />
         <option value="$PROJECT_DIR$/public/snap/modeling/minitask-loadstarter.js" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_snap_minitask_base.html.slim" />
@@ -325,10 +335,12 @@
         <option value="$PROJECT_DIR$/app/views/minitasks/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/minitasks/edit.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/minitasks_controller.rb" />
-        <option value="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/minitasks/new.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" />
+        <option value="$PROJECT_DIR$/db/seed-data/task1test.js" />
+        <option value="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" />
       </list>
     </option>
   </component>
@@ -387,6 +399,12 @@
               <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
               <item name="lambda" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="seed-data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lambda" type="b2602c69:ProjectViewProjectNode" />
@@ -710,12 +728,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="11337000" />
+      <workItem from="1560119191939" duration="15566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="541434000" />
+    <option name="totallyTimeSpent" value="545663000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -781,27 +799,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/options_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/snap/objects.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211450">
-          <caret line="8523" column="35" selection-start-line="8523" selection-start-column="35" selection-end-line="8523" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/questions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/AGScriptArrayTwoFormatting.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -938,17 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3275">
-          <caret line="152" column="36" selection-start-line="152" selection-start-column="36" selection-end-line="152" selection-end-column="36" />
-          <folding>
-            <element signature="e#6916#7288#0#HTML" />
-            <element signature="e#7619#30344#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1050,377 +1036,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-772">
-          <caret line="569" selection-start-line="569" selection-end-line="569" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W1_L2_T1_E3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="2435" column="61" selection-start-line="2435" selection-start-column="61" selection-end-line="2435" selection-end-column="61" />
-          <folding>
-            <element signature="e#657#668#0" />
-            <element signature="e#1031#1063#0" />
-            <element signature="e#1098#1311#0" />
-            <element signature="e#1126#1309#0" />
-            <element signature="e#1386#1745#0" />
-            <element signature="e#1462#1717#0" />
-            <element signature="e#1548#1646#0" />
-            <element signature="e#1809#7011#0" />
-            <element signature="e#1943#2512#0" />
-            <element signature="e#2030#2239#0" />
-            <element signature="e#2096#2229#0" />
-            <element signature="e#2420#2506#0" />
-            <element signature="e#2766#2919#0" />
-            <element signature="e#2951#3101#0" />
-            <element signature="e#3137#5510#0" />
-            <element signature="e#3299#3469#0" />
-            <element signature="e#3654#3820#0" />
-            <element signature="e#3929#4093#0" />
-            <element signature="e#4281#4456#0" />
-            <element signature="e#4315#4446#0" />
-            <element signature="e#4694#4863#0" />
-            <element signature="e#5080#5247#0" />
-            <element signature="e#5331#5504#0" />
-            <element signature="e#5546#6385#0" />
-            <element signature="e#5731#5897#0" />
-            <element signature="e#6042#6206#0" />
-            <element signature="e#6337#6379#0" />
-            <element signature="e#6481#6555#0" />
-            <element signature="e#6594#6671#0" />
-            <element signature="e#6694#6987#0" />
-            <element signature="e#6755#6981#0" />
-            <element signature="e#6810#6940#0" />
-            <element signature="e#7159#19928#0" />
-            <element signature="e#7303#8477#0" />
-            <element signature="e#7437#7984#0" />
-            <element signature="e#7498#7972#0" />
-            <element signature="e#7692#7958#0" />
-            <element signature="e#7752#7901#0" />
-            <element signature="e#8251#8471#0" />
-            <element signature="e#8304#8430#0" />
-            <element signature="e#8616#8742#0" />
-            <element signature="e#8952#9144#0" />
-            <element signature="e#9209#9469#0" />
-            <element signature="e#9581#19745#0" />
-            <element signature="e#9714#10060#0" />
-            <element signature="e#9871#10050#0" />
-            <element signature="e#10141#11397#0" />
-            <element signature="e#10203#10852#0" />
-            <element signature="e#10628#10838#0" />
-            <element signature="e#10741#10820#0" />
-            <element signature="e#10895#11361#0" />
-            <element signature="e#10994#11264#0" />
-            <element signature="e#11054#11246#0" />
-            <element signature="e#11439#14889#0" />
-            <element signature="e#11614#11799#0" />
-            <element signature="e#11996#12178#0" />
-            <element signature="e#12295#12475#0" />
-            <element signature="e#12679#12874#0" />
-            <element signature="e#12717#12860#0" />
-            <element signature="e#13128#13313#0" />
-            <element signature="e#13546#13729#0" />
-            <element signature="e#13958#14146#0" />
-            <element signature="e#14326#14574#0" />
-            <element signature="e#14384#14525#0" />
-            <element signature="e#14627#14879#0" />
-            <element signature="e#14683#14865#0" />
-            <element signature="e#14925#16009#0" />
-            <element signature="e#15122#15304#0" />
-            <element signature="e#15461#15641#0" />
-            <element signature="e#15814#15999#0" />
-            <element signature="e#16117#16199#0" />
-            <element signature="e#16238#16323#0" />
-            <element signature="e#16350#16982#0" />
-            <element signature="e#16415#16665#0" />
-            <element signature="e#16474#16616#0" />
-            <element signature="e#16719#16972#0" />
-            <element signature="e#16775#16958#0" />
-            <element signature="e#17095#17177#0" />
-            <element signature="e#17216#17301#0" />
-            <element signature="e#17328#17965#0" />
-            <element signature="e#17393#17643#0" />
-            <element signature="e#17452#17594#0" />
-            <element signature="e#17697#17955#0" />
-            <element signature="e#17758#17941#0" />
-            <element signature="e#18067#18143#0" />
-            <element signature="e#18179#18258#0" />
-            <element signature="e#18282#19739#0" />
-            <element signature="e#18344#18588#0" />
-            <element signature="e#18400#18539#0" />
-            <element signature="e#18639#19729#0" />
-            <element signature="e#18695#18875#0" />
-            <element signature="e#18919#19715#0" />
-            <element signature="e#19048#19344#0" />
-            <element signature="e#19114#19279#0" />
-            <element signature="e#19397#19697#0" />
-            <element signature="e#19461#19675#0" />
-            <element signature="e#19816#19904#0" />
-            <element signature="e#19975#20818#0" />
-            <element signature="e#20232#20785#0" />
-            <element signature="e#20294#20779#0" />
-            <element signature="e#20346#20625#0" />
-            <element signature="e#20631#20743#0" />
-            <element signature="e#20887#24488#0" />
-            <element signature="e#20945#20983#0" />
-            <element signature="e#21190#21244#0" />
-            <element signature="e#21266#21305#0" />
-            <element signature="e#21376#21432#0" />
-            <element signature="e#21474#22105#0" />
-            <element signature="e#21563#21846#0" />
-            <element signature="e#21701#21836#0" />
-            <element signature="e#22013#22099#0" />
-            <element signature="e#22349#22508#0" />
-            <element signature="e#22622#22780#0" />
-            <element signature="e#22849#23754#0" />
-            <element signature="e#23055#23230#0" />
-            <element signature="e#23089#23220#0" />
-            <element signature="e#23321#23494#0" />
-            <element signature="e#23577#23748#0" />
-            <element signature="e#23857#23933#0" />
-            <element signature="e#23977#24056#0" />
-            <element signature="e#24076#24360#0" />
-            <element signature="e#24134#24354#0" />
-            <element signature="e#24186#24313#0" />
-            <element signature="e#24429#24463#0" />
-            <element signature="e#24531#25262#0" />
-            <element signature="e#24548#25243#0" />
-            <element signature="e#24626#24678#0" />
-            <element signature="e#24708#24936#0" />
-            <element signature="e#24756#24900#0" />
-            <element signature="e#25007#25237#0" />
-            <element signature="e#25055#25201#0" />
-            <element signature="e#25309#39003#0" />
-            <element signature="e#25436#25748#0" />
-            <element signature="e#25466#25742#0" />
-            <element signature="e#25886#25940#0" />
-            <element signature="e#26014#26070#0" />
-            <element signature="e#26205#26829#0" />
-            <element signature="e#26294#26577#0" />
-            <element signature="e#26432#26567#0" />
-            <element signature="e#26744#26823#0" />
-            <element signature="e#26925#26978#0" />
-            <element signature="e#27067#27121#0" />
-            <element signature="e#27163#27241#0" />
-            <element signature="e#27467#29725#0" />
-            <element signature="e#27603#28251#0" />
-            <element signature="e#27697#28168#0" />
-            <element signature="e#27754#28034#0" />
-            <element signature="e#28040#28154#0" />
-            <element signature="e#28394#28821#0" />
-            <element signature="e#28446#28809#0" />
-            <element signature="e#28595#28795#0" />
-            <element signature="e#29018#29591#0" />
-            <element signature="e#29114#29300#0" />
-            <element signature="e#29395#29581#0" />
-            <element signature="e#29597#29639#0" />
-            <element signature="e#29731#29757#0" />
-            <element signature="e#30291#37983#0" />
-            <element signature="e#30416#31064#0" />
-            <element signature="e#30510#30981#0" />
-            <element signature="e#30567#30847#0" />
-            <element signature="e#30853#30967#0" />
-            <element signature="e#31195#31520#0" />
-            <element signature="e#31247#31508#0" />
-            <element signature="e#31294#31494#0" />
-            <element signature="e#31603#37977#0" />
-            <element signature="e#32078#32605#0" />
-            <element signature="e#32148#32589#0" />
-            <element signature="e#32345#32571#0" />
-            <element signature="e#32886#32936#0" />
-            <element signature="e#32950#32983#0" />
-            <element signature="e#33129#34428#0" />
-            <element signature="e#33442#33902#0" />
-            <element signature="e#33510#33882#0" />
-            <element signature="e#33623#33860#0" />
-            <element signature="e#34087#34145#0" />
-            <element signature="e#34322#34380#0" />
-            <element signature="e#34479#36150#0" />
-            <element signature="e#34791#35257#0" />
-            <element signature="e#34859#35237#0" />
-            <element signature="e#34978#35215#0" />
-            <element signature="e#35429#35808#0" />
-            <element signature="e#35567#35790#0" />
-            <element signature="e#35814#35872#0" />
-            <element signature="e#36044#36102#0" />
-            <element signature="e#36199#37496#0" />
-            <element signature="e#36301#36738#0" />
-            <element signature="e#36371#36522#0" />
-            <element signature="e#36431#36500#0" />
-            <element signature="e#36573#36720#0" />
-            <element signature="e#36629#36698#0" />
-            <element signature="e#36873#37453#0" />
-            <element signature="e#37009#37161#0" />
-            <element signature="e#37070#37139#0" />
-            <element signature="e#37287#37435#0" />
-            <element signature="e#37344#37413#0" />
-            <element signature="e#37548#37731#0" />
-            <element signature="e#37659#37717#0" />
-            <element signature="e#37783#37967#0" />
-            <element signature="e#37895#37953#0" />
-            <element signature="e#37989#38066#0" />
-            <element signature="e#38154#38208#0" />
-            <element signature="e#38250#38431#0" />
-            <element signature="e#38383#38425#0" />
-            <element signature="e#38475#38649#0" />
-            <element signature="e#38601#38643#0" />
-            <element signature="e#38694#38875#0" />
-            <element signature="e#38827#38869#0" />
-            <element signature="e#38944#38978#0" />
-            <element signature="e#39054#40212#0" />
-            <element signature="e#39623#39656#0" />
-            <element signature="e#39662#40188#0" />
-            <element signature="e#39699#39751#0" />
-            <element signature="e#39842#39969#0" />
-            <element signature="e#40055#40182#0" />
-            <element signature="e#40217#40289#0" />
-            <element signature="e#40436#41444#0" />
-            <element signature="e#40641#40691#0" />
-            <element signature="e#40723#40945#0" />
-            <element signature="e#40773#40907#0" />
-            <element signature="e#41026#41135#0" />
-            <element signature="e#41082#41129#0" />
-            <element signature="e#41141#41415#0" />
-            <element signature="e#41231#41356#0" />
-            <element signature="e#41291#41346#0" />
-            <element signature="e#41362#41409#0" />
-            <element signature="e#41490#43771#0" />
-            <element signature="e#41632#43019#0" />
-            <element signature="e#41830#41945#0" />
-            <element signature="e#41880#41935#0" />
-            <element signature="e#42026#42442#0" />
-            <element signature="e#42241#42432#0" />
-            <element signature="e#42355#42418#0" />
-            <element signature="e#42504#43013#0" />
-            <element signature="e#42635#42697#0" />
-            <element signature="e#42733#43003#0" />
-            <element signature="e#42787#42949#0" />
-            <element signature="e#43065#43255#0" />
-            <element signature="e#43202#43249#0" />
-            <element signature="e#43318#43492#0" />
-            <element signature="e#43439#43486#0" />
-            <element signature="e#43570#43741#0" />
-            <element signature="e#43688#43735#0" />
-            <element signature="e#43826#47029#0" />
-            <element signature="e#43894#43915#0" />
-            <element signature="e#44052#45341#0" />
-            <element signature="e#44128#44845#0" />
-            <element signature="e#44256#44667#0" />
-            <element signature="e#44332#44463#0" />
-            <element signature="e#44525#44653#0" />
-            <element signature="e#44719#44835#0" />
-            <element signature="e#44888#45237#0" />
-            <element signature="e#45012#45227#0" />
-            <element signature="e#45085#45213#0" />
-            <element signature="e#45261#45335#0" />
-            <element signature="e#45440#46456#0" />
-            <element signature="e#45629#45805#0" />
-            <element signature="e#45903#46450#0" />
-            <element signature="e#46112#46440#0" />
-            <element signature="e#46218#46426#0" />
-            <element signature="e#46642#46803#0" />
-            <element signature="e#46955#46997#0" />
-            <element signature="e#47077#57746#0" />
-            <element signature="e#47147#57713#0" />
-            <element signature="e#47387#48228#0" />
-            <element signature="e#47438#47916#0" />
-            <element signature="e#47692#47902#0" />
-            <element signature="e#48024#48218#0" />
-            <element signature="e#48357#54893#0" />
-            <element signature="e#48612#49521#0" />
-            <element signature="e#48670#48885#0" />
-            <element signature="e#48891#49507#0" />
-            <element signature="e#49121#49352#0" />
-            <element signature="e#49422#49489#0" />
-            <element signature="e#49537#49570#0" />
-            <element signature="e#49664#52151#0" />
-            <element signature="e#49812#51076#0" />
-            <element signature="e#49876#50445#0" />
-            <element signature="e#50273#50335#0" />
-            <element signature="e#50341#50423#0" />
-            <element signature="e#50496#51058#0" />
-            <element signature="e#50886#50948#0" />
-            <element signature="e#50954#51036#0" />
-            <element signature="e#51116#52095#0" />
-            <element signature="e#51248#52077#0" />
-            <element signature="e#51346#52053#0" />
-            <element signature="e#51410#51789#0" />
-            <element signature="e#51511#51759#0" />
-            <element signature="e#51795#52027#0" />
-            <element signature="e#52203#54709#0" />
-            <element signature="e#52354#53624#0" />
-            <element signature="e#52421#52993#0" />
-            <element signature="e#52818#52880#0" />
-            <element signature="e#52886#52971#0" />
-            <element signature="e#53041#53606#0" />
-            <element signature="e#53431#53493#0" />
-            <element signature="e#53499#53584#0" />
-            <element signature="e#53667#54650#0" />
-            <element signature="e#53799#54632#0" />
-            <element signature="e#53897#54608#0" />
-            <element signature="e#53961#54341#0" />
-            <element signature="e#54060#54311#0" />
-            <element signature="e#54347#54582#0" />
-            <element signature="e#54783#54843#0" />
-            <element signature="e#54940#56264#0" />
-            <element signature="e#55227#56131#0" />
-            <element signature="e#55285#55495#0" />
-            <element signature="e#55501#56117#0" />
-            <element signature="e#55736#55962#0" />
-            <element signature="e#56032#56099#0" />
-            <element signature="e#56164#56219#0" />
-            <element signature="e#56309#56885#0" />
-            <element signature="e#56403#56850#0" />
-            <element signature="e#56526#56659#0" />
-            <element signature="e#56580#56641#0" />
-            <element signature="e#56705#56836#0" />
-            <element signature="e#56757#56818#0" />
-            <element signature="e#56925#57088#0" />
-            <element signature="e#57020#57078#0" />
-            <element signature="e#57127#57291#0" />
-            <element signature="e#57223#57281#0" />
-            <element signature="e#57330#57494#0" />
-            <element signature="e#57426#57484#0" />
-            <element signature="e#57657#57707#0" />
-            <element signature="e#57779#60779#0" />
-            <element signature="e#57906#58410#0" />
-            <element signature="e#57936#58404#0" />
-            <element signature="e#58493#58547#0" />
-            <element signature="e#58568#58607#0" />
-            <element signature="e#58695#59287#0" />
-            <element signature="e#58784#59067#0" />
-            <element signature="e#58922#59057#0" />
-            <element signature="e#59195#59281#0" />
-            <element signature="e#59307#60652#0" />
-            <element signature="e#59441#60268#0" />
-            <element signature="e#59527#60211#0" />
-            <element signature="e#59584#59914#0" />
-            <element signature="e#59920#60167#0" />
-            <element signature="e#60415#60457#0" />
-            <element signature="e#60562#60604#0" />
-            <element signature="e#60721#60755#0" />
-            <element signature="e#60782#60854#0" />
-            <element signature="e#61417#61485#0" />
-            <element signature="e#61614#62817#0" />
-            <element signature="e#61717#61740#0" />
-            <element signature="e#61894#61956#0" />
-            <element signature="e#61972#62004#0" />
-            <element signature="e#62121#62173#0" />
-            <element signature="e#62209#62246#0" />
-            <element signature="e#62366#62439#0" />
-            <element signature="e#62445#62488#0" />
-            <element signature="e#62598#62625#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1444,14 +1063,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/minitasks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1465,7 +1077,7 @@
     <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops1-Use(1).xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret column="1001" lean-forward="true" selection-start-column="1001" selection-end-column="1001" />
+          <caret column="1001" selection-start-column="1001" selection-end-column="1001" />
         </state>
       </provider>
     </entry>
@@ -1473,6 +1085,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_Demo_KScope.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-610">
+          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W2_L1_E3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="926">
+          <caret line="606" column="82" lean-forward="true" selection-start-line="606" selection-start-column="82" selection-end-line="606" selection-end-column="82" />
+          <folding>
+            <element signature="e#20700#20824#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="447" column="38" selection-start-line="447" selection-start-column="22" selection-end-line="447" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="904">
+          <caret line="41" column="65585" selection-start-line="41" selection-start-column="65385" selection-end-line="41" selection-end-column="65585" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seed-data/task1test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="2445" column="23" selection-start-line="2445" selection-start-column="23" selection-end-line="2445" selection-end-column="23" />
         </state>
       </provider>
     </entry>
