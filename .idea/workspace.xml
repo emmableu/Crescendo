@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806cd96d-f0dc-453e-8b4e-0faddd5064d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/assets/images/Screenshot from 2019-06-02 21-53-08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/Screenshot from 2019-06-03 00-00-04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/Screenshot from 2019-06-03 00-23-04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/Screenshot from 2019-06-07 11-07-43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seed-data/task1test.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/seed-data/task1test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/snap" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -108,7 +103,7 @@
           <entry key="css" value="29" />
           <entry key="erb" value="10559" />
           <entry key="html" value="25" />
-          <entry key="js" value="6746" />
+          <entry key="js" value="6756" />
           <entry key="php" value="33" />
           <entry key="rb" value="9602" />
           <entry key="scss" value="5" />
@@ -120,7 +115,7 @@
         <counts>
           <entry key="CSS" value="29" />
           <entry key="HTML" value="28" />
-          <entry key="JavaScript" value="6745" />
+          <entry key="JavaScript" value="6755" />
           <entry key="PLAIN_TEXT" value="38" />
           <entry key="RHTML" value="10557" />
           <entry key="Ruby" value="9646" />
@@ -174,8 +169,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="2445" column="23" selection-start-line="2445" selection-start-column="23" selection-end-line="2445" selection-end-column="23" />
+            <state relative-caret-position="600">
+              <caret line="2442" column="41" selection-start-line="2442" selection-start-column="41" selection-end-line="2442" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -358,7 +353,7 @@
       <path value="$PROJECT_DIR$/vendor/bower/jquery-ujs/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="35" />
     <option name="y" value="25" />
     <option name="width" value="1613" />
@@ -728,12 +723,12 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="15566000" />
+      <workItem from="1560119191939" duration="15978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545663000" />
+    <option name="totallyTimeSpent" value="546075000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1138,8 +1133,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="2445" column="23" selection-start-line="2445" selection-start-column="23" selection-end-line="2445" selection-end-column="23" />
+        <state relative-caret-position="600">
+          <caret line="2442" column="41" selection-start-line="2442" selection-start-column="41" selection-end-line="2442" selection-end-column="41" />
         </state>
       </provider>
     </entry>
