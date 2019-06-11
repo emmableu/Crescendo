@@ -289,18 +289,7 @@
             document.getElementById("ag-results").removeChild(comment.nextSibling);
         }
 
-
-        closeButton = document.createElement('button');
-        closeButton.id = "close";
-        closeButton.innerHTML = 'X';
-        $("#ag-results").append(closeButton);
-        const closeButton = document.getElementById("close");
-
-        closeButton.addEventListener("click", closePopup);
-
-
-
-
+        //
 
 
         var log = feedbackLog;
@@ -684,6 +673,14 @@
             $("#ag-results").append(divTest);
 
         }
+        var closeButton = document.createElement('button');
+        closeButton.id = "close";
+        closeButton.innerHTML = 'X';
+        $("#ag-results").append(closeButton);
+
+        // const closeButton = document.getElementById("close");
+
+        closeButton.addEventListener("click", closePopup);
 
         // $("#stars").append(star);
         // $("#stars").append(unstar);

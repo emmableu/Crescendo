@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806cd96d-f0dc-453e-8b4e-0faddd5064d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/assets/testfiles/S19-Loops1-Modify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/ppxmlfiles/S19-Loops1-Modify.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/ppxmlfiles/S19-Loops1-Modify.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/minitasks/_snap_minitask_autograder.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/minitasks/_snap_minitask_autograder.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seed-data/task1test.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/seed-data/task1test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/autograder" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/snap" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" afterDir="false" />
     </list>
@@ -46,21 +55,22 @@
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="43" />
+          <entry key="project.opened" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Gemfile" value="1" />
           <entry key="css" value="4" />
-          <entry key="erb" value="134" />
-          <entry key="html" value="46" />
+          <entry key="erb" value="137" />
+          <entry key="html" value="54" />
           <entry key="jbuilder" value="6" />
-          <entry key="js" value="173" />
+          <entry key="js" value="184" />
           <entry key="less" value="1" />
           <entry key="log" value="3" />
           <entry key="md" value="1" />
@@ -81,12 +91,12 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="HTML" value="46" />
+          <entry key="HTML" value="54" />
           <entry key="Image" value="1" />
-          <entry key="JavaScript" value="173" />
+          <entry key="JavaScript" value="184" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="RHTML" value="134" />
+          <entry key="RHTML" value="137" />
           <entry key="RNG Compact" value="1" />
           <entry key="Ruby" value="290" />
           <entry key="SCSS" value="1" />
@@ -101,9 +111,9 @@
         <counts>
           <entry key="Gemfile" value="44" />
           <entry key="css" value="29" />
-          <entry key="erb" value="10559" />
+          <entry key="erb" value="10579" />
           <entry key="html" value="25" />
-          <entry key="js" value="6756" />
+          <entry key="js" value="9491" />
           <entry key="php" value="33" />
           <entry key="rb" value="9602" />
           <entry key="scss" value="5" />
@@ -115,9 +125,9 @@
         <counts>
           <entry key="CSS" value="29" />
           <entry key="HTML" value="28" />
-          <entry key="JavaScript" value="6755" />
+          <entry key="JavaScript" value="9490" />
           <entry key="PLAIN_TEXT" value="38" />
-          <entry key="RHTML" value="10557" />
+          <entry key="RHTML" value="10577" />
           <entry key="Ruby" value="9646" />
           <entry key="Slim" value="6763" />
           <entry key="YAML" value="23" />
@@ -128,67 +138,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/minitasks/new.html.slim">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="904">
-              <caret line="41" column="65585" selection-start-line="41" selection-start-column="65385" selection-end-line="41" selection-end-column="65585" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="447" column="38" selection-start-line="447" selection-start-column="22" selection-end-line="447" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seed-data/task1test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="2442" column="41" selection-start-line="2442" selection-start-column="41" selection-end-line="2442" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_Demo_KScope.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-610">
-              <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W2_L1_E3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="-450">
+              <caret line="6" column="27" selection-end-line="102" />
             </state>
           </provider>
         </entry>
@@ -196,29 +149,146 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="926">
-              <caret line="606" column="82" lean-forward="true" selection-start-line="606" selection-start-column="82" selection-end-line="606" selection-end-column="82" />
+            <state relative-caret-position="341">
+              <caret line="64" column="37" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="37" />
               <folding>
-                <element signature="e#20700#20824#0" />
+                <element signature="e#10724#10993#0" />
+                <element signature="e#11653#12331#0" />
+                <element signature="e#12836#12987#0" />
+                <element signature="e#13388#13793#0" />
+                <element signature="e#14552#15851#0" />
+                <element signature="e#16036#17212#0" />
+                <element signature="e#17740#18373#0" />
+                <element signature="e#18729#19116#0" />
+                <element signature="e#19807#22265#0" />
+                <element signature="e#24176#24838#0" />
+                <element signature="e#24248#24280#0" />
+                <element signature="e#24314#24348#0" />
+                <element signature="e#24357#24779#0" />
+                <element signature="e#24520#24773#0" />
+                <element signature="e#24719#24763#0" />
+                <element signature="e#24789#24818#0" />
+                <element signature="e#28123#29359#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops2-Use.xml">
+        <entry file="file://$PROJECT_DIR$/app/views/minitasks/_snap_minitask_autograder.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="37" selection-start-column="37" selection-end-column="37" />
+            <state relative-caret-position="166">
+              <caret line="78" column="54" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops1-Use(1).xml">
+        <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptMinitaskAnalysis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret column="1001" selection-start-column="1001" selection-end-column="1001" />
+            <state relative-caret-position="425">
+              <caret line="236" column="15" selection-start-line="236" selection-start-column="15" selection-end-line="236" selection-end-column="15" />
+              <folding>
+                <element signature="n#!!block;n#CBlockContainsInSprite#0" />
+                <element signature="e#174#206#0" />
+                <element signature="e#240#274#0" />
+                <element signature="e#283#705#0" />
+                <element signature="e#446#699#0" />
+                <element signature="e#645#689#0" />
+                <element signature="e#715#744#0" />
+                <element signature="n#!!block;n#CBlockContains#0" />
+                <element signature="e#235#264#0" />
+                <element signature="e#298#329#0" />
+                <element signature="e#363#394#0" />
+                <element signature="e#428#462#0" />
+                <element signature="e#503#539#0" />
+                <element signature="e#1044#1168#0" />
+                <element signature="e#1102#1162#0" />
+                <element signature="e#1268#2776#0" />
+                <element signature="e#1349#1382#0" />
+                <element signature="e#1453#1696#0" />
+                <element signature="e#1642#1686#0" />
+                <element signature="e#1809#2259#0" />
+                <element signature="e#1828#2012#0" />
+                <element signature="e#1908#1952#0" />
+                <element signature="e#2145#2189#0" />
+                <element signature="e#2210#2265#0" />
+                <element signature="e#3893#3909#0" />
+                <element signature="e#4184#4217#0" />
+                <element signature="e#4468#4902#0" />
+                <element signature="e#4574#4891#0" />
+                <element signature="e#5099#5873#0" />
+                <element signature="e#5747#5831#0" />
+                <element signature="n#!!block;n#occurancesOfBlockSpec#0" />
+                <element signature="e#6451#6484#0" />
+                <element signature="e#6546#6972#0" />
+                <element signature="e#6652#6961#0" />
+                <element signature="e#7772#7805#0" />
+                <element signature="e#7867#8293#0" />
+                <element signature="e#7973#8282#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/testfiles/S19-Loops1-Modify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="875">
+              <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/AGMiniTaskAgent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="821">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/modeling/isnaptest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/deprecated/AGTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/deprecated/SnapPLE.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="2103" column="22" selection-start-line="2103" selection-start-column="22" selection-end-line="2103" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_YifatAmir.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="167" column="26" selection-start-line="167" selection-start-column="26" selection-end-line="167" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -227,36 +297,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setDefaultInputForPolygonMaker</find>
-      <find>setText</find>
-      <find>cover</find>
-      <find>disableBlockEdit</find>
-      <find>blockse</find>
-      <find>allow_repeat</find>
+      <find>blockseque</find>
+      <find>findBlockInPalette</find>
+      <find>repeat %</find>
+      <find>function CBlockContainsInSprite</find>
+      <find>CBlockContains</find>
+      <find>go to</find>
+      <find>function CBlockContains</find>
+      <find>repeat %n %loop</find>
       <find>cblock</find>
-      <find>function cblockcontains</find>
-      <find>allow_rep</find>
-      <find>lambda_dev</find>
-      <find>seeds.rb</find>
-      <find>bridge of shapes</find>
-      <find>32</find>
-      <find>task_id:</find>
-      <find>quiz</find>
-      <find>Quiz</find>
-      <find>minitask_id</find>
-      <find>divTest =</find>
-      <find>Make sure you name your block exactly</find>
-      <find>draw square</find>
-      <find>CBlock</find>
-      <find>a</find>
-      <find>script_s</find>
-      <find>scripts</find>
-      <find>simplecblock</find>
+      <find>repeat %n %</find>
+      <find>scriptana</find>
+      <find>block</find>
+      <find>scriptanalysis</find>
+      <find>repeat %n %c</find>
+      <find>CBlockContainsInSprite</find>
       <find>cblockcontains</find>
-      <find>Cblockcontains</find>
-      <find>correct_feedback</find>
-      <find>instruction</find>
-      <find>allow_re</find>
+      <find>%loop</find>
+      <find>cblockcontainsin</find>
+      <find>before</find>
+      <find>scriptContainsBlock</find>
+      <find>scriptsonscreen</find>
+      <find>tojson</find>
+      <find>blockprecedes</find>
+      <find>occurance</find>
+      <find>occurancesofblock</find>
+      <find>targetblockspec.spl</find>
+      <find>occuranceof</find>
+      <find>blocks</find>
+      <find>test_log</find>
+      <find>outputlog</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;]</replace>
@@ -280,15 +350,11 @@
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/public/snap" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/minitasks/_snap_base.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/layouts/base.html.slim" />
-        <option value="$PROJECT_DIR$/public/autograder/ag-files/AGScriptArrayTwoFormatting.js" />
-        <option value="$PROJECT_DIR$/public/autograder/ag-files/AGFormatting.js" />
         <option value="$PROJECT_DIR$/app/views/tasks/_snap_base.html.slim" />
         <option value="$PROJECT_DIR$/app/views/tasks/_snap_autograder.html.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/show.html.slim" />
@@ -321,7 +387,6 @@
         <option value="$PROJECT_DIR$/public/autograder/deprecated/tables-display.js" />
         <option value="$PROJECT_DIR$/public/autograder/ag-files/AGMiniTaskFormatting.js" />
         <option value="$PROJECT_DIR$/public/autograder/mooc2/M2_W3_L1_T3_E3.html" />
-        <option value="$PROJECT_DIR$/app/views/minitasks/_snap_minitask_autograder.html.erb" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_header.html.erb" />
         <option value="$PROJECT_DIR$/public/snap/modeling/minitask-loadstarter.js" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_snap_minitask_base.html.slim" />
@@ -333,9 +398,14 @@
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/minitasks/new.html.slim" />
+        <option value="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" />
         <option value="$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb" />
         <option value="$PROJECT_DIR$/db/seed-data/task1test.js" />
-        <option value="$PROJECT_DIR$/public/snap/modeling/parsons-problem.js" />
+        <option value="$PROJECT_DIR$/public/autograder/snap/src/objects.js" />
+        <option value="$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js" />
+        <option value="$PROJECT_DIR$/app/views/minitasks/_snap_minitask_autograder.html.erb" />
+        <option value="$PROJECT_DIR$/public/autograder/ag-files/scriptMinitaskAnalysis.js" />
+        <option value="$PROJECT_DIR$/app/assets/testfiles/S19-Loops1-Modify.js" />
       </list>
     </option>
   </component>
@@ -365,6 +435,69 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
+          <expand>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="environments" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="initializers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="locales" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -429,69 +562,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
-          <expand>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="environments" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="initializers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="lambda" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="locales" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -723,12 +793,14 @@
       <workItem from="1559962271387" duration="3371000" />
       <workItem from="1560003433387" duration="5273000" />
       <workItem from="1560101702712" duration="11850000" />
-      <workItem from="1560119191939" duration="15978000" />
+      <workItem from="1560119191939" duration="16038000" />
+      <workItem from="1560193931608" duration="15423000" />
+      <workItem from="1560226885375" duration="17096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="546075000" />
+    <option name="totallyTimeSpent" value="578654000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -743,7 +815,7 @@
     <frame x="35" y="25" width="1885" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22963367" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23291416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -756,7 +828,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32964602" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49972662" weight="0.1880531" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49972662" weight="0.18915929" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50027335" side_tool="true" weight="0.32079646" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32964602" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -765,7 +837,7 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32968834" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21377802" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23291416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -794,93 +866,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/AGScriptArrayTwoFormatting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="176" column="7" selection-start-line="176" selection-start-column="7" selection-end-line="176" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/quizzes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/quizzes/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/quizzes/edit.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/options/_form.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="24" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/options/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="37" column="90" selection-start-line="37" selection-start-column="90" selection-end-line="37" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/quizzes/_form.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W1_L2_E4_YifatAmir.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/feedbackLog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/snap/gui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="3431" column="8" selection-start-line="3431" selection-start-column="8" selection-end-line="3431" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/deprecated/tables-display.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="87" column="77" lean-forward="true" selection-start-line="87" selection-start-column="77" selection-end-line="87" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W1_L2_E4b.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -909,13 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/minitasks/_snap_minitask_autograder.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/index.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -927,13 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="470" column="2" selection-start-line="470" selection-start-column="2" selection-end-line="470" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="140" column="16" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -951,16 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/AGMiniTaskAgent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4975">
-          <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!block;n#AGFinish#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,13 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W1_L2_T1_E3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/development.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -1062,6 +1016,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/minitasks/new.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2675">
+          <caret line="41" column="65585" selection-start-line="41" selection-start-column="65385" selection-end-line="41" selection-end-column="65585" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops2-Use.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1071,70 +1039,238 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/starters/S19-Loops1-Use(1).xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="25">
           <caret column="1001" selection-start-column="1001" selection-end-column="1001" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/minitasks/new.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_Demo_KScope.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-610">
+        <state relative-caret-position="25">
           <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_feedback_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1360">
+          <caret line="71" column="30" selection-start-line="71" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W1_L2_T1_E4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="59" column="130" selection-start-line="59" selection-start-column="130" selection-end-line="59" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W1_L2_T1_E3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-460">
+          <caret line="86" column="58" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/mooc2/M2_W3_L1_T1_E8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W2_L1_T1_ETIF2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1525">
+          <caret line="61" column="10" selection-start-line="61" selection-end-line="65" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W2_L1_E3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="926">
-          <caret line="606" column="82" lean-forward="true" selection-start-line="606" selection-start-column="82" selection-end-line="606" selection-end-column="82" />
-          <folding>
-            <element signature="e#20700#20824#0" />
-          </folding>
+        <state relative-caret-position="3900">
+          <caret line="156" column="45" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_help_results.html.erb">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17025">
+          <caret line="681" selection-start-line="681" selection-end-line="681" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/minitasks/_autograder_minitask_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="140" column="16" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/mooc1/W1_L3_T2_E7.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/snap/src/objects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="741" column="34" selection-start-line="741" selection-start-column="34" selection-end-line="741" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="263" column="41" selection-start-line="263" selection-start-column="41" selection-end-line="263" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/snap/objects.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="447" column="38" selection-start-line="447" selection-start-column="22" selection-end-line="447" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
-          <caret line="41" column="65585" selection-start-line="41" selection-start-column="65385" selection-end-line="41" selection-end-column="65585" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seed-data/task1test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
+          <caret line="627" column="32" selection-start-line="627" selection-start-column="27" selection-end-line="627" selection-end-column="32" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/snap/modeling/parsons-problem.js">
+    <entry file="file://$PROJECT_DIR$/public/autograder/misc-problems/AG_D1_YifatAmir.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="2442" column="41" selection-start-line="2442" selection-start-column="41" selection-end-line="2442" selection-end-column="41" />
+        <state relative-caret-position="290">
+          <caret line="167" column="26" selection-start-line="167" selection-start-column="26" selection-end-line="167" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/deprecated/AGTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/deprecated/SnapPLE.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="2103" column="22" selection-start-line="2103" selection-start-column="22" selection-end-line="2103" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptAnalysis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="37" />
+          <folding>
+            <element signature="e#10724#10993#0" />
+            <element signature="e#11653#12331#0" />
+            <element signature="e#12836#12987#0" />
+            <element signature="e#13388#13793#0" />
+            <element signature="e#14552#15851#0" />
+            <element signature="e#16036#17212#0" />
+            <element signature="e#17740#18373#0" />
+            <element signature="e#18729#19116#0" />
+            <element signature="e#19807#22265#0" />
+            <element signature="e#24176#24838#0" />
+            <element signature="e#24248#24280#0" />
+            <element signature="e#24314#24348#0" />
+            <element signature="e#24357#24779#0" />
+            <element signature="e#24520#24773#0" />
+            <element signature="e#24719#24763#0" />
+            <element signature="e#24789#24818#0" />
+            <element signature="e#28123#29359#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/scriptMinitaskAnalysis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="236" column="15" selection-start-line="236" selection-start-column="15" selection-end-line="236" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!block;n#CBlockContainsInSprite#0" />
+            <element signature="e#174#206#0" />
+            <element signature="e#240#274#0" />
+            <element signature="e#283#705#0" />
+            <element signature="e#446#699#0" />
+            <element signature="e#645#689#0" />
+            <element signature="e#715#744#0" />
+            <element signature="n#!!block;n#CBlockContains#0" />
+            <element signature="e#235#264#0" />
+            <element signature="e#298#329#0" />
+            <element signature="e#363#394#0" />
+            <element signature="e#428#462#0" />
+            <element signature="e#503#539#0" />
+            <element signature="e#1044#1168#0" />
+            <element signature="e#1102#1162#0" />
+            <element signature="e#1268#2776#0" />
+            <element signature="e#1349#1382#0" />
+            <element signature="e#1453#1696#0" />
+            <element signature="e#1642#1686#0" />
+            <element signature="e#1809#2259#0" />
+            <element signature="e#1828#2012#0" />
+            <element signature="e#1908#1952#0" />
+            <element signature="e#2145#2189#0" />
+            <element signature="e#2210#2265#0" />
+            <element signature="e#3893#3909#0" />
+            <element signature="e#4184#4217#0" />
+            <element signature="e#4468#4902#0" />
+            <element signature="e#4574#4891#0" />
+            <element signature="e#5099#5873#0" />
+            <element signature="e#5747#5831#0" />
+            <element signature="n#!!block;n#occurancesOfBlockSpec#0" />
+            <element signature="e#6451#6484#0" />
+            <element signature="e#6546#6972#0" />
+            <element signature="e#6652#6961#0" />
+            <element signature="e#7772#7805#0" />
+            <element signature="e#7867#8293#0" />
+            <element signature="e#7973#8282#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/ag-files/AGMiniTaskAgent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/autograder/modeling/isnaptest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/minitasks/_snap_minitask_autograder.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="78" column="54" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seed-data/task1test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="6" column="27" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/testfiles/S19-Loops1-Modify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
         </state>
       </provider>
     </entry>
