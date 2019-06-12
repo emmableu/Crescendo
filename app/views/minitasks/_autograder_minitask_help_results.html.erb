@@ -210,6 +210,11 @@
                     const selector = `input[name=question${questionNumber}]:checked`;
                     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
                     Trace.log(userAnswer.toString());
+
+
+
+
+
                     // if answer is correct
                     if (userAnswer === currentQuestion.correctAnswer) {
                         // add to the number of correct answers
@@ -218,13 +223,13 @@
                         // color the answers green
                         ;
                         next_subtask = document.getElementById('next-subtask');
-                        if (next_subtask == null && task_order <3) {
+                        if (task_order <3) {
                             divTest = $('<div>')
                                 .html("<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>")
                             ;
                             $("#ag-results").append(divTest);
                         }
-                        if (next_subtask == null && task_order === 3) {
+                        if (next_subtask === null && task_order === 3) {
                             divTest = $('<div>')
                                 .html("<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'nextminitask', id: "next-subtask" }) %>")
                             ;
@@ -243,6 +248,9 @@
                 // show number of correct answers out of total
                 // Trace.log(resultsContainer);
                 // closePopup()
+
+
+
             }
 
             const quizContainer = document.getElementById("quiz");
@@ -262,7 +270,8 @@
                   },
               ];
             <% else%>
-            const myQuestions = []
+            const myQuestions = [];
+
             <% end%>
                 // }
 

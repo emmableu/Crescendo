@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d00d344f-45c8-472f-9f39-c61e5a239bca" name="lin-res03.csc.ncsu.edu" url="http://lin-res03.csc.ncsu.edu">
+        <fileTransfer host="lin-res03.csc.ncsu.edu" port="22" rootFolder="/home/wwang33/lambda" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

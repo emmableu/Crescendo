@@ -65,8 +65,13 @@ class MinitasksController < ApplicationController
     end
     #
     puts('task: ', @task.title)
-    @nextminitask = Minitask.where(task_id: @task.id, order: @minitask.order+1).first
-    puts("nextminitask: ", @nextminitask)
+    if @minitask.order < 3
+      @nextminitask = Minitask.where(task_id: @task.id, order: @minitask.order+1).first
+      puts("nextminitask: ", @nextminitask)
+    else
+      @nextminitask = @minitask
+    end
+
     render layout: 'base'
 
   end
