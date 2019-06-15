@@ -11,17 +11,40 @@
   }
   #ag-header{
     background-color: #000000;
-    height: 10%;
+    /*height: 10%;*/
     position: relative;
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    background-image: none !important;
+    border-bottom: none !important;
   }
+
+
+  /*#ag-header1{*/
+    /*height: 5%;*/
+    /*position: absolute;*/
+  /*}*/
+  /*#ag-header2{*/
+    /*!*height: 5%;*!*/
+    /*!*position: absolute;*!*/
+  /*}*/
+
+
   .navbar-inverse{
     background-color: #1f1f1f;
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    background-image: none !important;
+    border-bottom: none !important;
   }
 
   #numtips {
     font-variant: small-caps;
     font-weight: bold;
   }
+  /*.navbar-lower{*/
+    /*position: relative;*/
+  /*}*/
 
   span.task-title {
     float: left;
@@ -45,10 +68,10 @@
     font-size: 18px;
   }
 
- .navbar-upper-left {
-   margin-left: 10px;
-   margin-right: 10px;
-   float: left;
+  .navbar-upper-left {
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
     width: 100%;
     height: 50px;
     padding: 15px;
@@ -59,23 +82,25 @@
     margin-left: 10px;
     margin-right: 10px;
     float: left;
+    height: 40px;
     width: 100%;
     padding: 15px;
     display: table-cell;
     color: #777;
+    border-bottom: 0;
   }
 
   /*.navbar-logo{*/
-    /*background-image: url('https://cdn.pixabay.com/photo/2017/03/07/15/38/bulb-2124338_960_720.png');*/
-    /*width: 130px;*/
-    /*height: 90px;*/
-    /*background-size: cover;*/
-    /*background-position: center center;*/
-    /*background-repeat: no-repeat;*/
-    /*position: absolute;*/
-    /*top: 5px;*/
-    /*left: 45%;*/
-    /*z-index: 1051;*/
+  /*background-image: url('https://cdn.pixabay.com/photo/2017/03/07/15/38/bulb-2124338_960_720.png');*/
+  /*width: 130px;*/
+  /*height: 90px;*/
+  /*background-size: cover;*/
+  /*background-position: center center;*/
+  /*background-repeat: no-repeat;*/
+  /*position: absolute;*/
+  /*top: 5px;*/
+  /*left: 45%;*/
+  /*z-index: 1051;*/
   /*}*/
 
   .modal{
@@ -124,7 +149,7 @@
   }
 
   .checkmywork{
-    background-image: url('https://lh3.googleusercontent.com/-tw5LsU4Fg28/Umo6BBcoCnI/AAAAAAAAmjE/1iqULsem06E/w896-h896/heisencat.png');
+    /*background-image: url('/assets/');*/
     width: 90px;
     height: 90px;
     background-size: cover;
@@ -149,11 +174,11 @@
     /*z-index: 1051;*/
   }
 
-    #middle-instruction{
-      z-index: 1000;
-      top: 300px;
-      display: block;
-    }
+  #middle-instruction{
+    z-index: 1000;
+    top: 300px;
+    display: block;
+  }
 
 </style>
 
@@ -169,36 +194,36 @@
 <% elsif @minitask.order == 3 %>
   <a class="instruction-create" href="#"></a>
 <% end %>
-  <button class = "checkmywork" id = 'autograding_button'></button>
-  <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <br>
-        <div class="modal-body"><h4 style="margin-top: 35px; font-size: 25px; line-height: 35px">
-          <%= @minitask.instruction.html_safe %>
-<!--          ERB.new(str).result(binding)-->
-        </h4><button class="btn btn-primary had-btn-lg" onclick = "killmodal()" style="margin-left:80%;">OK</button></div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div>
+<button class = "checkmywork" id = 'autograding_button'>Check My Work</button>
+<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <br>
+      <div class="modal-body"><h4 style="margin-top: 35px; font-size: 25px; line-height: 35px">
+        <%= @minitask.instruction.html_safe %>
+        <!--          ERB.new(str).result(binding)-->
+      </h4><button class="btn btn-primary had-btn-lg" onclick = "killmodal()" style="margin-left:80%;">OK</button></div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
 
 
 <div id="ag-header">
-<nav class="navbar-inverse navbar-upper" >
-  <div class="container-fluid">
-    <ul class="nav navbar-upper-left">
-      <li> <span class="task-title">Score: <%=30* @task.order%> </span>
- <span class="task-title-right"><%= @task.title %></span>
-      </li>
+  <nav class="navbar-inverse navbar-upper"  >
+    <div class="container-fluid" id = "ag-header1">
+      <ul class="nav navbar-upper-left">
+        <li> <span class="task-title">Score: <%=30* @task.order%> </span>
+          <span class="task-title-right"><%= @task.title %></span>
+        </li>
 
 
 
-  </div>
-</nav>
-<nav class="navbar navbar-inverse navbar-static-top navbar-lower">
-  <div class="container-fluid">
+    </div>
+  </nav>
+  <nav class="navbar navbar-inverse navbar-static-top navbar-lower" >
+    <div class="container-fluid" id = "ag-header2">
 
-      <ul class="nav navbar-lower-left">
+      <ul class="nav navbar-lower-left" >
         <li> <span class="task-title">Goal: 180</span>
           <span class="task-title-right">Level <%= @task.order %> - <%= @minitask.order %>  </span>
         </li>
@@ -206,12 +231,12 @@
       </ul>
     </div>
 
-  <button class="btn btn-default navbar-btn tips-msg"
-          id="numtips" style="display: none;"
-          onClick="openResults()">
-    <span class="badge">0</span> Tips
-  </button>
-</nav>
+    <button class="btn btn-default navbar-btn tips-msg"
+            id="numtips" style="display: none;"
+            onClick="openResults()">
+      <span class="badge">0</span> Tips
+    </button>
+  </nav>
 
 
 </div>

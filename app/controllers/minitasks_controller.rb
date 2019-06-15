@@ -13,6 +13,14 @@ class MinitasksController < ApplicationController
   before_action :require_admin, only: [
       :edit, :update, :destroy, :new
   ]
+  before_action :require_user
+  def require_user
+    if current_user
+      true
+    else
+      redirect_to new_user_session_path, notice: "You must be logged in to access that page."
+    end
+  end
 
   def index
     @tasks = Task.all
@@ -43,7 +51,10 @@ class MinitasksController < ApplicationController
     params.require(:minitask).permit(:id, :title,:task_id, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
                                      :updated_at, :instruction, :description, :ppxmlfile, :allow_repeat, :palette_start_index)
   end
-
+  def iframe
+    load_channels
+    render :partial => 'snap_minitask_base', :layout => "iframe"
+  end
   def show
 
     @minitask = Minitask.find(params[:id])
@@ -53,6 +64,9 @@ class MinitasksController < ApplicationController
       @options =Option.where(quiz_id: @quiz.id).order(order: :asc)
     end
     @task = Task.where(id: @minitask.task_id).first
+    # current_user.progression = ((@task.order-1)*3) + @minitask.order
+    current_user.update_attributes(:progression => ((@task.order-1)*3) + @minitask.order)
+    puts('currentuser.progression: ', current_user.progression)
     # if @minitask.starter_file
     #   gon.starter_file_path = starter_file_minitask_path
     # else
@@ -166,12 +180,14 @@ class MinitasksController < ApplicationController
     @minitask = Minitask.find(params[:id])
     @task = Task.where(id: @minitask.task_id).first
     @nextminitask = Minitask.where(task_id: @task.id, order: @minitask.order+1).first
+    current_user.progression+= 1
     # respond_with @nextminitask.show
-    format.html {
-      redirect_to action: "show",
-                  id: @nextminitask.id
-
-    }
+    # format.html {
+    #   redirect_to action: "show",
+    #               id: @nextminitask.id
+    #
+    # }
+    redirect_to @nextminitask.show
   end
 
 

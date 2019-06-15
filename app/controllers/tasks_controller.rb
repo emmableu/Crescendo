@@ -13,8 +13,15 @@ class TasksController < ApplicationController
   before_action :require_admin, only: [
       :edit, :update, :destroy, :new
   ]
-
-
+  before_action :require_user
+  # before_action :require_user
+  def require_user
+    if current_user
+      true
+    else
+      redirect_to new_user_session_path, notice: "You must be logged in to access that page."
+    end
+  end
   def require_admin
     # return true if Rails.env.development?
 

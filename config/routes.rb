@@ -25,6 +25,8 @@ Rails.application.routes.draw do
       get 'starter_file', to: 'minitasks#starter_file'
       get 'ppxmlfile', to: 'minitasks#ppxmlfile'
       get 'next_minitask', to: 'minitasks#next_minitask'
+      get 'iframe', to: 'minitasks#iframe'
+
       # get 'show_instruction', to: 'minitasks#show_instruction'
 
     end
