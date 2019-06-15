@@ -82,7 +82,11 @@ function AGTest(outputLog) {
     );
 
     var blockExists1 = function () {
-        return IfExistsInInnerForever('down arrow');
+        if(SeriesOfBlockSpecInRepeat(["draw a square with %s size", "draw a triangle with %s size"], 1)){
+            return true;
+        };
+        // };
+        return false;
     };
 
     tip.newAssertTest(
@@ -93,7 +97,41 @@ function AGTest(outputLog) {
         0
     );
 
-    return fb;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    chunk2 = fb.newChunk('');
+
+    var tip = chunk2.newTip(
+        "Draw a newtip1s",
+        'newtip2',
+        'newtip3'
+    );
+
+    var blockExists2 = function () {
+
+        if(SeriesOfBlockSpecInRepeat(["draw a triangle with %s size", "draw a square with %s size"], 2)){
+            return true;
+        };
+    };
+
+    tip.newAssertTest(
+        blockExists2,
+        "newasserttest1",
+        "The second row of teeth is correct!",
+        "Please make the second row of teeth 3 series of triangle and square!",
+        0
+    );
 
 
 }

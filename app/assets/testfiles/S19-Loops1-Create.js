@@ -20,7 +20,7 @@ function AGTest(outputLog) {
     );
 
     var blockExists1 = function () {
-        if(SeriesOfBlockSpecInRepeat([ "draw a triangle with %s size", "draw a square with %s size", "draw a square with %s size", "draw a triangle with %s size"], 1)){
+        if(SeriesOfBlockSpecInRepeat(["draw a square with %s size",  "draw a triangle with %s size",  "draw a triangle with %s size", "draw a square with %s size"], 1)){
             return true;
         };
         // };
@@ -30,8 +30,8 @@ function AGTest(outputLog) {
     tip.newAssertTest(
         blockExists1,
         "newasserttest1",
-        "The first row of teeth is correct!",
-        "Please make the first row of teeth 3 series of square and triangles!",
+        "The monster teeth is correct!",
+        "Please draw a series of teeth in each repeat!",
         0
     );
 

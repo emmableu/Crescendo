@@ -42,8 +42,13 @@ function AGTest(outputLog) {
         'newtip3'
     );
 
+<<<<<<< HEAD
     var blockExists2 = function () {
         return SeriesOfBlockSpecInRepeat(["change pen color by %n"], 1);
+=======
+    var blockExists1 = function () {
+        return SeriesOfBlockSpecInRepeat(["change pen %hsva by %n"], 1);
+>>>>>>> a6ec8e319e94e247e0fa9c296e9923b326a2e397
 
     };
 
