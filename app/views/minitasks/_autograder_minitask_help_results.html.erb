@@ -3,6 +3,9 @@
   .container {
     /*border: 1px solid #ccc;*/
     text-align: center;
+    left: inherit;
+    right: inherit;
+    width: inherit;
   }
 
   .star {
@@ -20,6 +23,11 @@
     width: 90px;
     height: 90px;
   }
+  .hover_over_stars_instruction{
+    font-size: 16px;
+    color: whitesmoke;
+  }
+
 
   .description {
     display: none;
@@ -37,15 +45,16 @@
     font-size: 14px;
     color: whitesmoke;
   }
+  .quizimg{
+    height: 90px;
+  }
 
-  /*body{*/
-  /*font-size: 20px;*/
-  /*font-family: sans-serif;*/
-  /*color: #333;*/
-  /*}*/
+  body{
+  background-color: #1f1f1f;
+  }
 
 
-  @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+  /*@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);*/
 
   /*body{*/
   /*font-size: 20px;*/
@@ -79,34 +88,95 @@
     display: block;
     margin-bottom: 10px;
   }
-  button{
+  .answerdiv{
+    color:whitesmoke!important;
+    /*font-size: */
+  }
+  #askteacher{
+    background-color: #232323;
+    color: whitesmoke!important;
+  }
+  .checkmywork{
     font-family: 'Work Sans', sans-serif;
-    font-size: 22px;
-    background-color: #279;
-    color: #fff;
+    font-size: 18px;
+    background-color: #f2ff2d;
+    color: #1e2121;
     border: 0px;
     border-radius: 3px;
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
   }
-  button:hover{
-    background-color: #38a;
+  /*button:hover{*/
+    /*background-color: #38a;*/
+  /*}*/
+  .activesubmit{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    background-color: #f2ff2d!important;
+    color: #1e2121;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
   }
-
+  .activesubmit:hover{
+    background-color: #38a!important;
+  }
+  .greysubmit{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    background-color: #4f5353;
+    color: #1e2121;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
   .overlay{
     position:absolute;
   }
+  #myForm{
+    display: none;
+    background: white;
+    position: relative;
+    /*bottom: 0;*/
+    /*right: 15px;*/
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+
+
+
   /*#ag-output{*/
     /*z-index: 1;*/
   /*}*/
 
+
   #close {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+
     position: absolute;
     background: #ff5763;
     color: white;
     top: 0px;
     right: -10px;
+  }
+
+
+  #close-chatpopup{
+    position: absolute;
+    top: 0px !important;
+    right: 0px !important;
   }
 
 </style>
@@ -141,12 +211,16 @@
             document.getElementById("ag-results").removeChild(comment.nextSibling);
         }
 
+
+
+
         quiz = document.createElement('div');
         quiz.id = 'quiz';
         results = document.createElement('div');
         results.id = 'results';
         submitButton = document.createElement('button');
         submitButton.id = "submit";
+        submitButton.className = 'greysubmit';
         submitButton.innerHTML = 'Submit';
         closeButton = document.createElement('button');
         closeButton.id = "close";
@@ -197,7 +271,7 @@
             }
 
             function showResults() {
-                // gather answer containers from our quiz
+
                 const answerContainers = quizContainer.querySelectorAll(".answers");
 
                 // keep track of user's answers
@@ -208,6 +282,9 @@
                     // find selected answer
                     const answerContainer = answerContainers[questionNumber];
                     const selector = `input[name=question${questionNumber}]:checked`;
+                    console.log('quesitonNumber: ', questionNumber);
+                    console.log('currentQuestion: ', currentQuestion);
+                    console.log('selector: ', selector);
                     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
                     Trace.log(userAnswer.toString());
 
@@ -219,35 +296,44 @@
                     if (userAnswer === currentQuestion.correctAnswer) {
                         // add to the number of correct answers
                         numCorrect++;
-                        alert("Correct! Congratulations!");
-                        // color the answers green
-                        ;
-                        next_subtask = document.getElementById('next-subtask');
-                        if (task_order <3) {
-                            divTest = $('<div>')
-                                .html("<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>")
-                            ;
-                            $("#ag-results").append(divTest);
+                        // alert("Correct! Congratulations!");
+
+                        answerdiv = document.getElementById("answerdiv");
+                        if (answerdiv === null) {
+                            answerdiv = document.createElement('div');
                         }
-                        if (next_subtask === null && task_order === 3) {
-                            divTest = $('<div>')
-                                .html("<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'nextminitask', id: "next-subtask" }) %>")
-                            ;
+                        answerdiv.innerHTML = "Correct! Congratulations! Now you can proceed to the next task!";
+                        answerdiv.className = ('answerdiv');
+                        answerdiv.id = 'answerdiv';
+
+                        $("#ag-results").append(answerdiv);
+                        next_subtask = document.getElementById('next-subtask');
+
+                        // console.log(divTest);
+                        try {
+                            divTest;
+                        }
+                        catch(err) {
+                           divTest = $('<div>')
+                                .html("<%= escape_javascript link_to(image_tag("next.png"), minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>");
                             $("#ag-results").append(divTest);
+
                         }
 
                     } else {
-                        // if answer is wrong or blank
-                        alert("Wrong Answer, please try again");
-                        answerContainers[questionNumber].style.color = "red";
-                        // resultsContainer.innerHTML = `Wrong!`;
+                        answerdiv = document.getElementById("answerdiv");
+                        if (answerdiv === null) {
+                            answerdiv = document.createElement('div');
+                        }
+                        answerdiv.innerHTML = "Wrong! Please try again!";
+                        answerdiv.className = ('answerdiv');
+                        answerdiv.id = 'answerdiv';
+
+                        $("#ag-results").append(answerdiv);
+
 
                     }
                 });
-                // resultsContainer.innerHTML = `Correct!`
-                // show number of correct answers out of total
-                // Trace.log(resultsContainer);
-                // closePopup()
 
 
 
@@ -257,10 +343,22 @@
             const resultsContainer = document.getElementById("results");
             const submitButton = document.getElementById("submit");
             const closeButton = document.getElementById("close");
-            <% if @quiz%>
+            <% if @quiz and @quiz.id == 9 %>
+            const myQuestions = [
+                {
+                    question: "<%= @quiz.quizbody.html_safe%>",
+                    answers: {
+                        a: "<%= @options[0].optionbody.html_safe%>",
+                        b: "<%= @options[1].optionbody.html_safe%>",
+<!--                        c: "<%#= @options[2].optionbody.html_safe%>"-->
+                    },
+                    correctAnswer:  "<%= @quiz.solution%>"
+                },
+            ];
+            <% elsif @quiz%>
               const myQuestions = [
                   {
-                      question: "<%= @quiz.quizbody%>",
+                      question: "<%= @quiz.quizbody.html_safe%>",
                       answers: {
                           a: "<%= @options[0].optionbody.html_safe%>",
                           b: "<%= @options[1].optionbody.html_safe%>",
@@ -269,6 +367,7 @@
                       correctAnswer:  "<%= @quiz.solution%>"
                   },
               ];
+
             <% else%>
             const myQuestions = [];
 
@@ -278,9 +377,18 @@
 
             // display quiz right away
             buildQuiz();
-
+            // $('#submit').hide();
             // on submit, show results
-            submitButton.addEventListener("click", showResults);
+            $(document).ready(function() {
+                $('input[type=radio]').change(function() {
+
+                    $('#submit').addClass("activesubmit");
+                    submitButton.addEventListener("click", showResults);
+
+                });
+            });
+
+
             closeButton.addEventListener("click", closePopup);
         })();
 
@@ -491,7 +599,7 @@
 
                 var htmlString, string_reporter, testSectionDiv;
 
-                string_reporter = document.createElement("div")
+                string_reporter = document.createElement("div");
                 string_reporter.classList.add("data", "assertion");
 
                 // TODO: Try extracting this out.
@@ -617,6 +725,15 @@
                 }
             }
         }
+
+        hover_over_stars_instruction = document.createElement('div');
+        hover_over_stars_instruction.innerHTML = "Hover over the stars to see what to work on!";
+        hover_over_stars_instruction.className = ('hover_over_stars_instruction');
+        hover_over_stars_instruction.id = 'hover_over_stars_instruction';
+        $("#ag-results").append(hover_over_stars_instruction);
+
+
+
         console.log('correct_total', correct_total);
         console.log('incorrect_total', incorrect_total);
         console.log('correct_feedback', correct_feedbacks);
@@ -667,21 +784,79 @@
                 $(  "#description-table"  ).find( "span" ).text();
             });
 
-        <!--        star = $('<div>')-->
-        <!--            .html("<%= escape_javascript image_tag('star.jpg') %> <p>text<p> <p class = 'description'> description <p>").addClass('star');-->
-        // star.id = 'star';
-        // star.html("<p>text<\p>");
-        // star.className = 'star';
         unstar = $('<div>')
             .html("<%= escape_javascript image_tag('unstar.jpg') %>").addClass('star');
         // unstar.className = 'unstar';
         if (numtips == 0) {
-            divTest = $('<div>')
-                .html("<%= escape_javascript button_to('Next Subtask',  minitask_path(@nextminitask), {class: 'nextminitask'}) %>")
-            ;
-            $("#ag-results").append(divTest);
+            next_subtask = document.getElementById('next-subtask');
+            <% if @minitask.order < 3%>
+            { divTest = $('<div>')
+                      .html("<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>")
+                  ;
+                  $("#ag-results").append(divTest);
+            }
+            <% elsif @minitask.order == 3%>
+              {
+                  divTest = $('<div>')
+                      .html("<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'nextminitask', id: "next-subtask" }) %>")
+                  ;
+                  $("#ag-results").append(divTest);
+              }
+          <% end %>
 
+
+    }
+
+
+        var askteacher = document.createElement('button');
+        askteacher.id = "askteacher";
+        askteacher.classname = 'askteacher';
+        askteacher.innerHTML = 'Ask teacher to check my work';
+        $("#ag-results").append(askteacher);
+
+
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        };
+
+        function closeForm() {
+            console.log('closeForm');
+            document.getElementById("myForm").style.display = "none";
+        };
+
+        var chatpopup = document.createElement('div');
+        chatpopup.id = "myForm";
+        chatpopup.classname = 'chat-popup';
+        chatpopup.innerHTML = "<b>The following can only be filled in by an instructor </b> <br> <b>Allow student to proceed to next task:</b><input></input><br><b>Password:</b><input id = 'password' type='password'></input><br><button class='btn' id = 'send-chatpopup'>Send</button><br><button type='button' class='btn cancel' id = 'close-chatpopup' onclick='closeForm()'>Close</button>";
+        chatpopup.style.display = 'none';
+        $("#ag-results").append(chatpopup);
+
+
+        askteacher.addEventListener("click", openForm);
+        close_chatpopup = document.getElementById('close-chatpopup');
+        close_chatpopup.addEventListener('click', closeForm);
+
+
+        function chatpopupNext() {
+            var password = document.getElementById('password').value;
+            if (password === "summercamp") {
+                try {
+                    divTest;
+                }
+                catch (err) {
+                    divTest = $('<div>')
+                        .html("<%= escape_javascript link_to(image_tag("next.png"), minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>");
+                    $("#ag-results").append(divTest);
+
+                }
+            }
         }
+
+        send_chatpopup = document.getElementById('send-chatpopup');
+        send_chatpopup.addEventListener('click', chatpopupNext);
+
+
         var closeButton = document.createElement('button');
         closeButton.id = "close";
         closeButton.innerHTML = 'X';

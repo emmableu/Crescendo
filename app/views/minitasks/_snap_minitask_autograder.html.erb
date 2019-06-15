@@ -27,7 +27,7 @@
 <% content_for :head do %>
   <!-- NOTE: jQuery and _ are included in the Rails App  -->
 
-<!--  <script src='/autograder/ag-files/MiniTaskPopulate.js'></script>-->
+  <!--  <script src='/autograder/ag-files/MiniTaskPopulate.js'></script>-->
   <!-- AG Snap Modifications -->
   <script src="/snap-path.js"></script>
   <script src="/autograder/ag-files/snap-ui-overrides.js"></script>
@@ -47,7 +47,7 @@
   <script src="/autograder/ag-files/AGMiniTaskAgent.js"></script>
   <script src='/autograder/ag-files/feedbackLog.js'></script>
   <script src="/autograder/ag-files/AGMiniTaskFormatting.js"></script>
-<!--  <script src="/autograder/ag-files/task-script.js"></script>-->
+  <!--  <script src="/autograder/ag-files/task-script.js"></script>-->
 
 
   <!-- Custom cloud access on localhost only. -->
@@ -70,17 +70,21 @@
       // It should take in a width and height.
       WorldMorph.prototype.fillPage = function () {
           console.log('worldmorph fill page');
-          var agHeight = $('#ag-header').outerHeight();
+          var agHeight = $('#ag-header1').outerHeight() + $('#ag-header2').outerHeight();
 
           clientHeight = $(window).height() - agHeight,
               clientWidth = window.innerWidth,
               myself = this;
 
-          this.worldCanvas.style.position = "absolute";
+          // this.worldCanvas.style.position = "absolute";
+          this.worldCanvas.style.position = "relative";
           this.worldCanvas.style.left = '0px';
           this.worldCanvas.style.right = "0px";
           this.worldCanvas.style.width = clientWidth + 'px';
-          this.worldCanvas.style.top = agHeight + 'px';
+          // this.worldCanvas.style.top = agHeight + 'px';
+          //
+          // this.worldCanvas.style.top = "40px";
+          // this.worldCanvas.style.height = "calc(100% - 40px)";
 
           if (this.worldCanvas.width !== clientWidth) {
               this.worldCanvas.width = clientWidth;
@@ -90,8 +94,14 @@
               this.worldCanvas.height = clientHeight;
               this.setHeight(clientHeight);
           }
+
+
           this.children.forEach(function (child) {
               if (child.reactToWorldResize) {
+                  extendObject(child, 'reactToWorldResize', function (base) {
+                      base.call(this);
+                      console.log('resized');
+                  });
                   child.reactToWorldResize(myself.bounds.copy());
               }
           });
@@ -107,15 +117,20 @@
           );
           // console.log($('#ag-header').outerHeight(), $(window).height(), $('#canvas-container').height());
           $('#canvas-container').width($(window).width());
+          $('#canvas-container').css({
+              position: 'absolute'
+          });
+          var agHeight = $('#ag-header1').outerHeight() + $('#ag-header2').outerHeight();
+          $('body').height($(window).height());
           world_canvas = document.getElementById('world');
           world = new WorldMorph(world_canvas);
           var ide = new IDE_Morph().openIn(world);
           // Start Snap Environment Loop
           loop();
           <% if @minitask.order == 1 %>
-            $("#autograding_button").click(doExecAndDisplayQuizzes);
+          $("#autograding_button").click(doExecAndDisplayQuizzes);
           <% else %>
-            $("#autograding_button").click(doExecAndDisplayTests);
+          $("#autograding_button").click(doExecAndDisplayTests);
           <% end %>
           var ide = world.children[0];
 
@@ -123,6 +138,8 @@
 
 
           console.log('ide: ', ide);
+
+          // ide.controlbar.color = controlbar.groupColor;
           instruction_left = ide.stage.left();
           instruction_width = clientWidth - ide.stage.left();
           var agHeight = $('#ag-header').outerHeight();

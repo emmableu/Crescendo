@@ -68,6 +68,9 @@
           this.worldCanvas.style.width = clientWidth + 'px';
           this.worldCanvas.style.height = clientHeight + 'px';
 
+          this.worldCanvas.style.top = "240px";
+          this.worldCanvas.style.height = "calc(100% - 240px)";
+
           if (this.worldCanvas.width !== clientWidth) {
               this.worldCanvas.width = clientWidth;
               this.setWidth(clientWidth * 3/4);

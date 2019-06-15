@@ -11,6 +11,10 @@
     <%= f.label :password %>
     <%= f.password_field :password, autocomplete: "123456"%>
   </div>
+  <div class="field" style="display: none;">
+    <%= f.label :progression %>
+    <%= f.text_field :progression, autocomplete: "0"%>
+  </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

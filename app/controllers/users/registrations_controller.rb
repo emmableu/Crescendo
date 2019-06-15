@@ -41,7 +41,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     generated_password = "123456"
     s_hash = sign_up_params.to_hash()
     s_hash["password"] = generated_password
-    sign_up_params = ActionController::Parameters.new(s_hash).permit(:username, :password)
+    s_hash["progression"] = 0
+    puts(s_hash)
+    sign_up_params = ActionController::Parameters.new(s_hash).permit(:username, :password, :progression)
     # print('sign_up_params.type: ', sign_up_params.class)
     # print('s_hash: ', s_hash)
     # print('sign_up_params[:password]: ', sign_up_params["password"])

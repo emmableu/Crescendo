@@ -2,6 +2,7 @@
 doctype html
 - if current_user
   - @next_task = current_user.progression/3 + 1
+  / - current_user.progression = 10
 - else
   - @next_task = 3
   / console.log(#{@next_task})
@@ -63,18 +64,28 @@ body
       background-color: #0c1021
     }
     img {
-      /*width: 6vw;*/
-      height: 8vw;
-      object-fit: fill;
+      /*width: 3vw;*/
+      /*height: 5vh;*/
+      /*width: 20%;*/
+      /*height: auto;*/
+      width: 18rem;
+      object-fit: cover;
     }
     .entire-card {
       color: #f2eeff;
+      width: 18rem;
+      height: auto;
+    }
+
+    .card.border-secondary{
+      width: 18rem;
     }
 
     .entire-card:hover {
       color: #f2eeff;
     }
     .card-body {
+      width: 18rem;
       font-family: serif;
       font-size: 15px;
       text-align: center;
