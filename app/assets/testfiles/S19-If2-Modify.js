@@ -1,3 +1,4 @@
+
 // var id = 'somevarid';
 // var isEDX = isEDXurl();
 // var graded = true;
@@ -83,16 +84,34 @@ function AGTest(outputLog) {
     );
 
     var blockExists1 = function () {
-        return IfDoExistsInInnerForever('down arrow','change y by %n');
+        scriptsOnScreen = getScripts(0);
+        script = scriptsOnScreen[0];
+        var script = JSONscript(script);
+        foreverScript = subScript(script, 'forever %loop');
+        ifElseScript = subScript(foreverScript, 'if %b %c else %c', 'if');
+        if (blockSpecMatch(ifElseScript[0].inputs[0].blockSp, '%s < %s')){
+            if (ifElseScript[0].inputs[0].inputs[0] === 'x position') {
+                innerIfScript = subScript(ifElseScript, 'if %b %c else %c', 'if');
+                if (innerIfScript[0].blockColor.r === 252 &&
+                    innerIfScript[0].blockColor.g === 0 &&
+                    innerIfScript[0].blockColor.b === 19) {
+                    return true;
+                }
+            }
+        }
+
+
     };
 
     tip.newAssertTest(
         blockExists1,
         "newasserttest1",
-        "Monkey moves down when the down key is pressed",
-        "Monkey needs to move down when the down key is pressed!",
+        "Sprite draws red on the bottom left",
+        "Sprite should draw red on the bottom left!",
         0
     );
+
+
 
 
 
@@ -104,17 +123,31 @@ function AGTest(outputLog) {
         'newtip3'
     );
 
-    var blockExists2 = function () {
-        return IfDoExistsInInnerForever('space','next costume');
+    var blockExists1 = function () {
+        scriptsOnScreen = getScripts(0);
+        script = scriptsOnScreen[0];
+        var script = JSONscript(script);
+        foreverScript = subScript(script, 'forever %loop');
+        ifElseScript = subScript(foreverScript, 'if %b %c else %c', 'if');
+
+        innerIfScript = subScript(ifElseScript, 'if %b %c else %c', 'else');
+        if (innerIfScript[0].blockColor.r === 248 &&
+            innerIfScript[0].blockColor.g === 116 &&
+            innerIfScript[0].blockColor.b === 255) {
+            return true;
+        }
+
+
     };
 
     tip.newAssertTest(
-        blockExists2,
+        blockExists1,
         "newasserttest1",
-        "Monkey is dancing when the space key is pressed.",
-        "Monkey should be dancing when the space key is pressed!",
+        "Sprite draws pink on the bottom right",
+        "Sprite should draw pink on the bottom right!",
         0
     );
+
 
     return fb;
 
@@ -125,6 +158,9 @@ function AGTest(outputLog) {
 
 
 }
+
+
+
 
 
 

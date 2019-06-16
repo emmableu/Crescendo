@@ -98,10 +98,6 @@
 
           this.children.forEach(function (child) {
               if (child.reactToWorldResize) {
-                  extendObject(child, 'reactToWorldResize', function (base) {
-                      base.call(this);
-                      console.log('resized');
-                  });
                   child.reactToWorldResize(myself.bounds.copy());
               }
           });
@@ -124,7 +120,10 @@
           $('body').height($(window).height());
           world_canvas = document.getElementById('world');
           world = new WorldMorph(world_canvas);
-          var ide = new IDE_Morph().openIn(world);
+          var ide = new IDE_Morph();
+          ide.openIn(world);
+          window.ide = ide;
+          console.log(ide.stage.guid);
           // Start Snap Environment Loop
           loop();
           <% if @minitask.order == 1 %>
@@ -132,7 +131,10 @@
           <% else %>
           $("#autograding_button").click(doExecAndDisplayTests);
           <% end %>
-          var ide = world.children[0];
+          // var ide = world.children[0];
+
+          window.assignmentID ='<%=@minitask.title%>';
+          window.userID = '<%=@current_user.username%>';
 
 
 
