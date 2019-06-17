@@ -21,3 +21,9 @@ script
 /   #canvas-container
 /       iframe#snap frameborder="0" height="100%" scrolling="no" width="100%"  src= "#{url_for controller: 'minitasks', action: 'iframe'}"
       / iframe height="480" name="RiverOfNews" scrollbars="auto" src=("#{url_for controller: 'welcome'), action: 'iframe'}" width="320"
+
+
+
+javascript:
+  | window.assignmentID ='#{@minitask.title}';
+  | window.userID = '#{current_user.username}';
