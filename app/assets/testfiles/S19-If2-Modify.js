@@ -106,8 +106,8 @@ function AGTest(outputLog) {
     tip.newAssertTest(
         blockExists1,
         "newasserttest1",
-        "Sprite draws red on the bottom left",
-        "Sprite should draw red on the bottom left!",
+        "<p>Great! The mouse draws <img src=\"/assets/red.png\" /> when hovers over the bottom-left</p>",
+        "<p>When the mouse hovers over the bottom-left, it should draw <img src=\"/assets/red.png\" /></p>",
         0
     );
 
@@ -143,8 +143,8 @@ function AGTest(outputLog) {
     tip.newAssertTest(
         blockExists1,
         "newasserttest1",
-        "Sprite draws pink on the bottom right",
-        "Sprite should draw pink on the bottom right!",
+        "<p>Great! The mouse draws <img src=\"/assets/pink.png\" /> when hovers over the bottom-right</p>",
+        "<p>When the mouse hovers over the bottom-right, it should draw <img src=\"/assets/pink.png\" /></p>",
         0
     );
 

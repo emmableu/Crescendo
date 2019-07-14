@@ -137,19 +137,19 @@ body
                     .card.border-secondary.mx-4.mb-5.greenPulse.button
                       |#{image_tag(categorytask.title)}
                       .card-body
-                        strong.card-text = "#{categorytask.title}"
+                        strong.card-text ="#{categorytask.order} - #{categorytask.title}"
                 - elsif categorytask.order < @next_task
                   a.entire-card
                     .card.border-secondary.mx-4.mb-5
                       |#{image_tag("Pass" + categorytask.title)}
                       .card-body
-                        strong.card-text =  "#{categorytask.title}"
+                        strong.card-text =  "#{categorytask.order} - #{categorytask.title}"
                 - else
                   a.entire-card
                     .card.border-secondary.mx-4.mb-5
                       |#{image_tag("Blur" + categorytask.title)}
                       .card-body
-                        strong.card-text = "#{categorytask.title}"
+                        strong.card-text = "#{categorytask.order} - #{categorytask.title}"
 
                 .card.invisible.mx-4.mb-5
                   |#{image_tag(categorytask.title)}
@@ -165,35 +165,19 @@ body
 
                 - if categorytask.order == @next_task
                   a.entire-card href="#{minitask_path(@minitask1[categorytask])}"
-                  script
-                    javascript:console.log(@minitasks);
-                    .card.border-secondary.mx-4.mb-5.greenPulse.button
-                      |#{image_tag(categorytask.title)}
-                      .card-body
-                        strong.card-text = "#{categorytask.title}"
+                      .card.border-secondary.mx-4.mb-5.greenPulse.button
+                        |#{image_tag(categorytask.title)}
+                        .card-body
+                          strong.card-text = "#{categorytask.order} - #{categorytask.title}"
                 - elsif categorytask.order < @next_task
                   a.entire-card
                     .card.border-secondary.mx-4.mb-5
                       |#{image_tag("Pass" + categorytask.title)}
                       .card-body
-                        strong.card-text =  "#{categorytask.title}"
+                        strong.card-text =  "#{categorytask.order} - #{categorytask.title}"
                 - else
                   a.entire-card
                     .card.border-secondary.mx-4.mb-5
                       |#{image_tag("Blur" + categorytask.title)}
                       .card-body
-                        strong.card-text = "#{categorytask.title}"
-/
-/ script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
-//javascript:
-//  line1 = $('#line1');
-//  div1 = $('#task1');
-//  div2 = $('#task2');
-//  var pos1 = div1.offset()- div1.offsetParent();
-//  var pos2 = div2.offset() - div2.offsetParent();
-//  line1
-//    .attr('x1', div1.offset().left - div1.offsetParent().left)
-//    .attr('y1', div1.offset().top - div1.offsetParent().top)
-//    .attr('x2', pos2.left)
-//    .attr('y2', pos2.top);
-
+                        strong.card-text = "#{categorytask.order} - #{categorytask.title}"

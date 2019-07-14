@@ -31,7 +31,7 @@
 
 
   .navbar-inverse{
-    background-color: #1f1f1f;
+    background-color: #000000;
     border: 0px !important;
     border-bottom-color: transparent !important;
     background-image: none !important;
@@ -88,6 +88,7 @@
     display: table-cell;
     color: #777;
     border-bottom: 0;
+    background-color: #000000;
   }
 
   /*.navbar-logo{*/
@@ -104,13 +105,23 @@
   /*}*/
 
   .modal{
-    top: 300px;
+    top: 175px;
+    font-size: 14px;
+    /*width: 40%;*/
+    /*width: 500px;*/
+    /*left: 40%;*/
   }
+
+
+  .modal-content{
+    width: 70%;
+  }
+
 
   .instruction-use{
     background-image: url(/assets/use.jpg);
-    width: 270px;
-    height: 100px;
+    width: 200px;
+    height: 80px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -118,12 +129,12 @@
     top: 5px;
     left: 40%;
     z-index: 1051;
-    border: 2px solid #192121
+    /*border: 2px solid #192121*/
   }
   .instruction-modify{
     background-image: url(/assets/modify.jpg);
-    width: 270px;
-    height: 100px;
+    width: 200px;
+    height: 80px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -131,13 +142,13 @@
     top: 5px;
     left: 40%;
     z-index: 1051;
-    border: 2px solid #192121
+    /*border: 2px solid #192121*/
   }
 
   .instruction-create{
     background-image: url(/assets/create.jpg);
-    width: 270px;
-    height: 100px;
+    width: 200px;
+    height:80px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -145,21 +156,58 @@
     top: 5px;
     left: 40%;
     z-index: 1051;
-    border: 2px solid #192121
+    /*border: 2px solid #192121*/
   }
 
   .checkmywork{
-    /*background-image: url('/assets/');*/
-    width: 90px;
-    height: 90px;
+    background-image: url(/assets/next.png);
+    width: 120px;
+    height: 80px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 70%;
     z-index: 1051;
+    cursor: pointer;
+    /*color: gold;*/
+    /*text-align: center;*/
+    /*border: 0px;*/
+    /*border-radius: 3px;*/
+    /*padding: 20px;*/
+    /*cursor: pointer;*/
+    /*margin-bottom: 20px;*/
+
+
   }
+
+
+
+  .checkmywork2 img{
+    /*background-image: url(/assets/next.png);*/
+    width: 120px;
+    height: 80px;
+    /*background-size: cover;*/
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
+    position: absolute;
+    top: 10px;
+    left: 72%;
+    z-index: 1051;
+    cursor: pointer;
+    /*color: gold;*/
+    /*text-align: center;*/
+    /*border: 0px;*/
+    /*border-radius: 3px;*/
+    /*padding: 20px;*/
+    /*cursor: pointer;*/
+    /*margin-bottom: 20px;*/
+
+
+  }
+
+
   .nextminitask img{
     /*background-image: url('https://cdn.pixabay.com/photo/2013/03/29/13/39/next-97612_960_720.png');*/
     /*width: 150px;*/
@@ -172,13 +220,21 @@
     /*top: 5px;*/
     left: 80%;
     /*z-index: 1051;*/
+
   }
 
   #middle-instruction{
     z-index: 1000;
-    top: 300px;
+    top: 100px;
     display: block;
+    /*width: 500px;*/
   }
+
+  .navbar{
+    min-height: 30px;
+  }
+
+
 
 </style>
 
@@ -188,19 +244,23 @@
 <!--button_to('Next Subtask',  minitask_path(@nextminitask), {class: 'nextminitask'})-->
 <%#= button_to('', minitask_path, {class: 'instruction-umc'}) %>
 <% if @minitask.order == 1 %>
-  <a class="instruction-use" href="#"></a>
+  <div class="instruction-use" href="#"></div>
 <% elsif @minitask.order == 2 %>
-  <a class="instruction-modify" href="#"></a>
+  <div class="instruction-modify" href="#"></div>
 <% elsif @minitask.order == 3 %>
-  <a class="instruction-create" href="#"></a>
+  <div class="instruction-create" href="#"></div>
 <% end %>
-<button class = "checkmywork" id = 'autograding_button'>Check My Work</button>
+<% if @minitask.order == 1 %>
+  <a class = "checkmywork" id = 'autograding_button'></a>
+<% else %>
+  <button class = "checkmywork hidden" id = 'autograding_button'>Check My Work</button>
+<% end %>
 <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-hidden="false" style="display: block;">
   <div class="modal-dialog">
     <div class="modal-content">
       <br>
       <div class="modal-body"><h4 style="margin-top: 35px; font-size: 25px; line-height: 35px">
-        <%= @minitask.instruction.html_safe %>
+        <h2>Instruction: </h2><%= @minitask.instruction.html_safe %>
         <!--          ERB.new(str).result(binding)-->
       </h4><button class="btn btn-primary had-btn-lg" onclick = "killmodal()" style="margin-left:80%;">OK</button></div>
     </div><!-- /.modal-content -->
@@ -220,7 +280,7 @@
 
     </div>
   </nav>
-  <nav class="navbar navbar-inverse navbar-static-top navbar-lower" >
+  <nav class="navbar navbar-inverse navbar-static-top navbar-lower" style="margin-bottom: 0px;">
     <div class="container-fluid" id = "ag-header2">
 
       <ul class="nav navbar-lower-left" >
@@ -247,7 +307,7 @@
 
     function killmodal() {
         modal = document.getElementById("myModal");
-        console.log("modal: ", modal);
+        // console.log("modal: ", modal);
         modal.style.display = 'none';
     }
 </script>

@@ -5,7 +5,42 @@
     text-align: center;
     left: inherit;
     right: inherit;
+    width: 100%;
+  }
+
+  .little-container {
+    cursor:pointer;
+    text-align: center;
+    /*border: 3px white;*/
+    height: 70px;
+    /*left: inherit;*/
+    /*right: inherit;*/
     width: inherit;
+    background-color: #231f20;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 54%;
+    z-index: 1040;
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 2px;
+    border-color: gold;
+    /*text-align: center;*/
+    /*left: inherit;*/
+    /*right: inherit;*/
+    /*width: inherit;*/
+  }
+
+  .check-my-work{
+    width:100%;
+    color:white;
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    test-aligh:center;
   }
 
   .star {
@@ -14,14 +49,100 @@
     color: whitesmoke;
     /*text-decoration-color: seashell;*/
     display: inline-block;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     margin: 5px;
   }
 
   .star img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .little-star {
+    text-align: center;
+    font-size: 14px;
+    color: whitesmoke;
+    /*text-decoration-color: seashell;*/
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+  }
+
+  .little-star img {
+    width: 45px;
+    height: 45px;
+  }
+
+
+
+
+
+
+  .little-trans-star {
+    text-align: center;
+    font-size: 14px;
+    color: whitesmoke;
+    /*text-decoration-color: seashell;*/
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+  }
+
+  .little-trans-star img {
+    width: 45px;
+    height: 45px;
+  }
+
+
+
+  @keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+  }
+  @-moz-keyframes fadein { /* Firefox */
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+  }
+  @-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+  }
+  @-o-keyframes fadein { /* Opera */
+    from {
+      opacity:0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
+
+  .star:hover {
     width: 90px;
     height: 90px;
+    outline-width: 3px;
+    outline-style: solid;
   }
   .hover_over_stars_instruction{
     font-size: 16px;
@@ -31,18 +152,19 @@
 
   .description {
     display: none;
+    /*font-size:*/
   }
 
   .description-table {
     /*display: none;*/
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     color: whitesmoke;
   }
   .star:hover .description-table {
     display: block;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     color: whitesmoke;
   }
   .quizimg{
@@ -50,7 +172,13 @@
   }
 
   body{
-  background-color: #1f1f1f;
+  background-color: #f2eeff;
+  /*background-color: #000000;*/
+  }
+
+  #quiz{
+    color: gold;
+    font-size: 20px;
   }
 
 
@@ -87,26 +215,18 @@
     color: whitesmoke;
     display: block;
     margin-bottom: 10px;
+    font-size: 18px;
   }
   .answerdiv{
     color:whitesmoke!important;
+    font-size: 17px!important;
     /*font-size: */
   }
   #askteacher{
     background-color: #232323;
     color: whitesmoke!important;
   }
-  .checkmywork{
-    font-family: 'Work Sans', sans-serif;
-    font-size: 18px;
-    background-color: #f2ff2d;
-    color: #1e2121;
-    border: 0px;
-    border-radius: 3px;
-    padding: 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
+
   /*button:hover{*/
     /*background-color: #38a;*/
   /*}*/
@@ -239,7 +359,7 @@
         (function() {
             function buildQuiz() {
                 // we'll need a place to store the HTML output
-                const output = [];
+                const output = ["Knowledge Check: "];
 
                 // for each question...
                 myQuestions.forEach((currentQuestion, questionNumber) => {
@@ -282,34 +402,56 @@
                     // find selected answer
                     const answerContainer = answerContainers[questionNumber];
                     const selector = `input[name=question${questionNumber}]:checked`;
-                    console.log('quesitonNumber: ', questionNumber);
-                    console.log('currentQuestion: ', currentQuestion);
-                    console.log('selector: ', selector);
+                    // //console.log('quesitonNumber: ', questionNumber);
+                    // //console.log('currentQuestion: ', currentQuestion);
+                    // //console.log('selector: ', selector);
                     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
                     Trace.log(userAnswer.toString());
+                    <% if @quiz and @quiz.id == 9 %>
+                      answerdiv = document.getElementById("answerdiv");
+                      if (answerdiv === null) {
+                          answerdiv = document.createElement('div');
+                      }
+                      if (userAnswer == "a"){
+                          // if ()
+                          answerdiv.innerHTML = "<%= @options[0].comment.html_safe%>";
+                      }
+                      if (userAnswer == "b"){
+                          answerdiv.innerHTML = "<%= @options[1].comment.html_safe%>";
+                      }
+                      answerdiv.className = ('answerdiv');
+                      answerdiv.id = 'answerdiv';
 
+                      $("#ag-results").append(answerdiv);
 
+                    <% elsif @quiz%>
+                      answerdiv = document.getElementById("answerdiv");
+                      if (answerdiv === null) {
+                          answerdiv = document.createElement('div');
+                      }
+                      if (userAnswer == "a"){
+                          // if ()
+                          answerdiv.innerHTML = "<%= @options[0].comment.html_safe%>";
+                      }
+                      if (userAnswer == "b"){
+                          answerdiv.innerHTML = "<%= @options[1].comment.html_safe%>";
+                      }
+                      if (userAnswer == "c"){
+                          answerdiv.innerHTML = "<%= @options[2].comment.html_safe%>";
+                      }
+                      answerdiv.className = ('answerdiv');
+                      answerdiv.id = 'answerdiv';
+
+                      $("#ag-results").append(answerdiv);
+                    <% end %>
 
 
 
                     // if answer is correct
                     if (userAnswer === currentQuestion.correctAnswer) {
-                        // add to the number of correct answers
-                        numCorrect++;
-                        // alert("Correct! Congratulations!");
-
-                        answerdiv = document.getElementById("answerdiv");
-                        if (answerdiv === null) {
-                            answerdiv = document.createElement('div');
-                        }
-                        answerdiv.innerHTML = "Correct! Congratulations! Now you can proceed to the next task!";
-                        answerdiv.className = ('answerdiv');
-                        answerdiv.id = 'answerdiv';
-
-                        $("#ag-results").append(answerdiv);
                         next_subtask = document.getElementById('next-subtask');
 
-                        // console.log(divTest);
+                        // // //console.log(divTest);
                         try {
                             divTest;
                         }
@@ -321,15 +463,6 @@
                         }
 
                     } else {
-                        answerdiv = document.getElementById("answerdiv");
-                        if (answerdiv === null) {
-                            answerdiv = document.createElement('div');
-                        }
-                        answerdiv.innerHTML = "Wrong! Please try again!";
-                        answerdiv.className = ('answerdiv');
-                        answerdiv.id = 'answerdiv';
-
-                        $("#ag-results").append(answerdiv);
 
 
                     }
@@ -394,20 +527,23 @@
 
     };
 
-
-
     populateFeedback = function(feedbackLog, allFeedback, chunknum, tipnum) {
+        console.log('populateFeedback');
         var i, j, x;
-
         var comment = document.getElementById("comment");
         comment.innerHTML = "";
-
         while (comment.nextSibling) {
             document.getElementById("ag-results").removeChild(comment.nextSibling);
         }
+        // var little_stars = document.getElementById("little-stars");
 
-        //
 
+        var little_stars = document.getElementById("little-stars");
+        check_my_work = document.createElement('div');
+        check_my_work.innerHTML = "Check My Work";
+        check_my_work.className = ('check-my-work');
+        little_stars.innerHTML = "";
+        little_stars.append(check_my_work);
 
         var log = feedbackLog;
         var chunks = log.chunk_list;
@@ -415,336 +551,91 @@
         var numtips = 0;
         var chunkHasCorrectTip = false;
         var tipHasCorrectTest = false;
-
         var tipsDiv = document.getElementById("numtips");
-
-        ['correct', 'incorrect'].forEach(createCorrectIncorrectGrouping);
-
-
+        // ['correct', 'incorrect'].forEach(createCorrectIncorrectGrouping);
         var correct_total = 0;
         var incorrect_total = 0;
         var correct_feedbacks = [];
         var incorrect_feedbacks = [];
         for (i = 0; i < chunks.length; i++) {
-            console.log("chunks.length", chunks.length);
+            //console.log('this chunk: ', chunks[i]);
             var chunk = chunks[i];
-
-            var chunkPoints = "";
-            if (showPoints) {
-                chunkPoints = " ({0} possible {1}) ".format(
-                    chunk.totalPoints, pluralize('point', chunk.totalPoints));
-            }
-
             var tips = chunk.tip_list;
-
-
-            var header = document.createElement("p");
-            header.innerHTML = chunk.chunk_title + chunkPoints + '<br><br>';
-
-            header.classList.add("chunk-header", "chunk" + i);
-
-            var correct_chunk = header.cloneNode(true);
-            correct_chunk.classList.add("correct-chunk" + i);
-
-            if (chunk.allCorrect) {
-                // document.getElementById("correct-section").style.display = "block";
-                document.getElementById("correct-section").appendChild(correct_chunk);
-            } else {
-                var incorrect_chunk = header.cloneNode(true);
-                incorrect_chunk.classList.add("incorrect-chunk" + i);
-                // document.getElementById("incorrect-section").style.display = "block";
-                document.getElementById("incorrect-section").appendChild(incorrect_chunk);
-            }
-
             var allFeedback = allFeedback !== undefined ? allFeedback : false;
             var currRank = 1;
-            console.log("tips: ", tips);
-            // tipLoop:
-            // TODO: Document this
-
-            // for (x = 0; x < tips.length; x++) {
+            //console.log("tips: ", tips);
             x = 0;
-            console.log('x', x, 'tips.length', tips.length);
+            //console.log('x', x, 'tips.length', tips.length);
             var tip = tips[x];
             var label_class = "incorrectans";
-            var div = document.createElement("div");
-            var current_chunk = document.getElementsByClassName("incorrect-chunk" + i)[0];
             if (tip.allCorrect) {
                 correct_total += 1;
-                // document.getElementById("correct-section").style.display = "block";
-                document.getElementById("correct-section").appendChild(correct_chunk);
-                current_chunk = document.getElementsByClassName("correct-chunk" + i)[0];
                 label_class = "correctans";
-                var suggestion = tip.complement;
             } else {
                 incorrect_total += 1;
                 numtips += 1;
-                var suggestion = tip.suggestion;
             }
-
             var tipPoints = "";
-
-            // TODO: Clean this up
-            // TODO: Use a button and bootstrap collapse.
-            div.innerHTML = '<input class="details" id="expander' + i + x + '" type="checkbox" ><label class="' + label_class + '" for="expander' + i + x + '">' + tipPoints + suggestion + '</label><div id="table-wrapper' + i + x + '">';
-
-            current_chunk.appendChild(div);
-            var details = document.getElementById("table-wrapper" + i + x);
-            details.previousSibling.click();
             var allTests = tip.test_list;
-            appendElement(
-                "p",
-                "",
-                ["inner-titles", "observations" + i + x],
-                details
-            );
             j = 0;
-            // for (j = 0; j < allTests.length; j++) {
-            // console.log('alltests.length', allTests.length);
-            var newRow = document.createElement("tr");
             var thisTest = allTests[j];
-            var testPoints = showPoints ? "({0}) ".format(
-                pluralizeWithNum('point', thisTest.points)
-            ) : '';
-
             if (thisTest.testClass !== "r") {
-                if (document.getElementsByClassName("observations-section" + i + x[0]) !== []) {
-                    incorrect_assertions = 0;
-                    correct_assertions = 0;
-                    appendElement(
-                        "div",
-                        "",
-                        ["results", "observations-section" + i + x],
-                        document.getElementsByClassName("observations" + i + x)[0]
-                    );
-                }
-
-                if (!tip.allCorrect && thisTest.correct) {
-                    tipHasCorrectTest = true;
-                    if (!document.getElementById("correct-tip" + i + x)) {
-                        // TODO: What's this for?
-                    }
-                }
 
                 if (thisTest.correct) {
                     correct_feedbacks.push(thisTest.feedback);
-                    correct_assertions += 1;
-                    // TODO: Consider removing this conditional and always showing the test.
                     if (allFeedback || tip.allCorrect) {
-                        appendElement(
-                            "p",
-                            "✔",
-                            "data",
-                            document.getElementsByClassName("observations-section" + i + x)[0]
-                        );
-                        appendElement(
-                            "p",
-                            testPoints + "Tests Passed! " + thisTest.feedback,
-                            ["data", "assertion"],
-                            document.getElementsByClassName("observations-section" + i + x)[0]
-                        );
-                        appendElement(
-                            "br",
-                            null,
-                            null,
-                            document.getElementsByClassName("observations-section" + i + x)[0]
-                        );
                     }
                 } else {
                     incorrect_feedbacks.push(thisTest.feedback);
-                    // Non-r class failing cases.
-                    appendElement(
-                        "p",
-                        "✖",
-                        "data",
-                        document.getElementsByClassName("observations-section" + i + x)[0]
-                    );
-                    incorrect_assertions += 1;
-                    appendElement(
-                        "p",
-                        testPoints + thisTest.feedback,
-                        ["data", "assertion"],
-                        document.getElementsByClassName("observations-section" + i + x)[0]
-                    );
-                    appendElement(
-                        "br",
-                        null,
-                        null,
-                        document.getElementsByClassName("observations-section" + i + x)[0]
-                    );
-                }
-            } else { // TESTS WITH CLASS 'r'
-                if (document.getElementsByClassName("tests-section" + i + x[0]) !== []) {
-                    incorrect_tests = 0;
-                    correct_tests = 0;
-                    appendElement(
-                        "div",
-                        "",
-                        ["results", "tests-section" + i + x],
-                        document.getElementsByClassName("observations" + i + x)[0]
-                    );
-                }
-                if (thisTest.correct && !tip.allCorrect) {
-                    tipHasCorrectTest = true;
-                    if (!document.getElementById("correct-tip" + i + x)) {
-                        // TODO: This?
-                    }
-                }
-
-                if (thisTest.correct) {
-                    correct_tests += 1;
-                } else {
-                    incorrect_tests += 1;
-                }
-
-                var htmlString, string_reporter, testSectionDiv;
-
-                string_reporter = document.createElement("div");
-                string_reporter.classList.add("data", "assertion");
-
-                // TODO: Try extracting this out.
-                if (thisTest.correct) {
-                    // TODO: FIX THE CSS LIST HERE
-                    // passing-test-case is used for the show/hide button
-                    if (allFeedback || tip.allCorrect) {
-                        appendElement(
-                            "p",
-                            "✔",
-                            ["data", "passing-test-case"],
-                            document.getElementsByClassName("tests-section" + i + x)[0]
-                        );
-                        // TODO Clean these strings up.
-                        var input = thisTest.input;
-                        if (input instanceof List || input instanceof Array) {
-                            input = arrayFormattedString(input);
-                        }
-
-                        htmlString = [
-                            '<p class="data assertion">',
-                            testPoints + thisTest.feedback,
-                            ' The input: <code class="data assertion">',
-                            input,
-                            '</code>'
-                        ].join('');
-                        if (thisTest.expOut.constructor !== Function) {
-                            var expOut = thisTest.expOut;
-                            if (expOut instanceof List || expOut instanceof Array) {
-                                expOut = arrayFormattedString(expOut);
-                            }
-                            htmlString += [
-                                '<p class="data assertion">, returned the',
-                                ' expected value: <code class="data assertion">',
-                                expOut,
-                                '</code></p>'
-                            ].join('');
-                        } else {
-                            htmlString += '<p class="data assertion">passed the tests.</p>';
-                        }
-                        // TODO: Make a block ==> image call here!
-                        string_reporter.innerHTML = htmlString;
-                        // TODO: Clean up this...
-                        document.getElementsByClassName(
-                            "tests-section" + i + x
-                        )[0].appendChild(string_reporter);
-                        appendElement(
-                            "br",
-                            null,
-                            null,
-                            document.getElementsByClassName("tests-section" + i + x)[0]
-                        );
-                    }
-                } else {
-                    appendElement(
-                        "p",
-                        "✖",
-                        "data",
-                        document.getElementsByClassName("tests-section" + i + x)[0]
-                    );
-
-                    string_reporter.classList.add("data", "assertion");
-                    // TODO Clean these strings up.
-                    var input = thisTest.input;
-                    if (input instanceof List || input instanceof Array) {
-                        input = arrayFormattedString(input);
-                    }
-
-                    htmlString = [
-                        '<p class="data assertion">',
-                        testPoints + thisTest.feedback,
-                        'The input: <code>',
-                        input,
-                        '</code></p> '
-                    ].join('');
-
-                    // Don't show "expected output" if the output check is
-                    // a custon JS function (where no output type is known.)
-                    if (thisTest.expOut && thisTest.expOut.constructor !== Function) {
-                        var expOut = thisTest.expOut;
-                        if (expOut instanceof List || expOut instanceof Array) {
-                            expOut = arrayFormattedString(expOut);
-                        }
-                        htmlString += [
-                            '<p class="data assertion">did <em>not</em> return the',
-                            ' expected value: ',
-                            '<code>', expOut, '</code></p>'
-                        ].join('');
-                    }
-                    if (thisTest.output === null) {
-                        htmlString += [
-                            '<p class="data assertion"> did <em>not</em> return the expected value.</p>',
-                            ''
-                        ].join('');
-                        htmlString += '<p class="data assertion"> Instead it returned no output.</p>';
-                    } else {
-                        var output = thisTest.output;
-                        if (output instanceof List || output instanceof Array) {
-                            output = arrayFormattedString(output);
-                        }
-                        htmlString += '<p class="data assertion">output: <code>' + output + '</code></p>';
-                    }
-                    string_reporter.innerHTML = htmlString;
-                    document.getElementsByClassName(
-                        "tests-section" + i + x
-                    )[0].appendChild(string_reporter);
-
-                    appendElement(
-                        "br",
-                        null,
-                        null,
-                        document.getElementsByClassName("tests-section" + i + x)[0]
-                    );
-                } // 'r' test cases
-            } // end adding test div
-
-            if (tip.rank === currRank || tip.rank !== 0) {
-                // TODO: document this....
-                if (!tip.allCorrect) {
-                    // break tipLoop;
-                } else {
-                    currRank += 1;
                 }
             }
-        }
 
+        }
         hover_over_stars_instruction = document.createElement('div');
         hover_over_stars_instruction.innerHTML = "Hover over the stars to see what to work on!";
         hover_over_stars_instruction.className = ('hover_over_stars_instruction');
         hover_over_stars_instruction.id = 'hover_over_stars_instruction';
         $("#ag-results").append(hover_over_stars_instruction);
+        //console.log('correct_total', correct_total);
+        //console.log('incorrect_total', incorrect_total);
+        //console.log('correct_feedback', correct_feedbacks);
+        //console.log('incorrect_feedback', incorrect_feedbacks);
 
 
 
-        console.log('correct_total', correct_total);
-        console.log('incorrect_total', incorrect_total);
-        console.log('correct_feedback', correct_feedbacks);
-        console.log('incorrect_feedback', incorrect_feedbacks);
+
+        for (i = 0; i < correct_total; i++) {
+            console.log("window.currentStars: ", window.currentStars);
+            if (i < window.currentStars) {
+                star = $('<div>')
+                    .html("<%= escape_javascript image_tag('star.jpg') %>").addClass('little-star');
+                $("#little-stars").append(star);
+            }
+            else{
+                trans_star = $('<div>')
+                    .html("<%= escape_javascript image_tag('star.jpg') %>").addClass('little-trans-star');
+                $("#little-stars").append(trans_star);
+            }
+        }
+        for (i = 0; i < incorrect_total; i++) {
+            unstar = $('<div>')
+                .html("<%= escape_javascript image_tag('unstar.jpg') %>").addClass('little-star');
+            $("#little-stars").append(unstar);
+        }
+
+        window.currentStars = correct_total;
+
+
+
+
+
+
 
 
         stars = document.createElement('div');
         stars.className = ('container');
         stars.id = 'stars';
         $("#ag-results").append(stars);
-
         for(i = 0; i < correct_total; i++){
             star = $('<div>')
                 .html("<%= escape_javascript image_tag('star.jpg') %>").addClass('star');
@@ -754,7 +645,15 @@
             star.append(data);
             $("#stars").append(star);
 
+<!--            little_star = $('<div>')-->
+<!--                .html("<%= escape_javascript image_tag('star.jpg') %>").addClass('little-star');-->
+<!--            $("#little-stars").append(little_star);-->
+
         }
+
+
+
+
 
         for(i = 0; i < incorrect_total; i++){
             unstar = $('<div>')
@@ -765,117 +664,196 @@
             unstar.append(data);
             $("#stars").append(unstar);
 
-        }
+<!--            unstar = $('<div>')-->
+<!--                .html("<%= escape_javascript image_tag('unstar.jpg') %>").addClass('little-star');-->
+<!--            $("#little-stars").append(unstar);-->
 
+        }
         var description_table = document.createElement('p');
-        description_table.innerHTML = "<span><\span>";
+        description_table.innerHTML = "<span>&nbsp;<\span>";
         description_table.className = 'description-table';
         description_table.id = 'description-table';
-
         $("#ag-results").append(description_table);
-
         $( "div.star" )
             .mouseenter(function() {
                 description = this.children[1].innerHTML;
-                console.log(description);
+                //console.log(description);
                 $( "#description-table" ).find( "span" ).html( description);
             })
             .mouseleave(function() {
                 $(  "#description-table"  ).find( "span" ).text();
             });
-
         unstar = $('<div>')
             .html("<%= escape_javascript image_tag('unstar.jpg') %>").addClass('star');
         // unstar.className = 'unstar';
         if (numtips == 0) {
             next_subtask = document.getElementById('next-subtask');
+
             <% if @minitask.order < 3%>
-            { divTest = $('<div>')
-                      .html("<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>")
-                  ;
-                  $("#ag-results").append(divTest);
+            { var divTest = document.createElement('div');
+                divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'checkmywork2', id: "next-subtask" }) %>";
+                console.log('divTest: ', divTest);
+                document.body.appendChild(divTest);
             }
             <% elsif @minitask.order == 3%>
-              {
-                  divTest = $('<div>')
-                      .html("<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'nextminitask', id: "next-subtask" }) %>")
-                  ;
-                  $("#ag-results").append(divTest);
-              }
-          <% end %>
-
-
-    }
-
-
+            {
+                var divTest = document.createElement('div');
+                divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'checkmywork2', id: "next-subtask" }) %>";
+                console.log('divTest: ', divTest);
+                document.body.appendChild(divTest);
+            }
+            <% end %>
+        }
         var askteacher = document.createElement('button');
         askteacher.id = "askteacher";
         askteacher.classname = 'askteacher';
         askteacher.innerHTML = 'Ask teacher to check my work';
         $("#ag-results").append(askteacher);
-
-
-
         function openForm() {
             document.getElementById("myForm").style.display = "block";
         };
-
         function closeForm() {
-            console.log('closeForm');
+            //console.log('closeForm');
             document.getElementById("myForm").style.display = "none";
         };
-
         var chatpopup = document.createElement('div');
         chatpopup.id = "myForm";
         chatpopup.classname = 'chat-popup';
-        chatpopup.innerHTML = "<b>The following can only be filled in by an instructor </b> <br> <b>Allow student to proceed to next task:</b><input></input><br><b>Password:</b><input id = 'password' type='password'></input><br><button class='btn' id = 'send-chatpopup'>Send</button><br><button type='button' class='btn cancel' id = 'close-chatpopup' onclick='closeForm()'>Close</button>";
+        chatpopup.innerHTML = "<b>The following can only be filled in by an instructor </b> <br> <b>Allow student to proceed to next task:</b><input></input><br><br><button class='btn' id = 'send-chatpopup'>Send</button><br><button type='button' class='btn cancel' id = 'close-chatpopup' onclick='closeForm()'>Close</button>";
         chatpopup.style.display = 'none';
         $("#ag-results").append(chatpopup);
-
-
         askteacher.addEventListener("click", openForm);
         close_chatpopup = document.getElementById('close-chatpopup');
         close_chatpopup.addEventListener('click', closeForm);
-
-
         function chatpopupNext() {
-            var password = document.getElementById('password').value;
-            if (password === "summercamp") {
+            // var password = document.getElementById('password').value;
+            // if (password === "summercamp") {
                 try {
-                    divTest;
+                    divTest.innerHTML;
+                    console.log("trydivTest: ", divTest);
                 }
                 catch (err) {
-                    divTest = $('<div>')
-                        .html("<%= escape_javascript link_to(image_tag("next.png"), minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>");
-                    $("#ag-results").append(divTest);
 
+
+
+                    <% if @minitask.order < 3%>
+                    { var divTest = document.createElement('div');
+                        divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'checkmywork2', id: "next-subtask" }) %>";
+                        console.log('divTest: ', divTest);
+                        document.body.appendChild(divTest);
+                    }
+                    <% elsif @minitask.order == 3%>
+                    {
+                        var divTest = document.createElement('div');
+                        divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'checkmywork2', id: "next-subtask" }) %>";
+                        console.log('divTest: ', divTest);
+                        document.body.appendChild(divTest);
+                    }
+                    <% end %>
+
+
+                    // divTest.appendTo(document.body);
                 }
-            }
+            // }
         }
-
         send_chatpopup = document.getElementById('send-chatpopup');
+        console.log('send chatpopup');
         send_chatpopup.addEventListener('click', chatpopupNext);
-
-
         var closeButton = document.createElement('button');
         closeButton.id = "close";
         closeButton.innerHTML = 'X';
         $("#ag-results").append(closeButton);
-
+        console.log('dddddddddddd');
         // const closeButton = document.getElementById("close");
-
         closeButton.addEventListener("click", closePopup);
-
         // $("#stars").append(star);
         // $("#stars").append(unstar);
         // TODO Make a function for this.
         tipsDiv.innerHTML = '<span class="badge">{0}</span>'.format(numtips) + pluralize('tip', numtips);
-
         if (tipHasCorrectTest) {
             $(SELECT.toggle_correct_button).show();
         }
-
         openResults();
     };
-</script>
 
+    populateLittleFeedback = function(feedbackLog, allFeedback, chunknum, tipnum) {
+
+        // console.log('-------------populatelittleFeedback--------------------');
+        var little_stars = document.getElementById('little-stars');
+
+        check_my_work = document.createElement('div');
+        check_my_work.innerHTML = "Check My Work";
+        check_my_work.className = ('check-my-work');
+        little_stars.innerHTML = "";
+        little_stars.append(check_my_work);
+
+        var i, j, x;
+
+        var log = feedbackLog;
+        var chunks = log.chunk_list;
+        var numtips = 0;
+        var correct_total = 0;
+        var incorrect_total = 0;
+        for (i = 0; i < chunks.length; i++) {
+            //console.log("chunks.length", chunks.length);
+            //console.log('this chunk: ', chunks[i]);
+            var chunk = chunks[i];
+            var tips = chunk.tip_list;
+            var allFeedback = allFeedback !== undefined ? allFeedback : false;
+            var currRank = 1;
+            //console.log("tips: ", tips);
+            x = 0;
+            //console.log('x', x, 'tips.length', tips.length);
+            var tip = tips[x];
+            var label_class = "incorrectans";
+            if (tip.allCorrect) {
+                correct_total += 1;
+                label_class = "correctans";
+            } else {
+                incorrect_total += 1;
+                numtips += 1;
+            }
+
+        }
+
+
+
+        for (i = 0; i < correct_total; i++) {
+            // console.log("window.currentStars: ", window.currentStars);
+            if (i < window.currentStars) {
+                star = $('<div>')
+                    .html("<%= escape_javascript image_tag('star.jpg') %>").addClass('little-star');
+                $("#little-stars").append(star);
+            }
+            else{
+                trans_star = $('<div>')
+                    .html("<%= escape_javascript image_tag('star.jpg') %>").addClass('little-trans-star');
+                $("#little-stars").append(trans_star);
+            }
+        }
+        for (i = 0; i < incorrect_total; i++) {
+            unstar = $('<div>')
+                .html("<%= escape_javascript image_tag('unstar.jpg') %>").addClass('little-star');
+            $("#little-stars").append(unstar);
+        }
+
+        window.currentStars = correct_total;
+        if (numtips == 0){
+          <% if @minitask.order < 3%>
+          { var divTest = document.createElement('div');
+              divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'checkmywork2', id: "next-subtask" }) %>";
+              console.log('divTest: ', divTest);
+              document.body.appendChild(divTest);
+          }
+          <% elsif @minitask.order == 3%>
+          {
+              var divTest = document.createElement('div');
+              divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'checkmywork2', id: "next-subtask" }) %>";
+              console.log('divTest: ', divTest);
+              document.body.appendChild(divTest);
+          }
+          <% end %>
+        }
+
+    };
+</script>
