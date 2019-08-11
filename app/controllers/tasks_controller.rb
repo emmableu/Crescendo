@@ -31,10 +31,12 @@ class TasksController < ApplicationController
     end
   end
   def tasks_params
-    params.require(:task).permit(:title, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
+    params.require(:task).permit(:title, :title_en, :title_zh, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
                                  :updated_at, :instruction, :description, :ppxmlfile)
   end
   def index
+    @number = params[:number]
+    puts('number: ', @number)
     @tasks = Task.all
     @categories = Category.order(name: :desc)
     @categorytasks = {}

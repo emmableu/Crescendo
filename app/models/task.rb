@@ -41,5 +41,7 @@ class Task < ActiveRecord::Base
   # def create_test_file(test)
   #   self.test_file = test
   # end
+  #
+  translates :title
 
 end

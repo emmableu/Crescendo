@@ -10,11 +10,17 @@
     = f.label :quiz_id
     = f.text_field :quiz_id
   .field
-    = f.label :optionbody
-    = f.text_area :optionbody
+    = f.label :optionbody_en
+    = f.text_area :optionbody_en, class: 'form-control', rows: 4
   .field
-    = f.label :comment
-    = f.text_area :comment
+    = f.label :optionbody_zh
+    = f.text_area :optionbody_zh, class: 'form-control', rows: 4
+  .field
+    = f.label :comment_en
+    = f.text_area :comment_en, class: 'form-control', rows: 4
+  .field
+    = f.label :comment_zh
+    = f.text_area :comment_zh, class: 'form-control', rows: 4
   .field
     = f.label :order
     = f.text_area :order

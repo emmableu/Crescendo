@@ -1,8 +1,11 @@
-/pictures from https://scratch.mit.edu/projects/editor/?tutorial=getStarted
+/ /pictures from https://scratch.mit.edu/projects/editor/?tutorial=getStarted
+
 doctype html
+
 - if current_user
   - @next_task = current_user.progression/3 + 1
-  / - current_user.progression = 10
+  - if @next_task == 3
+    - @next_task = 2.5
 - else
   - @next_task = 3
   / console.log(#{@next_task})
@@ -63,6 +66,20 @@ body
     body{
       background-color: #0c1021
     }
+
+    .overlay-after2 {
+      opacity: 0.95;
+      background-color: #232323;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: 2000;
+      color: white;
+      font-size: 30px;
+      /*text-align: center;*/
+    }
     img {
       /*width: 3vw;*/
       /*height: 5vh;*/
@@ -115,6 +132,39 @@ body
       -webkit-animation-name: greenPulse;
       -webkit-animation-duration: 2s;
     }
+    .middle-center{
+      position: relative;
+      left: 10%;
+      width: 80%;
+      /*right: 10%;*/
+      top: 30%;
+    }
+    .green-text{
+      color:deepskyblue;
+    }
+
+
+  - if @next_task == 2.5
+    .overlay-after2
+      .middle-center
+        p Congratulations! You have successfully finished the 2 challenges in your programming warm-up!
+        p
+          |Use this url:
+          a.green-text href="http://go.ncsu.edu/art-contest" target="_blank"  go.ncsu.edu/art-contest
+          |  to draw a cool picture in Snap! You can read more about composing this art on the item 3 of
+          a.green-text href="http://go.ncsu.edu/camp" target="_blank" go.ncsu.edu/camp
+
+
+
+  - if @next_task == 7
+    .overlay-after2
+      .middle-center
+        p Congratulations! You have successfully finished all of today's programming challenges!
+        p
+          |Use this url:
+          a.green-text href="http://go.ncsu.edu/frogger" target="_blank"  go.ncsu.edu/frogger
+          |  to design your own frogger game! You can read more about the instruction of this game design on the item 10 of
+          a.green-text href="http://go.ncsu.edu/camp" target="_blank" go.ncsu.edu/camp
 
 
 

@@ -3,7 +3,7 @@
 # Table name: tasks
 #
 #  id             :integer          not null, primary key
-#  title          :string
+#  title_en       :string
 #  category_id    :integer
 #  test_file      :text
 #  starter_file   :text
@@ -17,6 +17,7 @@
 #  scriptarraytwo :text
 #  ppxmlfile      :text
 #  scriptorder    :text
+#  title_zh       :string
 #
 # Indexes
 #

@@ -8,6 +8,7 @@ gem 'rails', '4.2.10'
 # Use Puma as the app server
 gem 'puma'
 
+gem 'traco'
 # Always use postgres as the db
 gem 'pg', '0.20.0'
 gem 'bundler', '1.15.2'

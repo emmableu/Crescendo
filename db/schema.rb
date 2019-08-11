@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190701163650) do
+ActiveRecord::Schema.define(version: 20190715175905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,18 +119,22 @@ ActiveRecord::Schema.define(version: 20190701163650) do
   add_index "descriptions", ["task_id"], name: "index_descriptions_on_task_id", using: :btree
 
   create_table "minitasks", force: :cascade do |t|
-    t.string   "title"
     t.integer  "task_id"
-    t.text     "test_file"
+    t.text     "test_file_en"
     t.text     "starter_file"
     t.integer  "difficulty"
     t.integer  "order"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.text     "instruction"
-    t.text     "ppxmlfile"
+    t.text     "ppxmlfile_en"
     t.integer  "allow_repeat"
     t.integer  "palette_start_index"
+    t.string   "title_en"
+    t.text     "instruction_en"
+    t.text     "title_zh"
+    t.text     "instruction_zh"
+    t.text     "test_file_zh"
+    t.text     "ppxmlfile_zh"
   end
 
   add_index "minitasks", ["task_id"], name: "index_minitasks_on_task_id", using: :btree
@@ -145,11 +149,13 @@ ActiveRecord::Schema.define(version: 20190701163650) do
 
   create_table "options", force: :cascade do |t|
     t.integer  "quiz_id"
-    t.text     "optionbody"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "optionbody_en"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "order"
-    t.text     "comment"
+    t.text     "comment_en"
+    t.text     "optionbody_zh"
+    t.text     "comment_zh"
   end
 
   add_index "options", ["quiz_id"], name: "index_options_on_quiz_id", using: :btree
@@ -180,11 +186,12 @@ ActiveRecord::Schema.define(version: 20190701163650) do
 
   create_table "quizzes", force: :cascade do |t|
     t.string   "name"
-    t.text     "quizbody"
+    t.text     "quizbody_en"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.text     "solution"
     t.integer  "minitask_id"
+    t.text     "quizbody_zh"
   end
 
   add_index "quizzes", ["minitask_id"], name: "index_quizzes_on_minitask_id", using: :btree
@@ -216,7 +223,7 @@ ActiveRecord::Schema.define(version: 20190701163650) do
   add_index "submissions", ["user_id"], name: "index_submissions_on_user_id", using: :btree
 
   create_table "tasks", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title_en"
     t.integer  "category_id"
     t.text     "test_file"
     t.text     "starter_file"
@@ -230,6 +237,7 @@ ActiveRecord::Schema.define(version: 20190701163650) do
     t.text     "scriptarraytwo"
     t.text     "ppxmlfile"
     t.text     "scriptorder"
+    t.string   "title_zh"
   end
 
   add_index "tasks", ["category_id"], name: "index_tasks_on_category_id", using: :btree

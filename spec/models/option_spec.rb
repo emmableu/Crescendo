@@ -2,13 +2,15 @@
 #
 # Table name: options
 #
-#  id         :integer          not null, primary key
-#  quiz_id    :integer
-#  optionbody :text
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  order      :integer
-#  comment    :text
+#  id            :integer          not null, primary key
+#  quiz_id       :integer
+#  optionbody_en :text
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  order         :integer
+#  comment_en    :text
+#  optionbody_zh :text
+#  comment_zh    :text
 #
 # Indexes
 #

@@ -1,6 +1,4 @@
 - content_for :head do
-  / script[var instruction_left]
-  / script[var instruction_top]
   script[src="/snap/logging/config.js?v=2.4.9"]
   script[src="/snap/hints/config.js?v=2.4.9"]
   script[src="/snap/morphic.js?v=2.4.9"]
@@ -45,7 +43,6 @@
   script[src="/snap/hints/snap-display.js?v=2.4.9"]
   script[src="/snap/hints/main.js?v=2.4.9"]
   script[src="/snap/modeling/hide-block.js"]
-  / script[src="/snap/modeling/minitask-loadstarter.js"]
   script[src="/snap/modeling/parsons-problem.js"]
   script[src="/snap/modeling/minitask-iframe.js"]
 
@@ -54,10 +51,4 @@
 
 #canvas-container[width='100%']
     canvas#world[tabindex="1"]
-
-
-
-
-/ body
-/   / = render 'parsons_problem'
 

@@ -1,4 +1,4 @@
-en:
+zh:
   date:
     formats:
       default:
@@ -15,12 +15,11 @@ en:
       short:
         "%B %d"
   titles:
-      application: λ
-      users:
-        show: '%{user}'
-        new: Registration
+    application: λ
+    users:
+      show: '%{user}'
+      new: Registration
 
-#
 #  minitasks:
-#    #    index:
-#    title: englishtasks
+##    index:
+#      title: chinesetasks

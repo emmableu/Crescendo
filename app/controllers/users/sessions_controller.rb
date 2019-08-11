@@ -3,6 +3,9 @@
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
   include Accessible
+  protect_from_forgery with: :null_session
+  skip_before_action :verify_authenticity_token
+
   skip_before_action :check_user, only: :destroy
   # def sign_in_params
   #   params.require(:user).permit(:username, :password)
@@ -28,21 +31,23 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
 
-  # def create
-  #   # User.create_with_password(users_params)
-  #   # userinfo = auth_options.to_hash()
-  #   # userinfo[:scope]["password"] = "123456"
-  #   # auth_options= userinfo
-  #   print('in create')
-  #   print('auth_options: ', auth_options)
-  #   print('auth_options_type: ', auth_options.class)
-  #   print('auth_options_scopt_type: ', auth_options[:scope].class)
-  #
-  #   print('    auth_options[:scope][:username]_type: ',    auth_options[:scope]["username"].class)
-  #
-  #   super
-  #   print('auth_options: ', auth_options)
-  # end
+  def create
+    # User.create_with_password(users_params)
+    # userinfo = auth_options.to_hash()
+    # userinfo[:scope]["password"] = "123456"
+    # auth_options= userinfo
+    response.headers['X-CSRF-Token'] = form_authenticity_token
+
+    print('in create')
+    print('auth_options: ', auth_options)
+    print('auth_options_type: ', auth_options.class)
+    print('auth_options_scopt_type: ', auth_options[:scope].class)
+
+    print('    auth_options[:scope][:username]_type: ',    auth_options[:scope]["username"].class)
+
+    super
+    print('auth_options: ', auth_options)
+  end
 
 
   # DELETE /resource/sign_out

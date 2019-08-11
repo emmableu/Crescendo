@@ -12,9 +12,11 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :quizbody
-    = f.text_area :quizbody
-
+    = f.label :quizbody_en
+    = f.text_area :quizbody_en, class: 'form-control', rows: 4
+  .field
+    = f.label :quizbody_zh
+    = f.text_area :quizbody_zh, class: 'form-control', rows: 4
   .field
     = f.label :solution
     = f.text_area :solution

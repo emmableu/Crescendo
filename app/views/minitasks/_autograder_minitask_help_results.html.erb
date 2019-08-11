@@ -23,12 +23,33 @@
     position: absolute;
     top: 10px;
     left: 54%;
-    z-index: 1040;
+    z-index: 1240;
     border-style: solid;
     border-radius: 1rem;
     border-width: 2px;
     border-color: gold;
     /*text-align: center;*/
+    /*left: inherit;*/
+    /*right: inherit;*/
+    /*width: inherit;*/
+  }
+
+  .next-task-info {
+    height: 100%;
+    width: 100%;
+    background-color: #231f20;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    padding: 50px;
+    z-index: 12400;
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 2px;
+    border-color: gold;
+    text-align: center;
+    display: none;
     /*left: inherit;*/
     /*right: inherit;*/
     /*width: inherit;*/
@@ -202,14 +223,18 @@
   }
   .question{
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 15px;
     margin-bottom: 10px;
   }
   .answers {
     color: whitesmoke;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     text-align: left;
     display: inline-block;
+  }
+
+  .answers img{
+    max-width: 60%;
   }
   .answers label{
     color: whitesmoke;
@@ -219,7 +244,7 @@
   }
   .answerdiv{
     color:whitesmoke!important;
-    font-size: 17px!important;
+    font-size: 15px!important;
     /*font-size: */
   }
   #askteacher{
@@ -232,7 +257,7 @@
   /*}*/
   .activesubmit{
     font-family: 'Work Sans', sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     background-color: #f2ff2d!important;
     color: #1e2121;
     border: 0px;
@@ -240,13 +265,16 @@
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
+    width: 60px;
+    height: 30px;
+    text-align: left !important;
   }
   .activesubmit:hover{
     background-color: #38a!important;
   }
   .greysubmit{
     font-family: 'Work Sans', sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     background-color: #4f5353;
     color: #1e2121;
     border: 0px;
@@ -254,6 +282,10 @@
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
+    width: 60px;
+    height: 30px;
+    text-align: left !important;
+
   }
   .overlay{
     position:absolute;
@@ -397,6 +429,7 @@
                 // keep track of user's answers
                 let numCorrect = 0;
 
+
                 // for each question...
                 myQuestions.forEach((currentQuestion, questionNumber) => {
                     // find selected answer
@@ -406,7 +439,26 @@
                     // //console.log('currentQuestion: ', currentQuestion);
                     // //console.log('selector: ', selector);
                     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-                    Trace.log(userAnswer.toString());
+                    answerText = "";
+
+                    options = [];
+                    <% if @quiz and @quiz.id == 9 %>
+                    options.push("<%= @options[0].optionbody.html_safe%>");
+                    options.push("<%= @options[1].optionbody.html_safe%>");
+                    <% elsif @quiz%>
+                    options.push("<%= @options[0].optionbody.html_safe%>");
+                    options.push("<%= @options[1].optionbody.html_safe%>");
+                    options.push("<%= @options[2].optionbody.html_safe%>");
+                    <% end %>
+                    <% if @quiz %>
+
+                      Trace.log('KnowledgeCheck.answerSelected', {'answer': userAnswer.toString(),
+                          'correct': (userAnswer === currentQuestion.correctAnswer),
+                      'question':"<%= @quiz.quizbody.html_safe%>",
+                        'options': options});
+
+                    <% end %>
+                    // Trace.log('knowledgeCheck.answerSelected', {'answer': userAnswer.toString(), 'correct': thisTest.correct, 'question': @quiz.quizbody.html_safe, 'answerText': answerText});
                     <% if @quiz and @quiz.id == 9 %>
                       answerdiv = document.getElementById("answerdiv");
                       if (answerdiv === null) {
@@ -450,16 +502,28 @@
                     // if answer is correct
                     if (userAnswer === currentQuestion.correctAnswer) {
                         next_subtask = document.getElementById('next-subtask');
+                        // $("#next-subtask").click(function(){
+                        //     console.log('crescendo.nextTask');
+                        //     Trace.log('crescendo.nextTask');
+                        // });
 
                         // // //console.log(divTest);
                         try {
                             divTest;
                         }
                         catch(err) {
-                           divTest = $('<div>')
-                                .html("<%= escape_javascript link_to(image_tag("next.png"), minitask_path(@nextminitask.id), {class: 'nextminitask', id: "next-subtask" }) %>");
+
+                            <% if I18n.locale.to_s == 'zh' %>
+                            divTest = $('<div>')
+                                .html("<%= escape_javascript button_tag image_tag("next-zh.png"), {class: 'nextminitask', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#ag-results").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+minitask_path(@nextminitask.id)+'"}, 3100);' } %>");
                             $("#ag-results").append(divTest);
 
+                            <% else %>
+                            divTest = $('<div>')
+                                .html("<%= escape_javascript button_tag image_tag("next.png"), {class: 'nextminitask', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#ag-results").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+minitask_path(@nextminitask.id)+'"}, 3100);' } %>");
+                            $("#ag-results").append(divTest);
+
+                            <% end %>
                         }
 
                     } else {
@@ -482,8 +546,7 @@
                     question: "<%= @quiz.quizbody.html_safe%>",
                     answers: {
                         a: "<%= @options[0].optionbody.html_safe%>",
-                        b: "<%= @options[1].optionbody.html_safe%>",
-<!--                        c: "<%#= @options[2].optionbody.html_safe%>"-->
+                        b: "<%= @options[1].optionbody.html_safe%>"
                     },
                     correctAnswer:  "<%= @quiz.solution%>"
                 },
@@ -507,7 +570,7 @@
             <% end%>
                 // }
 
-
+            // console.log(myQuestions.answers['a']);
             // display quiz right away
             buildQuiz();
             // $('#submit').hide();
@@ -529,6 +592,8 @@
 
     populateFeedback = function(feedbackLog, allFeedback, chunknum, tipnum) {
         console.log('populateFeedback');
+
+
         var i, j, x;
         var comment = document.getElementById("comment");
         comment.innerHTML = "";
@@ -625,8 +690,9 @@
 
         window.currentStars = correct_total;
 
+        Trace.log('CheckMyWork.littleStarsUpdated', {'correctTotal': correct_total, 'incorrectTotal': incorrect_total});
 
-
+        Trace.log('CheckMyWork.agOutputStarsUpdated', {'correctTotal': correct_total, 'incorrectTotal': incorrect_total, 'correctFeedbacks': correct_feedbacks, 'incorrectFeedbacks': incorrect_feedbacks});
 
 
 
@@ -645,13 +711,7 @@
             star.append(data);
             $("#stars").append(star);
 
-<!--            little_star = $('<div>')-->
-<!--                .html("<%= escape_javascript image_tag('star.jpg') %>").addClass('little-star');-->
-<!--            $("#little-stars").append(little_star);-->
-
         }
-
-
 
 
 
@@ -664,10 +724,6 @@
             unstar.append(data);
             $("#stars").append(unstar);
 
-<!--            unstar = $('<div>')-->
-<!--                .html("<%= escape_javascript image_tag('unstar.jpg') %>").addClass('little-star');-->
-<!--            $("#little-stars").append(unstar);-->
-
         }
         var description_table = document.createElement('p');
         description_table.innerHTML = "<span>&nbsp;<\span>";
@@ -677,10 +733,14 @@
         $( "div.star" )
             .mouseenter(function() {
                 description = this.children[1].innerHTML;
-                //console.log(description);
+                console.log(description);
+                Trace.log('CheckMyWork.hoverStar', description);
                 $( "#description-table" ).find( "span" ).html( description);
+
             })
             .mouseleave(function() {
+                console.log('CheckMyWork.hoverLeaveStar');
+                Trace.log('CheckMyWork.hoverLeaveStar');
                 $(  "#description-table"  ).find( "span" ).text();
             });
         unstar = $('<div>')
@@ -688,17 +748,35 @@
         // unstar.className = 'unstar';
         if (numtips == 0) {
             next_subtask = document.getElementById('next-subtask');
+            // $("#next-subtask").click(Trace.log('crescendo.nextTask'));
+
 
             <% if @minitask.order < 3%>
             { var divTest = document.createElement('div');
-                divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'checkmywork2', id: "next-subtask" }) %>";
-                console.log('divTest: ', divTest);
+
+                <% if I18n.locale.to_s == 'zh' %>
+                divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next-zh.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+minitask_path(@nextminitask.id)+'"}, 3100);'}) %>";
+
+
+                <% else %>
+                divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+minitask_path(@nextminitask.id)+'"}, 3100);' }) %>";
+
+
+                <% end %>
                 document.body.appendChild(divTest);
             }
             <% elsif @minitask.order == 3%>
             {
                 var divTest = document.createElement('div');
-                divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'checkmywork2', id: "next-subtask" }) %>";
+                <% if I18n.locale.to_s == 'zh' %>
+                divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next-zh.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+tasks_path+'"}, 3100);'}) %>";
+
+
+                <% else %>
+                divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+tasks_path+'"}, 3100);' }) %>";
+
+
+                <% end %>
                 console.log('divTest: ', divTest);
                 document.body.appendChild(divTest);
             }
@@ -710,27 +788,39 @@
         askteacher.innerHTML = 'Ask teacher to check my work';
         $("#ag-results").append(askteacher);
         function openForm() {
+            console.log('AskTeacher.Click');
+            Trace.log('AskTeacher.Click', null, true, true);
             document.getElementById("myForm").style.display = "block";
         };
         function closeForm() {
             //console.log('closeForm');
+            console.log('AskTeacher.Close');
+            Trace.log('AskTeacher.Close');
             document.getElementById("myForm").style.display = "none";
         };
         var chatpopup = document.createElement('div');
         chatpopup.id = "myForm";
         chatpopup.classname = 'chat-popup';
-        chatpopup.innerHTML = "<b>The following can only be filled in by an instructor </b> <br> <b>Allow student to proceed to next task:</b><input></input><br><br><button class='btn' id = 'send-chatpopup'>Send</button><br><button type='button' class='btn cancel' id = 'close-chatpopup' onclick='closeForm()'>Close</button>";
+        chatpopup.innerHTML = "<b>The following can only be filled in by an instructor </b> <br> <b>Allow student to proceed to next task:</b><input id = 'teacher-input'></input><br><br><button class='btn' id = 'send-chatpopup'>Send</button><br><button type='button' class='btn cancel' id = 'close-chatpopup' onclick='closeForm()'>Close</button>";
         chatpopup.style.display = 'none';
         $("#ag-results").append(chatpopup);
         askteacher.addEventListener("click", openForm);
         close_chatpopup = document.getElementById('close-chatpopup');
         close_chatpopup.addEventListener('click', closeForm);
         function chatpopupNext() {
+            console.log('AskTeacher.ClickSubmit');
+            var teacherInput = document.getElementById('teacher-input').value;
+            console.log(teacherInput);
+            Trace.log('AskTeacher.ClickSubmit', teacherInput);
             // var password = document.getElementById('password').value;
-            // if (password === "summercamp") {
+            // var teacherInput = document.getElementById('teacher-input');
+
+            if (teacherInput) {
                 try {
                     divTest.innerHTML;
                     console.log("trydivTest: ", divTest);
+                    var teacherInput = document.getElementById('teacher-input');
+                    console.log(teacherInput);
                 }
                 catch (err) {
 
@@ -738,23 +828,40 @@
 
                     <% if @minitask.order < 3%>
                     { var divTest = document.createElement('div');
-                        divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'checkmywork2', id: "next-subtask" }) %>";
+                        <% if I18n.locale.to_s == 'zh' %>
+                        divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next-zh.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+minitask_path(@nextminitask.id)+'"}, 3100);'}) %>";
+
+
+                        <% else %>
+                        divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+minitask_path(@nextminitask.id)+'"}, 3100);' }) %>";
+
+
+                        <% end %>
                         console.log('divTest: ', divTest);
                         document.body.appendChild(divTest);
                     }
                     <% elsif @minitask.order == 3%>
                     {
                         var divTest = document.createElement('div');
-                        divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'checkmywork2', id: "next-subtask" }) %>";
+                        <% if I18n.locale.to_s == 'zh' %>
+                        divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next-zh.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+tasks_path+'"}, 3100);' }) %>";
+
+
+                        <% else %>
+                        divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next.png"),  {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+tasks_path+'"}, 3100);' }) %>";
+
+
+                        <% end %>
                         console.log('divTest: ', divTest);
                         document.body.appendChild(divTest);
                     }
                     <% end %>
 
 
-                    // divTest.appendTo(document.body);
+
+                    Trace.log('Crescendo.showNextTaskButton');
                 }
-            // }
+            }
         }
         send_chatpopup = document.getElementById('send-chatpopup');
         console.log('send chatpopup');
@@ -777,6 +884,7 @@
     };
 
     populateLittleFeedback = function(feedbackLog, allFeedback, chunknum, tipnum) {
+        console.log('populateLittleFeedback');
 
         // console.log('-------------populatelittleFeedback--------------------');
         var little_stars = document.getElementById('little-stars');
@@ -815,6 +923,7 @@
             }
 
         }
+        Trace.log('CheckMyWork.littleStarsUpdated', {'correctTotal': correct_total, 'incorrectTotal': incorrect_total});
 
 
 
@@ -841,14 +950,30 @@
         if (numtips == 0){
           <% if @minitask.order < 3%>
           { var divTest = document.createElement('div');
-              divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  minitask_path(@nextminitask.id), {class: 'checkmywork2', id: "next-subtask" }) %>";
+              <% if I18n.locale.to_s == 'zh' %>
+              divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next-zh.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+minitask_path(@nextminitask.id)+'"}, 3100);' } ) %>";
+
+
+              <% else %>
+              divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+minitask_path(@nextminitask.id)+'"}, 3100);' }) %>";
+
+
+              <% end %>
               console.log('divTest: ', divTest);
               document.body.appendChild(divTest);
           }
           <% elsif @minitask.order == 3%>
           {
               var divTest = document.createElement('div');
-              divTest.innerHTML = "<%= escape_javascript link_to(image_tag("next.png"),  tasks_path, {class: 'checkmywork2', id: "next-subtask" }) %>";
+              <% if I18n.locale.to_s == 'zh' %>
+              divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next-zh.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+tasks_path+'"}, 3100);' }) %>";
+
+
+              <% else %>
+                divTest.innerHTML = "<%= escape_javascript button_tag(image_tag("next.png"), {class: 'checkmywork2', id: "next-subtask", onclick: 'Trace.log("Crescendo.nextTask"); this.disabled=true; this.style.display="none"; $("#next-task-info").show(); $("#next-task-info").append("<h1 style=\'color:white\'>Next task is loading..</h1>");  setTimeout(function(){ window.location.href="'+tasks_path+'"}, 3100);' }) %>";
+
+
+              <% end %>
               console.log('divTest: ', divTest);
               document.body.appendChild(divTest);
           }

@@ -8,9 +8,10 @@ doctype html
       tr
         / th
         th Category Name
-        th MiniTask
+        th title_en
         / th Consumer Key
-        th testfile
+        / th testfile
+        th title_zh
         th Edit
         th Delete
 
@@ -20,12 +21,14 @@ doctype html
           - @minitasks[categorytask].each do |minitask|
             tr
               td.vert-align = link_to "#{category.name}", category
-              td.vert-align = link_to "#{minitask.title}", minitask
-              - if minitask.test_file
-                td.vert-align
-                  = link_to "#{minitask.test_file[0,100]}", test_file_task_path(minitask), :maxlength => 3, :size => 10
-              - else
-                td.vert-align = "no test file yet"
+              td.vert-align = link_to "#{minitask.title_en}", minitask
+              td.vert-align = link_to "#{minitask.title_zh}", minitask
+              / td.vert-align = "#{minitask.locale}"
+              / - if minitask.test_file
+              /   td.vert-align
+              /     = link_to "#{minitask.test_file[0,100]}", test_file_task_path(minitask), :maxlength => 3, :size => 10
+              / - else
+              /   td.vert-align = "no test file yet"
                 / = link_to "Enter a correct script to get test file", correctscript_task_path(categorytask)
               / td.vert-align = 'Edit'
               / td.vert-align = 'Delete'

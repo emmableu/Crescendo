@@ -21,4 +21,5 @@
 
 class Option < ActiveRecord::Base
   belongs_to :quiz
+  translates :optionbody, :comment
 end

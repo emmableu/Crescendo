@@ -20,4 +20,5 @@
 #
 
 class Quiz < ActiveRecord::Base
+  translates :quizbody
 end

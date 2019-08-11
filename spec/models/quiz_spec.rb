@@ -4,11 +4,12 @@
 #
 #  id          :integer          not null, primary key
 #  name        :string
-#  quizbody    :text
+#  quizbody_en :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  solution    :text
 #  minitask_id :integer
+#  quizbody_zh :text
 #
 # Indexes
 #

@@ -105,11 +105,14 @@
   /*}*/
 
   .modal{
-    top: 175px;
+    top: 10%;
     font-size: 14px;
     /*width: 40%;*/
     /*width: 500px;*/
     /*left: 40%;*/
+  }
+  .modal img{
+    max-width: 70%;
   }
 
 
@@ -128,7 +131,7 @@
     position: absolute;
     top: 5px;
     left: 40%;
-    z-index: 1051;
+    z-index: 1050;
     /*border: 2px solid #192121*/
   }
   .instruction-modify{
@@ -141,7 +144,7 @@
     position: absolute;
     top: 5px;
     left: 40%;
-    z-index: 1051;
+    z-index: 1050;
     /*border: 2px solid #192121*/
   }
 
@@ -155,7 +158,7 @@
     position: absolute;
     top: 5px;
     left: 40%;
-    z-index: 1051;
+    z-index: 1050;
     /*border: 2px solid #192121*/
   }
 
@@ -182,6 +185,28 @@
 
   }
 
+  .checkmywork-zh{
+    background-image: url(/assets/next-zh.png);
+    width: 120px;
+    height: 80px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 70%;
+    z-index: 1051;
+    cursor: pointer;
+    /*color: gold;*/
+    /*text-align: center;*/
+    /*border: 0px;*/
+    /*border-radius: 3px;*/
+    /*padding: 20px;*/
+    /*cursor: pointer;*/
+    /*margin-bottom: 20px;*/
+
+
+  }
 
 
   .checkmywork2 img{
@@ -194,7 +219,7 @@
     position: absolute;
     top: 10px;
     left: 72%;
-    z-index: 1051;
+    z-index: 1500;
     cursor: pointer;
     /*color: gold;*/
     /*text-align: center;*/
@@ -251,7 +276,11 @@
   <div class="instruction-create" href="#"></div>
 <% end %>
 <% if @minitask.order == 1 %>
-  <a class = "checkmywork" id = 'autograding_button'></a>
+  <% if I18n.locale.to_s == 'zh' %>
+    <a class = "checkmywork-zh" id = 'autograding_button'></a>
+  <% else %>
+    <a class = "checkmywork" id = 'autograding_button'></a>
+  <% end %>
 <% else %>
   <button class = "checkmywork hidden" id = 'autograding_button'>Check My Work</button>
 <% end %>
@@ -260,7 +289,13 @@
     <div class="modal-content">
       <br>
       <div class="modal-body"><h4 style="margin-top: 35px; font-size: 25px; line-height: 35px">
-        <h2>Instruction: </h2><%= @minitask.instruction.html_safe %>
+        <% if I18n.locale.to_s == 'zh' %>
+          <h2>本阶段目标： </h2>
+        <% else %>
+          <h2>Instruction: </h2>
+        <% end %>
+
+        <%= @minitask.instruction.html_safe %>
         <!--          ERB.new(str).result(binding)-->
       </h4><button class="btn btn-primary had-btn-lg" onclick = "killmodal()" style="margin-left:80%;">OK</button></div>
     </div><!-- /.modal-content -->
@@ -272,7 +307,11 @@
   <nav class="navbar-inverse navbar-upper"  >
     <div class="container-fluid" id = "ag-header1">
       <ul class="nav navbar-upper-left">
-        <li> <span class="task-title">Score: <%=30* @task.order%> </span>
+        <% if I18n.locale.to_s == 'zh' %>
+          <li> <span class="task-title">得分： <%=30* @task.order%> </span>
+        <% else %>
+          <li> <span class="task-title">Score: <%=30* @task.order%> </span>
+        <% end %>
           <span class="task-title-right"><%= @task.title %></span>
         </li>
 
@@ -284,8 +323,16 @@
     <div class="container-fluid" id = "ag-header2">
 
       <ul class="nav navbar-lower-left" >
-        <li> <span class="task-title">Goal: 180</span>
+        <% if I18n.locale.to_s == 'zh' %>
+          <li> <span class="task-title">目标: 180</span>
+        <% else %>
+          <li> <span class="task-title">Goal: 180</span>
+        <% end %>
+        <% if I18n.locale.to_s == 'zh' %>
+          <span class="task-title-right">等級： <%= @task.order %> - <%= @minitask.order %>  </span>
+        <% else %>
           <span class="task-title-right">Level <%= @task.order %> - <%= @minitask.order %>  </span>
+        <% end %>
         </li>
 
       </ul>
@@ -309,5 +356,6 @@
         modal = document.getElementById("myModal");
         // console.log("modal: ", modal);
         modal.style.display = 'none';
+        Trace.log('Instruction.close');
     }
 </script>

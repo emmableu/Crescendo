@@ -17,6 +17,7 @@ end
 
 module Lambda
   class Application < Rails::Application
+    config.i18n.available_locales = [:en, :zh]
     config.i18n.enforce_available_locales = true
     config.quiet_assets = true
     config.generators do |generate|

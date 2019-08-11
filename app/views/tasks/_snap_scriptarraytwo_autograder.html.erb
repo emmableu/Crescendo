@@ -136,7 +136,7 @@
           // Start Snap Environment Loop
           loop();
           if (window.onWorldLoaded) {
-              window.onWorldLoaded();
+              window.onWorldLoaded(callback);
           }
 
           $("#savescript_button").click(saveScript);

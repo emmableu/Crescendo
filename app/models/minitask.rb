@@ -27,4 +27,5 @@
 
 class Minitask < ActiveRecord::Base
   belongs_to :task
+  translates :title, :instruction, :test_file, :ppxmlfile
 end

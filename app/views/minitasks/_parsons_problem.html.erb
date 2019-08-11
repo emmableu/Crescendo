@@ -1,51 +1,51 @@
 
-<html>
-<head>
-  <script type="text/javascript">
-      function checkIframeLoaded() {
-          // Get a handle to the iframe element
-          // var iframe = document.getElementById('snap');
-          // iframe.src = "../../snap.html?assignment=" +assignment+"&workedexample=true";
-          // console.log(assignment);
-          // var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-          // var milestone = getSearchParameters()['milestone'];
-          // Check if loading is complete
-          console.log('check whether ide ready')
-          if (window.ide) {
-              // The loading is complete, call the function we want executed once the iframe is loaded
-              console.log('ide is ready')
-              loadExample();
-              return;
-          }
-          // If we are here, it is not loaded. Set things up so we check the status again in 100 milliseconds
-          window.setTimeout(checkIframeLoaded, 100);
-      }
+<!--<html>-->
+<!--<head>-->
+<!--  <script type="text/javascript">-->
+<!--      function checkIframeLoaded() {-->
+<!--          // Get a handle to the iframe element-->
+<!--          // var iframe = document.getElementById('snap');-->
+<!--          // iframe.src = "../../snap.html?assignment=" +assignment+"&workedexample=true";-->
+<!--          // console.log(assignment);-->
+<!--          // var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;-->
+<!--          // var milestone = getSearchParameters()['milestone'];-->
+<!--          // Check if loading is complete-->
+<!--          console.log('check whether ide ready')-->
+<!--          if (window.ide) {-->
+<!--              // The loading is complete, call the function we want executed once the iframe is loaded-->
+<!--              console.log('ide is ready')-->
+<!--              loadExample();-->
+<!--              return;-->
+<!--          }-->
+<!--          // If we are here, it is not loaded. Set things up so we check the status again in 100 milliseconds-->
+<!--          window.setTimeout(checkIframeLoaded, 100);-->
+<!--      }-->
 
 
 
 
-      function loadExample() {
+<!--      function loadExample() {-->
 
 
 
 
 
-              ppxml_path = gon.ppxmlfile_path;
-              ide = world.children[0];
-              if (ppxml_path) {
-                  console.log('find ppxmlpath');
-                  console.log('ppxmlfilepath: ', ppxml_path);
-                  $.get(
-                      ppxml_path,
-                      function(data) {
-                          ide.droppedText(data);
-                          // ide.palette.hide();
-                      }
-                  ).done();
-              }
-      }
-  </script>
-</head>
-<body onload="checkIframeLoaded();">
-</body>
-</html>
+<!--              ppxml_path = gon.ppxmlfile_path;-->
+<!--              ide = world.children[0];-->
+<!--              if (ppxml_path) {-->
+<!--                  console.log('find ppxmlpath');-->
+<!--                  console.log('ppxmlfilepath: ', ppxml_path);-->
+<!--                  $.get(-->
+<!--                      ppxml_path,-->
+<!--                      function(data) {-->
+<!--                          ide.droppedText(data);-->
+<!--                          // ide.palette.hide();-->
+<!--                      }-->
+<!--                  ).done();-->
+<!--              }-->
+<!--      }-->
+<!--  </script>-->
+<!--</head>-->
+<!--<body onload="checkIframeLoaded();">-->
+<!--</body>-->
+<!--</html>-->

@@ -48,8 +48,8 @@ class MinitasksController < ApplicationController
     end
   end
   def minitasks_params
-    params.require(:minitask).permit(:id, :title,:task_id, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
-                                     :updated_at, :instruction, :description, :ppxmlfile, :allow_repeat, :palette_start_index)
+    params.require(:minitask).permit(:id, :title, :locale, :minitask_id, :task_id, :category_id, :test_file, :starter_file, :difficulty, :order, :created_at,
+                                     :updated_at, :instruction, :description, :ppxmlfile,:ppxmlfile_en,:ppxmlfile_zh, :allow_repeat, :palette_start_index, :title_en, :title_zh, :instruction_en, :instruction_zh, :test_file_en, :test_file_zh)
   end
   def iframe
     load_channels
@@ -167,8 +167,18 @@ class MinitasksController < ApplicationController
 
   def ppxmlfile
     @minitask = Minitask.find(params[:id])
-    render plain: @minitask.ppxmlfile
+    if (I18n.locale).to_s =='zh'
+      puts('zh 中文')
+      render plain: @minitask.ppxmlfile_zh
+    else
+      puts('英文')
+      puts('i18n.locale: ', I18n.locale)
+      render plain: @minitask.ppxmlfile_en
+    end
   end
+
+
+
   def starter_file
     @minitask = Minitask.find(params[:id])
     render plain: @minitask.starter_file

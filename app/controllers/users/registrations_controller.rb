@@ -2,6 +2,8 @@
 
 class Users::RegistrationsController < Devise::RegistrationsController
   include Accessible
+  skip_before_action :verify_authenticity_token
+
   skip_before_action :check_user, except: [:new, :create]
 
   # before_action :configure_sign_up_params, only: [:create]

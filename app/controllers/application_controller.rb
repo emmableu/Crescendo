@@ -1,8 +1,37 @@
 class ApplicationController < ActionController::Base
   # protect_from_forgery with: :null_session
   # protected
+  before_action :store_user_location!, if: :storable_location?
+  # The callback which stores the current location must be added before you authenticate the user
+  # as `authenticate_user!` (or whatever your resource is) will halt the filter chain and redirect
+  # before the location can be stored.
+  before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_locale
+  private
+  def storable_location?
+    request.get? && is_navigational_format? && !devise_controller? && !request.xhr?
+  end
 
+  def store_user_location!
+    # :user is the scope we are authenticating
+    store_location_for(:user, request.fullpath)
+  end
+
+  def after_sign_in_path_for(resource_or_scope)
+    stored_location_for(resource_or_scope) || super
+  end
+
+  def set_locale
+    I18n.locale = extract_locale || I18n.default_locale
+  end
+  def extract_locale
+    parsed_locale = params[:locale]
+    I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
+  end
+  def default_url_options
+    { locale: I18n.locale }
+  end
   protected
 
   def configure_permitted_parameters

@@ -68,6 +68,6 @@ class QuizzesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def quiz_params
-      params.require(:quiz).permit(:name, :quizbody, :solution, :minitask_id)
+      params.require(:quiz).permit(:name, :quizbody,:quizbody_en, :quizbody_zh, :solution, :minitask_id)
     end
 end

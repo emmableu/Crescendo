@@ -24,10 +24,10 @@
 
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :registerable,
-         :database_authenticatable,
-         :recoverable, :rememberable, authentication_keys: [:username]
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable:registerable,:recoverable,
+  devise :database_authenticatable,:registerable,
+          :rememberable, authentication_keys: [:username]
+  #
           # :validatable
   # attr_writer :login
   #
@@ -45,17 +45,6 @@ class User < ActiveRecord::Base
   end
 
   protected
-
-  # def password_required?
-  #   return false if skip_password_validation
-  #   super
-  # end
-  #
-  # def self.find_for_database_authentication warden_conditions
-  #   conditions = warden_conditions.dup
-  #   login = conditions.delete(:login)
-  #   where(conditions).where(["username = :value", {value: login.to_s}])
-  # end
 
 
   def self.create_with_password(attr={})

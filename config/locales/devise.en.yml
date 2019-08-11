@@ -9,12 +9,12 @@ en:
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
-      invalid: "Invalid %{authentication_keys} or password."
+      invalid: "Check again! Did you enter your name from the name card, such as cary, spain, etc?"
       locked: "Your account is locked."
       last_attempt: "You have one more attempt before your account is locked."
-      not_found_in_database: "Invalid %{authentication_keys} or password."
+      not_found_in_database: "Check again! Did you enter your name correctly from the name card such as cary, spain, etc? Is your name all lowercase?"
       timeout: "Your session expired. Please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
+      unauthenticated: "Log in using your name on the name card, such as cary, spain, etc. Remember to make it lowercase"
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:

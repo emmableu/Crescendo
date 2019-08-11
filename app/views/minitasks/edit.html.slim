@@ -1,7 +1,11 @@
 = form_for @minitask, html: {class: 'form-horizontal'} do |f|
   .form-group
-    = f.label :title
-    = f.text_field :title, class: 'form-control'
+    = f.label :title_en
+    = f.text_field :title_en, class: 'form-control'
+
+  .form-group
+    = f.label :title_zh
+    = f.text_field :title_zh, class: 'form-control'
   .form-group
     = f.label :task
     = f.collection_select(:task_id, Task.all, :id, :title, prompt: true)
@@ -16,29 +20,32 @@
     = f.label :order
     = f.text_area :order, class: 'form-control'
 
-  / .form-group
-  /   = f.label :start_block
-  /   = f.text_area :order, class: 'form-control'
-  /
-  / .form-group
-  /   = f.label :correctscript
-  /   = link_to "correctscript", correctscript_task_path
-  / .form-group
-  /   = f.label :description
-  /   = link_to "Description", edit_task_description_path(@task)
-  /
   .form-group
-    = f.label :instruction
-    = f.text_area :instruction, class: 'form-control', rows: 4
+    = f.label :instruction_en
+    = f.text_area :instruction_en, class: 'form-control', rows: 4
+
+
+  .form-group
+    = f.label :instruction_zh
+    = f.text_area :instruction_zh, class: 'form-control', rows: 4
+
+
+
   .form-group
     = f.label :starter_file
     = f.text_area :starter_file, class: 'form-control', rows: 10
   .form-group
-    = f.label :test_file
-    = f.text_area :test_file, class: 'form-control', rows: 10
+    = f.label :test_file_en
+    = f.text_area :test_file_en, class: 'form-control', rows: 10
   .form-group
-    = f.label :parsons_problem_xml_file
-    = f.text_area :ppxmlfile, class: 'form-control', rows: 10
+    = f.label :test_file_zh
+    = f.text_area :test_file_zh, class: 'form-control', rows: 10
+  .form-group
+    = f.label :ppxmlfile_en
+    = f.text_area :ppxmlfile_en, class: 'form-control', rows: 10
+  .form-group
+    = f.label :ppxmlfile_zh
+    = f.text_area :ppxmlfile_zh, class: 'form-control', rows: 10
   .form-group
     .col-xs-1
       = f.button :submit, class: "btn btn-success"

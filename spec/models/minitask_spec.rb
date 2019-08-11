@@ -3,18 +3,22 @@
 # Table name: minitasks
 #
 #  id                  :integer          not null, primary key
-#  title               :string
 #  task_id             :integer
-#  test_file           :text
+#  test_file_en        :text
 #  starter_file        :text
 #  difficulty          :integer
 #  order               :integer
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
-#  instruction         :text
-#  ppxmlfile           :text
+#  ppxmlfile_en        :text
 #  allow_repeat        :integer
 #  palette_start_index :integer
+#  title_en            :string
+#  instruction_en      :text
+#  title_zh            :text
+#  instruction_zh      :text
+#  test_file_zh        :text
+#  ppxmlfile_zh        :text
 #
 # Indexes
 #
