@@ -1,4 +1,4 @@
-# Crescendo's installment is similar to lambda (https://www2.eecs.berkeley.edu/Pubs/TechRpts/2018/EECS-2018-2.html). Below is the introduction by Michael Ball on how to install lambda
+### Crescendo's installment is similar to lambda (https://www2.eecs.berkeley.edu/Pubs/TechRpts/2018/EECS-2018-2.html). Below is the introduction by Michael Ball on how to install lambda
 
 # λ : lambda
 Lambda is an LTI app for autograding [Snap<em>!</em>][1] programs.
